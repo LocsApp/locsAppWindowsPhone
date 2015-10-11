@@ -1,1 +1,1 @@
-c:\users\tagzz\documents\visual studio 2015\Projects\Locsapp_Win_Phone\Locsapp_Win_Phone\Locsapp_Win_Phone.csproj;x86
+C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\Locsapp_Win_Phone.csproj;x86
