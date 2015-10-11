@@ -23,7 +23,7 @@
             <TextBox x:Name="Mail" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="E-Mail" />
             <PasswordBox x:Name="Password" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Password"/>
             <Button x:Name="Valide_Login" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Login" Width="100"/>
-            <Button x:Name="Sing_Up" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Sign Up" Width="100"/>
+            <Button x:Name="Sign_Up" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Sign Up" Width="100" Click="Sign_Up_Click"/>
         </Grid>
     </Grid>
 </Page>

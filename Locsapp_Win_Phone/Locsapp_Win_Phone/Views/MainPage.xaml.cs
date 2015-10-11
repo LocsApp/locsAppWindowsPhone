@@ -33,5 +33,10 @@ namespace Locsapp_Win_Phone
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
         }
+
+        private void Sign_Up_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
