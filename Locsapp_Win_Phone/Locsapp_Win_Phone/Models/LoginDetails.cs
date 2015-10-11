@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Locsapp_Win_Phone.Models
 {
-    class LoginDetails
+    class SignUpDetails
     {
         public string email { get; set; }
         public string first_name { get; set; }
@@ -20,5 +20,12 @@ namespace Locsapp_Win_Phone.Models
         public string biling_adress { get; set; }
         public string logo_url { get; set; }
         public string is_active { get; set; }
+    }
+
+    class LoginDetails
+    {
+        public string username { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
     }
 }
