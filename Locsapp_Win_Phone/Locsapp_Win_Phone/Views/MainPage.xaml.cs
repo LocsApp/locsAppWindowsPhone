@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Windows.Foundation;
@@ -34,7 +35,9 @@ namespace Locsapp_Win_Phone
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-
+            var client = new WebClient();
+            string html = client.DownloadString("http://www.google.com");
+            Console.WriteLine(html);
         }
     }
 }
