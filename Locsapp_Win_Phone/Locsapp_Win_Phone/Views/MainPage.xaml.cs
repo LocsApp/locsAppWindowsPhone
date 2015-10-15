@@ -26,12 +26,10 @@ namespace Locsapp_Win_Phone
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private const string URL = "http://127.0.0.1:8000";
+        ///
         public MainPage()
         {
             this.InitializeComponent();
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(URL);
         }
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>D16E0DC796FD37B39EDCFA8410DEC74DA0AFCEFB7D0386731D0F41F60277DCD8</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>057D941AA6AC6A5A110B1B8BD41430E543CD0132B1687F045E19302027263069</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7_1.0.0.0_x86__gmsv23bg2eghr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7_gmsv23bg2eghr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-11T07:02:49.549</Modified>
+      <Modified>2015-10-15T08:53:11.643</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -70,15 +70,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\entrypoint\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-11T07:02:48.553</Modified>
+      <Modified>2015-10-15T08:53:10.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-11T07:02:49.545</Modified>
+      <Modified>2015-10-15T08:53:11.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
-      <Modified>2015-10-11T07:02:48.383</Modified>
+      <Modified>2015-10-15T08:49:35.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-10-11T07:02:49.053</Modified>
+      <Modified>2015-10-15T08:49:36.400</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
