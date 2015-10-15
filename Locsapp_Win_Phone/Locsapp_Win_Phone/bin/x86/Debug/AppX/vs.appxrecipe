@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-15T08:58:57.952</Modified>
+      <Modified>2015-10-15T09:54:01.694</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -70,11 +70,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\entrypoint\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-15T08:58:57.288</Modified>
+      <Modified>2015-10-15T09:54:00.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-15T08:58:57.950</Modified>
+      <Modified>2015-10-15T09:54:01.690</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
@@ -82,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
-      <Modified>2015-10-07T06:26:02.721</Modified>
+      <Modified>2015-10-15T09:13:44.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.dll</PackagePath>
@@ -251,6 +251,14 @@
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
       <Modified>2015-10-07T06:26:09.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2015-10-15T09:09:30.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2015-10-15T09:09:30.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>

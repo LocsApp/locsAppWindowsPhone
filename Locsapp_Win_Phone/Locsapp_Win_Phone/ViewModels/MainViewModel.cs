@@ -5,11 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Locsapp_Win_Phone.Models;
+using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
 namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
-    {
-        const string ApiUrl = @"http://127.0.0.1:8000/";
+    {       
     }
 }

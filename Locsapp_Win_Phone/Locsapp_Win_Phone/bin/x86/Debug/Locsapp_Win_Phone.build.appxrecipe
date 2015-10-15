@@ -189,6 +189,12 @@
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
     </AppxPackagedFile>
