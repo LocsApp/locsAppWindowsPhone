@@ -10,54 +10,11 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel x:Name="Sign_up_Scroll">
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
-                <TextBlock>vrvr</TextBlock>
+                <TextBox PlaceholderText="E-Mail"></TextBox>
+                <TextBox PlaceholderText="UserName"></TextBox>
+                <TextBox PlaceholderText="First Name"></TextBox>
+                <TextBox PlaceholderText="Last Name"></TextBox>
+                <Button Margin="10" HorizontalAlignment="Center">Subscribre</Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>

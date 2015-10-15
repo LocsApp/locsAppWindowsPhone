@@ -51,6 +51,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Inlines" />
     </RootType>
-    <RootType FullName="Locsapp_Win_Phone.Sign_Up" />
+    <RootType FullName="Locsapp_Win_Phone.Sign_UpPage" />
   </Roots.RootTypes>
 </Roots>
