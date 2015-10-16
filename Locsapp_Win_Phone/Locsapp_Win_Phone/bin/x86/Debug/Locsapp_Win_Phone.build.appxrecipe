@@ -78,6 +78,9 @@
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -191,6 +194,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Formatting.dll">
+      <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
