@@ -5,6 +5,7 @@ using System.Linq;
 using System.Collections.Specialized;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Net;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Windows.Foundation;
@@ -35,9 +36,9 @@ namespace Locsapp_Win_Phone
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            
-            var request = (HttpWebRequest)WebRequest.Create("https://api.twitch.tv/kraken");
+            var request = (HttpWebRequest)WebRequest.Create("http://127.0.0.1:8000");
             request.Method = "GET";
+            Login.Text = "OK2";
             request.BeginGetResponse(Response_Completed, request);
             Login.Text = "OK";
         }
@@ -45,6 +46,8 @@ namespace Locsapp_Win_Phone
         void Response_Completed(IAsyncResult result)
         {
             HttpWebResponse response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
+            Debug.WriteLine(response.StatusCode);
         }
+
     }
 }
