@@ -18,7 +18,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Locsapp_Win_Phone.Models;
 
-
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Locsapp_Win_Phone
@@ -37,7 +36,7 @@ namespace Locsapp_Win_Phone
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
             
-            var request = (HttpWebRequest)WebRequest.Create("http://www.example.com/recepticle.aspx");
+            var request = (HttpWebRequest)WebRequest.Create("https://api.twitch.tv/kraken");
             request.Method = "GET";
             request.BeginGetResponse(Response_Completed, request);
             Login.Text = "OK";
@@ -45,7 +44,7 @@ namespace Locsapp_Win_Phone
 
         void Response_Completed(IAsyncResult result)
         {
-            ///Login.Text = "OK2";
+            HttpWebResponse response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
         }
     }
 }
