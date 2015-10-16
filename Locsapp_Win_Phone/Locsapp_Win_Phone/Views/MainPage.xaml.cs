@@ -44,9 +44,8 @@ namespace Locsapp_Win_Phone
             data.username = Login.Text;
             data.password = Password.Password;
             string json = JsonConvert.SerializeObject(data);
-            Debug.WriteLine(json);
-            //var API = new MainViewModel();
-            //API.API_req("http://127.0.0.1:8000", "GET");
+            var API = new MainViewModel();
+            API.API_req("http://127.0.0.1:8000/api/v1/rest-auth/login/", "POST", json);
 
         }
     }

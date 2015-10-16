@@ -25,7 +25,9 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
     {
-        public void API_req(String API_URL, String Method)
+        private String Data_JSON;
+
+        public void API_req(String API_URL, String Method, String JSON_data = "")
         {
             var request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
@@ -34,8 +36,19 @@ namespace Locsapp_Win_Phone.ViewModels
             if (Method == "POST")
             {
                 request.ContentType = "text/json";
-               
+                Data_JSON = JSON_data;
+                request.BeginGetRequestStream(Do_Request, request);
             }
+        }
+
+        void Do_Request(IAsyncResult result)
+        {
+            HttpWebRequest request = (HttpWebRequest)result.AsyncState;
+            Stream postStream = request.EndGetRequestStream(result);
+            byte[] byteArray = Encoding.UTF8.GetBytes(Data_JSON);
+            postStream.Write(byteArray, 0, Data_JSON.Length);
+            Debug.WriteLine(Data_JSON);
+            request.BeginGetResponse(Response_Completed, request);
         }
 
         void Response_Completed(IAsyncResult result)
@@ -45,5 +58,6 @@ namespace Locsapp_Win_Phone.ViewModels
             string res = streamReader.ReadToEnd();
             Debug.WriteLine(res);
         }
+
     }
 }
