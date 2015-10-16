@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Locsapp_Win_Phone.Models;
+using Locsapp_Win_Phone.ViewModels;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -36,18 +37,8 @@ namespace Locsapp_Win_Phone
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            var request = (HttpWebRequest)WebRequest.Create("http://127.0.0.1:8000");
-            request.Method = "GET";
-            Login.Text = "OK2";
-            request.BeginGetResponse(Response_Completed, request);
-            Login.Text = "OK";
+            var API = new MainViewModel();
+            API.API_req("http://127.0.0.1:8000", "GET");
         }
-
-        void Response_Completed(IAsyncResult result)
-        {
-            HttpWebResponse response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
-            Debug.WriteLine(response.StatusCode);
-        }
-
     }
 }
