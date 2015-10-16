@@ -29,7 +29,13 @@ namespace Locsapp_Win_Phone.ViewModels
         {
             var request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
-            request.BeginGetResponse(Response_Completed, request);
+            if (Method == "GET")
+                request.BeginGetResponse(Response_Completed, request);
+            if (Method == "POST")
+            {
+                request.ContentType = "text/json";
+               
+            }
         }
 
         void Response_Completed(IAsyncResult result)

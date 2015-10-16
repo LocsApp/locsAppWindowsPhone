@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Locsapp_Win_Phone.Models;
 using Locsapp_Win_Phone.ViewModels;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,8 +39,15 @@ namespace Locsapp_Win_Phone
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            var API = new MainViewModel();
-            API.API_req("http://127.0.0.1:8000", "GET");
+            LoginDetails data = new LoginDetails();
+            data.email = Mail.Text;
+            data.username = Login.Text;
+            data.password = Password.Password;
+            string json = JsonConvert.SerializeObject(data);
+            Debug.WriteLine(json);
+            //var API = new MainViewModel();
+            //API.API_req("http://127.0.0.1:8000", "GET");
+
         }
     }
 }
