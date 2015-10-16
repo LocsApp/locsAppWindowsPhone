@@ -25,7 +25,13 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
     {
-        private String Data_JSON;
+        private string _Data_JSON;
+
+        public string Data_JSON
+        {
+            get { return _Data_JSON; }
+            set { _Data_JSON = value; }
+        }
 
         public void API_req(String API_URL, String Method, String JSON_data = "")
         {
@@ -43,6 +49,7 @@ namespace Locsapp_Win_Phone.ViewModels
 
         void Do_Request(IAsyncResult result)
         {
+            Debug.WriteLine(Data_JSON);
             HttpWebRequest request = (HttpWebRequest)result.AsyncState;
             Stream postStream = request.EndGetRequestStream(result);
             byte[] byteArray = Encoding.UTF8.GetBytes(Data_JSON);

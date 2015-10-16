@@ -434,7 +434,6 @@ c:\users\tagzz\documents\visual studio 2015\Projects\Locsapp_Win_Phone\Locsapp_W
 c:\users\tagzz\documents\visual studio 2015\Projects\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\Locsapp_Win_Phone.xr.xml
 c:\users\tagzz\documents\visual studio 2015\Projects\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\WinMetadata\Windows.winmd
 c:\users\tagzz\documents\visual studio 2015\Projects\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\resources.pri
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Locsapp_Win_Phone.csprojResolveAssemblyReference.cache
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\App.g.i.cs
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\App.g.cs
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\XamlTypeInfo.g.cs
@@ -892,11 +891,4 @@ C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\qualifiers.txt
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\System.Net.Http.Formatting.dll
 C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\Newtonsoft.Json.dll
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\layout.resfiles
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\layout.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\Resources.resfiles
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\Resources.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\pri.resfiles
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\pri.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml
-C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml.intermediate
+C:\Users\Tagzz\Desktop\Win_Phone_Locsapp\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Enough.OAuth.dll
