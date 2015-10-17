@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading;
 
 namespace Locsapp_Win_Phone.ViewModels
 {
@@ -33,37 +34,69 @@ namespace Locsapp_Win_Phone.ViewModels
             set { _Data_JSON = value; }
         }
 
+        private static ManualResetEvent allDone = new ManualResetEvent(false);
+
         public void API_req(String API_URL, String Method, String JSON_data = "")
         {
-            var request = (HttpWebRequest)WebRequest.Create(API_URL);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
             if (Method == "GET")
                 request.BeginGetResponse(Response_Completed, request);
             if (Method == "POST")
             {
-                request.ContentType = "text/json";
+                request.ContentType = "application/json";
                 Data_JSON = JSON_data;
-                request.BeginGetRequestStream(Do_Request, request);
+                request.BeginGetRequestStream(new AsyncCallback(Do_Request), request);
+                allDone.WaitOne();
             }
         }
 
         void Do_Request(IAsyncResult result)
         {
-            Debug.WriteLine(Data_JSON);
             HttpWebRequest request = (HttpWebRequest)result.AsyncState;
+            request.Accept = "*/*";
+            request.Credentials = CredentialCache.DefaultCredentials;
             Stream postStream = request.EndGetRequestStream(result);
             byte[] byteArray = Encoding.UTF8.GetBytes(Data_JSON);
             postStream.Write(byteArray, 0, Data_JSON.Length);
-            Debug.WriteLine(Data_JSON);
-            request.BeginGetResponse(Response_Completed, request);
+            postStream.Dispose();
+            request.BeginGetResponse(new AsyncCallback(Response_Completed), request);
         }
 
         void Response_Completed(IAsyncResult result)
         {
-            HttpWebResponse response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
-            StreamReader streamReader = new StreamReader(response.GetResponseStream());
-            string res = streamReader.ReadToEnd();
-            Debug.WriteLine(res);
+            var _Cookie = new CookieContainer();
+            // response = null;
+            //try
+            ///       {
+            ///HttpWebResponse  response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
+            ///}
+            //catch (Exception e)
+            // {
+            //   Debug.WriteLine(e.Message);
+            //}
+
+            //StreamReader streamReader = new StreamReader(response.GetResponseStream());
+            //string res = streamReader.ReadToEnd();
+            //allDone.Set();
+            //Debug.WriteLine(res);
+            HttpWebRequest request = (HttpWebRequest)result.AsyncState;
+            request.CookieContainer = _Cookie;
+            request.Accept = "*/*";
+            request.Credentials = CredentialCache.DefaultCredentials;
+            HttpWebResponse response = (HttpWebResponse)request.EndGetResponse(result);
+            Debug.WriteLine(response.Headers);
+            Stream streamResponse = response.GetResponseStream();
+            StreamReader streamRead = new StreamReader(streamResponse);
+            string responseString = streamRead.ReadToEnd();
+            Debug.WriteLine(responseString);
+            // Close the stream object
+            streamResponse.Dispose();
+            streamRead.Dispose();
+
+            // Release the HttpWebResponse
+            response.Dispose();
+            allDone.Set();
         }
     }
 }
