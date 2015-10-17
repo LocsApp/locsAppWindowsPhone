@@ -65,6 +65,5 @@ namespace Locsapp_Win_Phone.ViewModels
             string res = streamReader.ReadToEnd();
             Debug.WriteLine(res);
         }
-
     }
 }
