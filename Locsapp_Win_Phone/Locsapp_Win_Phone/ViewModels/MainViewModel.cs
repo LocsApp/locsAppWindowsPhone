@@ -66,25 +66,30 @@ namespace Locsapp_Win_Phone.ViewModels
         void Response_Completed(IAsyncResult result)
         {
             var _Cookie = new CookieContainer();
-            // response = null;
-            //try
-            ///       {
-            ///HttpWebResponse  response = (result.AsyncState as HttpWebRequest).EndGetResponse(result) as HttpWebResponse;
-            ///}
-            //catch (Exception e)
-            // {
-            //   Debug.WriteLine(e.Message);
-            //}
 
-            //StreamReader streamReader = new StreamReader(response.GetResponseStream());
-            //string res = streamReader.ReadToEnd();
-            //allDone.Set();
-            //Debug.WriteLine(res);
+            ///TODO CRFS Token
+            /// 
+
+            ///
+            ///X-CSRFToken : <le token CSRF>
+            ///Authorization : Token <le token renvoyé par le endpoint login>
+            /// Envoyez donc bien "is_active"  : "True"
+
+
+            HttpWebResponse response = null;
             HttpWebRequest request = (HttpWebRequest)result.AsyncState;
             request.CookieContainer = _Cookie;
             request.Accept = "*/*";
             request.Credentials = CredentialCache.DefaultCredentials;
-            HttpWebResponse response = (HttpWebResponse)request.EndGetResponse(result);
+            try
+            {
+                response = (HttpWebResponse)request.EndGetResponse(result);
+            }
+            catch (WebException e)
+            {
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(e.Response);
+            }
             Debug.WriteLine(response.Headers);
             Stream streamResponse = response.GetResponseStream();
             StreamReader streamRead = new StreamReader(streamResponse);
