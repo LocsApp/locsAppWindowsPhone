@@ -22,36 +22,36 @@ using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
 
-// Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace Locsapp_Win_Phone
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Sign_UpPage : Page
     {
         ///
-        public MainPage()
+        public Sign_UpPage()
         {
             this.InitializeComponent();
         }
 
-        private void Sign_Up_Click(object sender, RoutedEventArgs e)
+        private void Button_Sub(object sender, RoutedEventArgs e)
         {
-            LoginDetails data = new LoginDetails();
-            data.username = Login.Text;
-            data.password = Password.Password;
+            SignUpDetails data = new SignUpDetails();
+            data.email = email.Text;
+            data.first_name = first_name.Text;
+            data.username  = username.Text;
+            data.password1 = password1.Password;
+            data.password2 = password2.Password;
+            data.birthday = "12/07/1994";
+            data.phone = phone.Text;
+            data.living_adress = l_adress.Text;
+            data.biling_adress = b_adress.Text;
+            data.logo_url = "kek/";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
-            var API = new MainViewModel();
-            API.API_req("http://127.0.0.1:8000/api/v1/rest-auth/login/", "POST", json);
-        }
-
-        private void Subscribe_Click(object sender, RoutedEventArgs e)
-        {
-            var toto = new Sign_UpPage();
-        
+            //var API = new MainViewModel();
+            //API.API_req("http://127.0.0.1:8000/api/v1/rest-auth/login/", "POST", json);
         }
     }
 }
