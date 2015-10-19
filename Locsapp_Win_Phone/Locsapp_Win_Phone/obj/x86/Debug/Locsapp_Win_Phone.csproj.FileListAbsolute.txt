@@ -1350,3 +1350,5 @@ C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\o
 C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\Locsapp_Win_Phone.pdb
 C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\Locsapp_Win_Phone.xr.xml
 C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\resources.pri
+C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\locsapp_logo.png
+C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Core\Assets\locsapp_logo.png

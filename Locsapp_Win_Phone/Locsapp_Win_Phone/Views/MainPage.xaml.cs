@@ -22,6 +22,7 @@ using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
 
+
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Locsapp_Win_Phone
@@ -51,7 +52,6 @@ namespace Locsapp_Win_Phone
         private void Subscribe_Click(object sender, RoutedEventArgs e)
         {
             var toto = new Sign_UpPage();
-        
         }
     }
 }

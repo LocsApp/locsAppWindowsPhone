@@ -19,6 +19,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Image Source="ms-appx:///Assets/locsapp_logo.png" Grid.Row="0" Grid.ColumnSpan="2"></Image>
             <TextBox x:Name="Login" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Login" />
             <PasswordBox x:Name="Password" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Password"/>
             <Button x:Name="Valide_Login" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Login" Width="100" Click="Sign_Up_Click"/>

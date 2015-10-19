@@ -24,6 +24,9 @@
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\locsapp_logo.png">
+      <PackagePath>Assets\locsapp_logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

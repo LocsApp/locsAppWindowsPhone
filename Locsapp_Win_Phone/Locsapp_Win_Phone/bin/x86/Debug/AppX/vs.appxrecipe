@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>057D941AA6AC6A5A110B1B8BD41430E543CD0132B1687F045E19302027263069</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F4315F063733980DB2A4DDA6493F9DAB7A4721BAC9E836FAF98D4A0742ACF38B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7_1.0.0.0_x86__gmsv23bg2eghr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7_gmsv23bg2eghr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>6d6a20e9-5fb6-4014-b925-a3e38d63c5f7</RegisteredPackageID>
@@ -22,511 +22,515 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-18T12:31:03.338</Modified>
+      <Modified>2015-10-19T04:36:47.263</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
-      <Modified>2015-10-17T02:22:43.174</Modified>
+      <Modified>2015-10-17T02:22:38.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-10-17T02:22:43.176</Modified>
+      <Modified>2015-10-17T02:22:38.366</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\locsapp_logo.png">
+      <PackagePath>Assets\locsapp_logo.png</PackagePath>
+      <Modified>2015-10-19T04:31:38.660</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.177</Modified>
+      <Modified>2015-10-17T02:22:38.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.178</Modified>
+      <Modified>2015-10-17T02:22:38.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.179</Modified>
+      <Modified>2015-10-17T02:22:38.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.180</Modified>
+      <Modified>2015-10-17T02:22:38.371</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.181</Modified>
+      <Modified>2015-10-17T02:22:38.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-17T02:22:43.182</Modified>
+      <Modified>2015-10-17T02:22:38.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.198</Modified>
+      <Modified>2015-10-07T06:26:11.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\entrypoint\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-18T12:31:02.277</Modified>
+      <Modified>2015-10-19T04:36:46.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-18T12:31:03.335</Modified>
+      <Modified>2015-10-19T04:36:47.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
-      <Modified>2015-10-17T02:22:45.161</Modified>
+      <Modified>2015-10-19T04:34:20.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.271</Modified>
+      <Modified>2015-10-15T09:13:44.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.234</Modified>
+      <Modified>2015-10-07T06:26:03.087</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
       <PackagePath>Microsoft.ApplicationInsights.PersistenceChannel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.253</Modified>
+      <Modified>2015-10-07T06:26:02.979</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.291</Modified>
+      <Modified>2015-10-07T06:26:06.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.308</Modified>
+      <Modified>2015-10-07T06:26:06.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.322</Modified>
+      <Modified>2015-10-07T06:26:04.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.345</Modified>
+      <Modified>2015-10-16T04:56:43.632</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-10-17T02:22:43.346</Modified>
+      <Modified>2015-10-17T02:22:38.394</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-10-18T12:31:02.845</Modified>
+      <Modified>2015-10-19T04:36:46.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.359</Modified>
+      <Modified>2015-10-07T06:26:05.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.375</Modified>
+      <Modified>2015-10-07T06:26:06.052</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.439</Modified>
+      <Modified>2015-10-07T06:26:06.399</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.391</Modified>
+      <Modified>2015-10-07T06:26:06.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.408</Modified>
+      <Modified>2015-10-07T06:26:08.492</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Collections.Specialized.dll">
       <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.421</Modified>
+      <Modified>2015-10-07T06:26:08.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
       <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.456</Modified>
+      <Modified>2015-10-07T06:26:06.163</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.467</Modified>
+      <Modified>2015-10-07T06:26:06.566</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.502</Modified>
+      <Modified>2015-10-07T06:26:06.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.485</Modified>
+      <Modified>2015-10-07T06:26:04.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Core.dll">
       <PackagePath>System.Core.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.516</Modified>
+      <Modified>2015-10-07T06:26:06.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Data.Common.dll">
       <PackagePath>System.Data.Common.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.531</Modified>
+      <Modified>2015-10-07T06:26:05.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.544</Modified>
+      <Modified>2015-10-07T06:26:04.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.565</Modified>
+      <Modified>2015-10-07T06:26:06.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.584</Modified>
+      <Modified>2015-10-07T06:26:04.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.598</Modified>
+      <Modified>2015-10-07T06:26:06.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.608</Modified>
+      <Modified>2015-10-07T06:26:06.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.dll">
       <PackagePath>System.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.810</Modified>
+      <Modified>2015-10-07T06:26:06.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
       <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.626</Modified>
+      <Modified>2015-10-07T06:26:07.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.636</Modified>
+      <Modified>2015-10-07T06:26:07.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.661</Modified>
+      <Modified>2015-10-07T06:26:07.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.651</Modified>
+      <Modified>2015-10-07T06:26:06.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.688</Modified>
+      <Modified>2015-10-07T06:26:07.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.674</Modified>
+      <Modified>2015-10-07T06:26:07.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.757</Modified>
+      <Modified>2015-10-07T06:26:06.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.716</Modified>
+      <Modified>2015-10-07T06:26:07.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.702</Modified>
+      <Modified>2015-10-07T06:26:07.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
       <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.729</Modified>
+      <Modified>2015-10-07T06:26:04.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.744</Modified>
+      <Modified>2015-10-07T06:26:07.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.811</Modified>
+      <Modified>2015-10-07T06:26:07.273</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.773</Modified>
+      <Modified>2015-10-07T06:26:09.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.788</Modified>
+      <Modified>2015-10-07T06:26:07.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Linq.Queryable.dll">
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.799</Modified>
+      <Modified>2015-10-07T06:26:09.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.dll">
       <PackagePath>System.Net.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.949</Modified>
+      <Modified>2015-10-07T06:26:06.612</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.878</Modified>
+      <Modified>2015-10-07T06:26:09.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.824</Modified>
+      <Modified>2015-10-15T09:09:30.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Formatting.dll">
       <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.840</Modified>
+      <Modified>2015-10-16T04:56:43.490</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.851</Modified>
+      <Modified>2015-10-15T09:09:30.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.864</Modified>
+      <Modified>2015-10-07T06:26:04.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
       <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.889</Modified>
+      <Modified>2015-10-07T06:26:09.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.902</Modified>
+      <Modified>2015-10-07T06:26:08.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Requests.dll">
       <PackagePath>System.Net.Requests.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.914</Modified>
+      <Modified>2015-10-07T06:26:05.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.927</Modified>
+      <Modified>2015-10-07T06:26:04.803</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
       <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.939</Modified>
+      <Modified>2015-10-07T06:26:04.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Numerics.dll">
       <PackagePath>System.Numerics.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.983</Modified>
+      <Modified>2015-10-07T06:26:06.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.974</Modified>
+      <Modified>2015-10-07T06:26:08.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.961</Modified>
+      <Modified>2015-10-07T06:26:04.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:43.995</Modified>
+      <Modified>2015-10-07T06:26:08.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.018</Modified>
+      <Modified>2015-10-07T06:26:04.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Private.Networking.dll">
       <PackagePath>System.Private.Networking.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.039</Modified>
+      <Modified>2015-10-07T06:26:08.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.104</Modified>
+      <Modified>2015-10-07T06:26:05.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.117</Modified>
+      <Modified>2015-10-07T06:26:03.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.128</Modified>
+      <Modified>2015-10-07T06:26:04.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
       <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.141</Modified>
+      <Modified>2015-10-07T06:26:08.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.240</Modified>
+      <Modified>2015-10-07T06:26:08.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Emit.dll">
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.171</Modified>
+      <Modified>2015-10-07T06:26:11.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.153</Modified>
+      <Modified>2015-10-07T06:26:11.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.162</Modified>
+      <Modified>2015-10-07T06:26:11.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.182</Modified>
+      <Modified>2015-10-07T06:26:08.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.203</Modified>
+      <Modified>2015-10-07T06:26:09.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.213</Modified>
+      <Modified>2015-10-07T06:26:08.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.227</Modified>
+      <Modified>2015-10-07T06:26:08.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.248</Modified>
+      <Modified>2015-10-07T06:26:08.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.412</Modified>
+      <Modified>2015-10-07T06:26:10.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.263</Modified>
+      <Modified>2015-10-07T06:26:09.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.276</Modified>
+      <Modified>2015-10-07T06:26:08.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.305</Modified>
+      <Modified>2015-10-07T06:26:09.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.291</Modified>
+      <Modified>2015-10-07T06:26:05.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.317</Modified>
+      <Modified>2015-10-07T06:26:09.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
       <PackagePath>System.Runtime.Serialization.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.364</Modified>
+      <Modified>2015-10-07T06:26:06.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.328</Modified>
+      <Modified>2015-10-07T06:26:05.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.342</Modified>
+      <Modified>2015-10-07T06:26:05.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.353</Modified>
+      <Modified>2015-10-07T06:26:05.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.396</Modified>
+      <Modified>2015-10-07T06:26:05.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.379</Modified>
+      <Modified>2015-10-07T06:26:05.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.430</Modified>
+      <Modified>2015-10-07T06:26:09.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.442</Modified>
+      <Modified>2015-10-07T06:26:09.159</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.dll">
       <PackagePath>System.ServiceModel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.546</Modified>
+      <Modified>2015-10-07T06:26:06.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.458</Modified>
+      <Modified>2015-10-07T06:26:05.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.473</Modified>
+      <Modified>2015-10-07T06:26:05.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.491</Modified>
+      <Modified>2015-10-07T06:26:05.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.508</Modified>
+      <Modified>2015-10-07T06:26:07.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.524</Modified>
+      <Modified>2015-10-07T06:26:05.667</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
       <PackagePath>System.ServiceModel.Web.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.535</Modified>
+      <Modified>2015-10-07T06:26:06.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.568</Modified>
+      <Modified>2015-10-07T06:26:06.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.587</Modified>
+      <Modified>2015-10-07T06:26:09.525</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.578</Modified>
+      <Modified>2015-10-07T06:26:09.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.601</Modified>
+      <Modified>2015-10-07T06:26:09.425</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.682</Modified>
+      <Modified>2015-10-07T06:26:09.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.613</Modified>
+      <Modified>2015-10-07T06:26:03.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.628</Modified>
+      <Modified>2015-10-07T06:26:10.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.656</Modified>
+      <Modified>2015-10-07T06:26:09.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.640</Modified>
+      <Modified>2015-10-07T06:26:10.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.668</Modified>
+      <Modified>2015-10-07T06:26:09.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Windows.dll">
       <PackagePath>System.Windows.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.690</Modified>
+      <Modified>2015-10-07T06:26:06.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.dll">
       <PackagePath>System.Xml.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.801</Modified>
+      <Modified>2015-10-07T06:26:06.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.Linq.dll">
       <PackagePath>System.Xml.Linq.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.699</Modified>
+      <Modified>2015-10-07T06:26:06.818</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.718</Modified>
+      <Modified>2015-10-07T06:26:09.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.Serialization.dll">
       <PackagePath>System.Xml.Serialization.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.732</Modified>
+      <Modified>2015-10-07T06:26:06.834</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.749</Modified>
+      <Modified>2015-10-07T06:26:09.619</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.768</Modified>
+      <Modified>2015-10-07T06:26:04.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
-      <Modified>2015-10-17T02:22:44.792</Modified>
+      <Modified>2015-10-07T06:26:06.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2015-10-17T02:22:44.863</Modified>
+      <Modified>2015-10-07T06:09:23.755</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
