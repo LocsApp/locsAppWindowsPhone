@@ -95,6 +95,8 @@ namespace Locsapp_Win_Phone.ViewModels
             StreamReader streamRead = new StreamReader(streamResponse);
             string responseString = streamRead.ReadToEnd();
             Debug.WriteLine(responseString);
+            
+            
             // Close the stream object
             streamResponse.Dispose();
             streamRead.Dispose();

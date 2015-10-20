@@ -51,7 +51,7 @@ namespace Locsapp_Win_Phone
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
         {
-            var toto = new Sign_UpPage();
+            var sub_open = new Sign_UpPage();
         }
     }
 }

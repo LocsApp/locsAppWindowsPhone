@@ -14,10 +14,10 @@ namespace Locsapp_Win_Phone.Models
         public string username { get; set; }
         public string password1 { get; set; }
         public string password2 { get; set; }
-        public string birthday { get; set; }
+        public string birthdate { get; set; }
         public string phone { get; set; }
-        public string living_adress { get; set; }
-        public string biling_adress { get; set; }
+        public string living_address { get; set; }
+        public string billing_address { get; set; }
         public string logo_url { get; set; }
         public string is_active { get; set; }
     }

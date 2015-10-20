@@ -43,11 +43,12 @@ namespace Locsapp_Win_Phone
             data.username  = username.Text;
             data.password1 = password1.Password;
             data.password2 = password2.Password;
-            data.birthday = "12/07/1994";
+            data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             data.phone = phone.Text;
-            data.living_adress = l_adress.Text;
-            data.biling_adress = b_adress.Text;
-            data.logo_url = "kek/";
+            data.living_address = l_adress.Text;
+            data.billing_address = b_adress.Text;
+            data.logo_url = "/default/";
+            data.is_active = "True";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             //var API = new MainViewModel();
