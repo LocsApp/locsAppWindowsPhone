@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-19T08:46:51.706</Modified>
+      <Modified>2015-10-22T07:36:54.974</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,15 +74,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\entrypoint\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-19T08:46:50.275</Modified>
+      <Modified>2015-10-22T07:36:53.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2015-10-19T08:46:51.697</Modified>
+      <Modified>2015-10-22T07:36:54.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
-      <Modified>2015-10-19T04:34:20.299</Modified>
+      <Modified>2015-10-20T14:52:07.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-10-19T04:41:17.510</Modified>
+      <Modified>2015-10-22T07:36:54.507</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

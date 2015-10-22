@@ -10,6 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel x:ConnectionId='1' x:Name="Sign_up_Scroll">
+                <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                 <TextBox x:ConnectionId='2' x:Name="email" PlaceholderText="E-Mail"></TextBox>
                 <TextBox x:ConnectionId='3' x:Name="username" PlaceholderText="UserName"></TextBox>
                 <TextBox x:ConnectionId='4' x:Name="first_name" PlaceholderText="First Name"></TextBox>
