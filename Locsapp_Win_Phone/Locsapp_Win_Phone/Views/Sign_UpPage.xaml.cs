@@ -48,7 +48,7 @@ namespace Locsapp_Win_Phone
             data.living_address = l_adress.Text;
             data.billing_address = b_adress.Text;
             data.logo_url = "/default/";
-            data.is_active = "True";
+            data.is_active = "False";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
