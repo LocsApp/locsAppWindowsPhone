@@ -40,6 +40,7 @@ namespace Locsapp_Win_Phone
             SignUpDetails data = new SignUpDetails();
             data.email = email.Text;
             data.first_name = first_name.Text;
+            data.last_name = last_name.Text;
             data.username  = username.Text;
             data.password1 = password1.Password;
             data.password2 = password2.Password;
@@ -48,11 +49,10 @@ namespace Locsapp_Win_Phone
             data.living_address = l_adress.Text;
             data.billing_address = b_adress.Text;
             data.logo_url = "/default/";
-            data.is_active = "False";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req("http://127.0.0.1:8000/api/v1/rest-auth/login/", "POST", json);
+            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/registration/", "POST", json);
         }
     }
 }
