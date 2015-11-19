@@ -25,7 +25,11 @@ namespace Locsapp_Win_Phone.Models
     class LoginDetails
     {
         public string username { get; set; }
-        public string email { get; set; }
         public string password { get; set; }
+    }
+
+    class KeyRegister
+    {
+        public string key { get; set; }
     }
 }

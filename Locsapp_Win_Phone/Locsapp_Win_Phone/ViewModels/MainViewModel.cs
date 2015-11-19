@@ -21,6 +21,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone.ViewModels
 {
@@ -94,9 +96,18 @@ namespace Locsapp_Win_Phone.ViewModels
             Stream streamResponse = response.GetResponseStream();
             StreamReader streamRead = new StreamReader(streamResponse);
             string responseString = streamRead.ReadToEnd();
-            Debug.WriteLine(responseString);
-            
-            
+            Debug.WriteLine("La réponse est " + responseString);
+
+            KeyRegister json = JsonConvert.DeserializeObject<KeyRegister>(responseString);
+            Debug.WriteLine("La clé unserialize est " + json.key);
+
+            if (json.key == "")
+                Debug.WriteLine("Account Error");
+
+            //Save de la Key
+            //App.Current.Resources.Add("Key", json.key);
+
+
             // Close the stream object
             streamResponse.Dispose();
             streamRead.Dispose();

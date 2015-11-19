@@ -46,7 +46,7 @@ namespace Locsapp_Win_Phone
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req("http://127.0.0.1:8000/api/v1/rest-auth/login/", "POST", json);
+            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/login/", "POST", json);
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
