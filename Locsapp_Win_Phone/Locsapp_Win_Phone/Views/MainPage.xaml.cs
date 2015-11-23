@@ -27,9 +27,7 @@ using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone
 {
-    /// <summary>
-    /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
-    /// </summary>
+
     public sealed partial class MainPage : Page
     {
         ///
@@ -47,6 +45,11 @@ namespace Locsapp_Win_Phone
             Debug.WriteLine(json);
             var API = new MainViewModel();
             API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/login/", "POST", json);
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Error_view));
+            if (API.SetResponse.error == false)
+                Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
+
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)

@@ -36,6 +36,8 @@ namespace Locsapp_Win_Phone.ViewModels
             set { _Data_JSON = value; }
         }
 
+        public API_Response SetResponse = new API_Response(false, "");
+
         private static ManualResetEvent allDone = new ManualResetEvent(false);
 
         public void API_req(String API_URL, String Method, String JSON_data = "")
@@ -69,15 +71,6 @@ namespace Locsapp_Win_Phone.ViewModels
         {
             var _Cookie = new CookieContainer();
 
-            ///TODO CRFS Token
-            /// 
-
-            ///
-            ///X-CSRFToken : <le token CSRF>
-            ///Authorization : Token <le token renvoyé par le endpoint login>
-            /// Envoyez donc bien "is_active"  : "True"
-
-
             HttpWebResponse response = null;
             HttpWebRequest request = (HttpWebRequest)result.AsyncState;
             request.CookieContainer = _Cookie;
@@ -89,31 +82,28 @@ namespace Locsapp_Win_Phone.ViewModels
             }
             catch (WebException e)
             {
-                Debug.WriteLine(e.Message);
-                Debug.WriteLine(e.Response);
+                SetResponse.error = true;
+                SetResponse.ErrorMessage = e.Message;
             }
-            Debug.WriteLine(response.Headers);
-            Stream streamResponse = response.GetResponseStream();
-            StreamReader streamRead = new StreamReader(streamResponse);
-            string responseString = streamRead.ReadToEnd();
-            Debug.WriteLine("La réponse est " + responseString);
+            if (SetResponse.error == false)
+            {
+                Stream streamResponse = response.GetResponseStream();
+                StreamReader streamRead = new StreamReader(streamResponse);
+                string responseString = streamRead.ReadToEnd();
+                Debug.WriteLine(response.Headers);
 
-            KeyRegister json = JsonConvert.DeserializeObject<KeyRegister>(responseString);
-            Debug.WriteLine("La clé unserialize est " + json.key);
+                SetResponse.APIResponseString = responseString;
 
-            if (json.key == "")
-                Debug.WriteLine("Account Error");
-
-            //Save de la Key
-            //App.Current.Resources.Add("Key", json.key);
-
-
-            // Close the stream object
-            streamResponse.Dispose();
-            streamRead.Dispose();
-
-            // Release the HttpWebResponse
-            response.Dispose();
+                // Close the stream object
+                streamResponse.Dispose();
+                streamRead.Dispose();
+                // Release the HttpWebResponse
+                response.Dispose();
+            }
+            else
+            {
+                Debug.WriteLine("Error");
+            }
             allDone.Set();
         }
     }
