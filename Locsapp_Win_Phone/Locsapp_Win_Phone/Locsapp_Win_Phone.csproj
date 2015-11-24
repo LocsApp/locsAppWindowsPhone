@@ -109,6 +109,9 @@
     <Compile Include="Models\LoginDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Sign_UpPage.xaml.cs">
       <DependentUpon>Sign_UpPage.xaml</DependentUpon>
     </Compile>

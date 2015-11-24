@@ -46,15 +46,17 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/login/", "POST", json);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view));
+                Frame.Navigate(typeof(Error_view), API.SetResponse.ErrorMessage);
             if (API.SetResponse.error == false)
+            {
                 Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
-
+                Debug.WriteLine("Login Sucess");
+            } 
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
         {
-           Frame.Navigate(typeof(Sign_UpPage));
+           Frame.Navigate(typeof(Profile));
         }
     }
 }

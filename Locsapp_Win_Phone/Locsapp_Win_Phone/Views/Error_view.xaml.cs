@@ -26,10 +26,25 @@ namespace Locsapp_Win_Phone
 {
     public sealed partial class Error_view : Page
     {
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            string text = e.Parameter as string;
+            ErrorText.Text = text;
+        }
+
         public Error_view()
         {
             this.InitializeComponent();
-            Debug.WriteLine("La page est changée");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFram = Window.Current.Content as Frame;
+            if (rootFram != null && rootFram.CanGoBack)
+            {
+                rootFram.GoBack();
+            }
         }
     }
 }

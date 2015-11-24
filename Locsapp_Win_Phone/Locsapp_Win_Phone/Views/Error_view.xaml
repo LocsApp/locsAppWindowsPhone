@@ -17,6 +17,7 @@
             <TextBlock Grid.Row="0" HorizontalAlignment="Center" FontSize="96" Margin="0,25,0,0">Error</TextBlock>
             <Border Grid.Row="1" Height="5" Background="Black" VerticalAlignment="Top" BorderBrush="Blue"></Border>
             <TextBlock x:Name="ErrorText" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center">Error Text</TextBlock>
+            <Button Grid.Row="2" HorizontalAlignment="Center" Click="Button_Click">Return</Button>
         </Grid>
     </Grid>
 </Page>

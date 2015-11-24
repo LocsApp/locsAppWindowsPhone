@@ -40,14 +40,21 @@ namespace Locsapp_Win_Phone.ViewModels
 
         private static ManualResetEvent allDone = new ManualResetEvent(false);
 
-        public void API_req(String API_URL, String Method, String JSON_data = "")
+        public void API_req(String API_URL, String Method, String JSON_data = "", String Key = "")
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
             if (Method == "GET")
+            {
+                if (Key != "")
+                    request.Headers["Authorization"] = "Token " + Key;
                 request.BeginGetResponse(Response_Completed, request);
+                allDone.WaitOne();
+            }
             if (Method == "POST")
             {
+                if (Key != "")
+                    request.Headers["Authorization"] = "Token " + Key;
                 request.ContentType = "application/json";
                 Data_JSON = JSON_data;
                 request.BeginGetRequestStream(new AsyncCallback(Do_Request), request);

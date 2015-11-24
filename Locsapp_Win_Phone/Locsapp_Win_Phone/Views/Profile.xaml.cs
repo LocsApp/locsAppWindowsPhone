@@ -24,37 +24,22 @@ using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone
 {
-    public sealed partial class Sign_UpPage : Page
+    public sealed partial class Profile : Page
     {
-        ///
-        public Sign_UpPage()
+        public Profile()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Sub(object sender, RoutedEventArgs e)
-        {
-            SignUpDetails data = new SignUpDetails();
-            data.email = email.Text;
-            data.first_name = first_name.Text;
-            data.last_name = last_name.Text;
-            data.username  = username.Text;
-            data.password1 = password1.Password;
-            data.password2 = password2.Password;
-            data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
-            data.phone = phone.Text;
-            data.living_address = l_adress.Text;
-            data.billing_address = b_adress.Text;
-            data.logo_url = "/default/";
-            data.is_active = "True";
-            string json = JsonConvert.SerializeObject(data);
-            Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/registration/", "POST", json);
+            string key = "97c0c8fdb37266ffc3f2fbfc9f4a5a3b24554151";    
+            Debug.WriteLine("La clé de aute est : " + key);
+            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/user/", "GET", "", key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API.SetResponse.ErrorMessage);
             if (API.SetResponse.error == false)
+            {
+                Debug.WriteLine("Connection Success");
                 Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
+            } 
         }
     }
 }
