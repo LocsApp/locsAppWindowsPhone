@@ -1,16 +1,38 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Locsapp_Win_Phone.Models;
+using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net;
+using System.Diagnostics;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using System.Threading;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone.Models
 {
     class SignUpDetails
     {
+        [JsonProperty("email")]
         public string email { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
+        [JsonProperty("username")]
         public string username { get; set; }
         public string password1 { get; set; }
         public string password2 { get; set; }
@@ -30,6 +52,7 @@ namespace Locsapp_Win_Phone.Models
 
     class KeyRegister
     {
+        [JsonProperty("email")]
         public string key { get; set; }
     }
 }

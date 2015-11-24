@@ -16,9 +16,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
-            <TextBlock Grid.Row="1" x:Name="Hello" HorizontalAlignment="Center" FontSize="32">Bonjour</TextBlock>
-            <TextBlock Grid.Row="2" Margin="10" x:Name="username">username :</TextBlock>
-            <TextBlock Grid.Row="3" Margin="10" x:Name="email">email :</TextBlock>
+            <TextBlock Grid.Row="1" x:Name="Hello" HorizontalAlignment="Center" FontSize="32">Welcome </TextBlock>
+            <TextBlock Grid.Row="2" Margin="10" x:Name="username">username : </TextBlock>
+            <TextBlock Grid.Row="3" Margin="10" x:Name="email">email : </TextBlock>
         </Grid>
     </Grid>
 </Page>

@@ -26,20 +26,37 @@ namespace Locsapp_Win_Phone
 {
     public sealed partial class Profile : Page
     {
+        private string _Key;
+
+        public string Key
+        {
+            get { return _Key; }
+            set { _Key = value; }
+        }
+
+
         public Profile()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            string text = e.Parameter as string;
+            Key = text;
             var API = new MainViewModel();
-            string key = "97c0c8fdb37266ffc3f2fbfc9f4a5a3b24554151";    
-            Debug.WriteLine("La clé de aute est : " + key);
-            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/user/", "GET", "", key);
+            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/user/", "GET", "", Key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API.SetResponse.ErrorMessage);
             if (API.SetResponse.error == false)
             {
-                Debug.WriteLine("Connection Success");
-                Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
-            } 
+                //Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
+                var results = JsonConvert.DeserializeObject<SignUpDetails>(API.SetResponse.APIResponseString);
+                Hello.Text = Hello.Text + results.username;
+                username.Text = username.Text + results.username;
+                email.Text = email.Text + results.email;
+            }
         }
+
     }
 }

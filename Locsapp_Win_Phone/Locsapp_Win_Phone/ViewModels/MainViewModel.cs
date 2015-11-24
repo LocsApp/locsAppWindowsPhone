@@ -44,6 +44,7 @@ namespace Locsapp_Win_Phone.ViewModels
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
+            allDone = new ManualResetEvent(false);
             if (Method == "GET")
             {
                 if (Key != "")

@@ -49,14 +49,16 @@ namespace Locsapp_Win_Phone
                 Frame.Navigate(typeof(Error_view), API.SetResponse.ErrorMessage);
             if (API.SetResponse.error == false)
             {
-                Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
                 Debug.WriteLine("Login Sucess");
+                var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
+                Debug.WriteLine("La clé est + " + API.SetResponse.APIResponseString);
+                Frame.Navigate(typeof(Profile), "97c0c8fdb37266ffc3f2fbfc9f4a5a3b24554151");
             } 
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
         {
-           Frame.Navigate(typeof(Profile));
+           Frame.Navigate(typeof(Sign_UpPage));
         }
     }
 }
