@@ -17,8 +17,11 @@
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
             <TextBlock x:ConnectionId='1' Grid.Row="1" x:Name="Hello" HorizontalAlignment="Center" FontSize="32">Welcome </TextBlock>
-            <TextBlock x:ConnectionId='2' Grid.Row="2" Margin="10" x:Name="username">username : </TextBlock>
-            <TextBlock x:ConnectionId='3' Grid.Row="3" Margin="10" x:Name="email">email : </TextBlock>
+            <TextBlock x:ConnectionId='2' Grid.Row="2" Margin="10" x:Name="username">username :</TextBlock>
+            <TextBlock x:ConnectionId='3' Grid.Row="2" VerticalAlignment="Bottom" Margin="10" x:Name="first_name">first_name :</TextBlock>
+            <TextBox x:ConnectionId='4' Grid.Row="2" Margin="10" Width="100" Height="25" x:Name="PutTest" ></TextBox>
+            <TextBlock x:ConnectionId='5' Grid.Row="3" Margin="10" x:Name="email">email : </TextBlock>
+            <Button x:ConnectionId='6' Grid.Row="3" Margin="10"                     >Test Put</Button>
         </Grid>
     </Grid>
 </Page>

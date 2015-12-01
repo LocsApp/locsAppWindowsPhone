@@ -50,13 +50,32 @@ namespace Locsapp_Win_Phone
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
             {
-                //Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
+                Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<SignUpDetails>(API.SetResponse.APIResponseString);
                 Hello.Text = Hello.Text + " " + results.username;
                 username.Text = username.Text + " " + results.username;
                 email.Text = email.Text + " " + results.email;
+                first_name.Text = first_name.Text + " " + results.first_name;
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SignUpDetails data = new SignUpDetails();
+            data.first_name = first_name.Text;
+            string json = JsonConvert.SerializeObject(data);
+            Debug.WriteLine(json);
+            var API = new MainViewModel();
+            API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "PUT", json, Key);
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Error_view), API);
+            if (API.SetResponse.error == false)
+            {
+                Debug.WriteLine("OKAY : UpSuccess" + API.SetResponse.APIResponseString);
+                /*Debug.WriteLine("Login Sucess");
+                var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
+                Frame.Navigate(typeof(Profile), results.key);*/
+            }
+        }
     }
 }
