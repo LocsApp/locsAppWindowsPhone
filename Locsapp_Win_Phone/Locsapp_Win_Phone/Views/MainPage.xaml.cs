@@ -44,15 +44,14 @@ namespace Locsapp_Win_Phone
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req("http://192.168.198.130:8000/api/v1/rest-auth/login/", "POST", json);
+            API.API_req( API.URL_API + "/api/v1/rest-auth/login/", "POST", json);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API.SetResponse.ErrorMessage);
+                Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("Login Sucess");
                 var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                Debug.WriteLine("La clé est + " + API.SetResponse.APIResponseString);
-                Frame.Navigate(typeof(Profile), "97c0c8fdb37266ffc3f2fbfc9f4a5a3b24554151");
+                Frame.Navigate(typeof(Profile), results.key);
             } 
         }
 

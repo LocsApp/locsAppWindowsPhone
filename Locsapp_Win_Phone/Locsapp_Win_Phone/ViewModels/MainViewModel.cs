@@ -28,12 +28,19 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
     {
+        private static string _URL_API = "http://192.168.198.130:8000";
+
         private string _Data_JSON;
 
         public string Data_JSON
         {
             get { return _Data_JSON; }
             set { _Data_JSON = value; }
+        }
+
+        public string URL_API
+        {
+            get { return _URL_API; }
         }
 
         public API_Response SetResponse = new API_Response(false, "");
@@ -50,6 +57,15 @@ namespace Locsapp_Win_Phone.ViewModels
                 if (Key != "")
                     request.Headers["Authorization"] = "Token " + Key;
                 request.BeginGetResponse(Response_Completed, request);
+                allDone.WaitOne();
+            }
+            if (Method == "PUT")
+            {
+                if (Key != "")
+                    request.Headers["Authorization"] = "Token " + Key;
+                request.ContentType = "application/json";
+                Data_JSON = JSON_data;
+                request.BeginGetRequestStream(new AsyncCallback(Do_Request), request);
                 allDone.WaitOne();
             }
             if (Method == "POST")
@@ -90,8 +106,25 @@ namespace Locsapp_Win_Phone.ViewModels
             }
             catch (WebException e)
             {
+                response = (HttpWebResponse)e.Response;
                 SetResponse.error = true;
                 SetResponse.ErrorMessage = e.Message;
+
+                Stream streamResponse = response.GetResponseStream();
+                StreamReader streamRead = new StreamReader(streamResponse);
+
+                string responseString = streamRead.ReadToEnd();
+                Debug.WriteLine(response.Headers);
+
+                SetResponse.APIResponseString = responseString;
+
+                SetResponse.JsonError = responseString;
+
+                // Close the stream object
+                streamResponse.Dispose();
+                streamRead.Dispose();
+                // Release the HttpWebResponse
+                response.Dispose();
             }
             if (SetResponse.error == false)
             {

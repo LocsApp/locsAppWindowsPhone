@@ -29,8 +29,9 @@ namespace Locsapp_Win_Phone
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string text = e.Parameter as string;
-            ErrorText.Text = text;
+            MainViewModel text = e.Parameter as MainViewModel;
+            ErrorText.Text = text.SetResponse.ErrorMessage;
+            ErrorJson.Text = text.SetResponse.JsonError;
         }
 
         public Error_view()

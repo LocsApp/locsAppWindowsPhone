@@ -52,7 +52,7 @@ namespace Locsapp_Win_Phone.Models
 
     class KeyRegister
     {
-        [JsonProperty("email")]
+        [JsonProperty("key")]
         public string key { get; set; }
     }
 }

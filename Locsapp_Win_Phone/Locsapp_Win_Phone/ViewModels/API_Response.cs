@@ -17,6 +17,7 @@ namespace Locsapp_Win_Phone.ViewModels
         public Boolean _IsError;
         public string _ErrorMessage;
         public string _APIResponseString;
+        public string _JsonError;
 
         public Boolean error
         {
@@ -43,6 +44,12 @@ namespace Locsapp_Win_Phone.ViewModels
                 ErrorMessage = message;
             else
                 APIResponseString = message;
+        }
+
+        public string JsonError
+        {
+            get { return _JsonError; }
+            set { _JsonError = value; }
         }
     }
 }
