@@ -13,16 +13,9 @@
                 <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                 <TextBox x:ConnectionId='2' x:Name="email" PlaceholderText="E-Mail"></TextBox>
                 <TextBox x:ConnectionId='3' x:Name="username" PlaceholderText="UserName"></TextBox>
-                <TextBox x:ConnectionId='4' x:Name="first_name" PlaceholderText="First Name"></TextBox>
-                <TextBox x:ConnectionId='5' x:Name="last_name" PlaceholderText="Last Name"></TextBox>
-                <PasswordBox x:ConnectionId='6' x:Name="password1" PlaceholderText="Password"></PasswordBox>
-                <PasswordBox x:ConnectionId='7' x:Name="password2" PlaceholderText="Confirm Password"></PasswordBox>
-                <TextBlock HorizontalAlignment="Center">Birthday :</TextBlock>
-                <DatePicker x:ConnectionId='8' x:Name="birthday" HorizontalAlignment="Center" Margin="10"/>
-                <TextBox x:ConnectionId='9' x:Name="phone" PlaceholderText="Phone"></TextBox>
-                <TextBox x:ConnectionId='10' x:Name="l_adress" PlaceholderText="Living Adress"></TextBox>
-                <TextBox x:ConnectionId='11' x:Name="b_adress" PlaceholderText="Biling Adress"></TextBox>
-                <Button x:ConnectionId='12' Margin="10" HorizontalAlignment="Center"                   >Subscribre</Button>
+                <PasswordBox x:ConnectionId='4' x:Name="password1" PlaceholderText="Password"></PasswordBox>
+                <PasswordBox x:ConnectionId='5' x:Name="password2" PlaceholderText="Confirm Password"></PasswordBox>
+                <Button x:ConnectionId='6' Margin="10" HorizontalAlignment="Center"                   >Subscribre</Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>

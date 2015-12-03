@@ -26,7 +26,6 @@ namespace Locsapp_Win_Phone
 {
     public sealed partial class Sign_UpPage : Page
     {
-        ///
         public Sign_UpPage()
         {
             this.InitializeComponent();
@@ -36,17 +35,10 @@ namespace Locsapp_Win_Phone
         {
             SignUpDetails data = new SignUpDetails();
             data.email = email.Text;
-            data.first_name = first_name.Text;
-            data.last_name = last_name.Text;
             data.username  = username.Text;
             data.password1 = password1.Password;
             data.password2 = password2.Password;
-            data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
-            data.phone = phone.Text;
-            data.living_address = l_adress.Text;
-            data.billing_address = b_adress.Text;
-            data.logo_url = "/default/";
-            data.is_active = "True";
+            //data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();

@@ -30,6 +30,16 @@ namespace Locsapp_Win_Phone.Models
     {
         [JsonProperty("email")]
         public string email { get; set; }
+        [JsonProperty("username")]
+        public string username { get; set; }
+        public string password1 { get; set; }
+        public string password2 { get; set; }
+    }
+
+    class UserInfos
+    {
+        [JsonProperty("email")]
+        public string email { get; set; }
         [JsonProperty("first_name")]
         public string first_name { get; set; }
         public string last_name { get; set; }

@@ -51,17 +51,16 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
-                var results = JsonConvert.DeserializeObject<SignUpDetails>(API.SetResponse.APIResponseString);
+                var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
                 Hello.Text = Hello.Text + " " + results.username;
-                username.Text = username.Text + " " + results.username;
-                email.Text = email.Text + " " + results.email;
-                first_name.Text = first_name.Text + " " + results.first_name;
+                username.Text = results.username;
+                email.Text = results.email;
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SignUpDetails data = new SignUpDetails();
+            UserInfos data = new UserInfos();
             data.first_name = first_name.Text;
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);

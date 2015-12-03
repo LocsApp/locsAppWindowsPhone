@@ -27,6 +27,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Height" />
@@ -54,8 +55,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -64,17 +63,13 @@
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.MainPage" />
-    <RootType FullName="Locsapp_Win_Phone.Profile" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-    </RootType>
+    <RootType FullName="Locsapp_Win_Phone.Profile" />
     <RootType FullName="Locsapp_Win_Phone.Sign_UpPage" />
   </Roots.RootTypes>
 </Roots>
