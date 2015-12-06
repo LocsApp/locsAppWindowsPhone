@@ -8,19 +8,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer>
-            <StackPanel x:Name="Sign_up_Scroll">
-                <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
-                <TextBlock x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
-                <TextBox x:Name="email" PlaceholderText="E-Mail"></TextBox>
-                <TextBox x:Name="username" PlaceholderText="UserName"></TextBox>
-                <TextBox x:Name="first_name"  PlaceholderText="FirstName"></TextBox>
-                <TextBox x:Name="last_name"  PlaceholderText="LastName"></TextBox>
-                <TextBox x:Name="phone_number"  PlaceholderText="PhoneNumber"></TextBox>
-                <TextBox x:Name="biling_adrress"  PlaceholderText="BilingAdrress"></TextBox>
-                <TextBox x:Name="living_adrress"  PlaceholderText="LivingAdrress"></TextBox>
-                <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click">Send</Button>
-            </StackPanel>
-        </ScrollViewer>
+        <SplitView x:Name="SplitView" Background="Black" OpenPaneLength="240" CompactPaneLength="48" 
+        DisplayMode="CompactOverlay" IsPaneOpen="False" PaneBackground="DarkSeaGreen">
+            <SplitView.Pane>
+                <TextBlock Text="User Menu"
+                   FontSize="24"/>
+            </SplitView.Pane>
+            <ScrollViewer>
+                <StackPanel x:Name="Sign_up_Scroll">
+                    <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
+                    <TextBlock x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
+                    <TextBox x:Name="email" PlaceholderText="E-Mail"></TextBox>
+                    <TextBox x:Name="username" PlaceholderText="UserName"></TextBox>
+                    <TextBox x:Name="first_name"  PlaceholderText="FirstName"></TextBox>
+                    <TextBox x:Name="last_name"  PlaceholderText="LastName"></TextBox>
+                    <TextBox x:Name="phone_number"  PlaceholderText="PhoneNumber"></TextBox>
+                    <TextBox x:Name="biling_adrress"  PlaceholderText="BilingAdrress"></TextBox>
+                    <TextBox x:Name="living_adrress"  PlaceholderText="LivingAdrress"></TextBox>
+                    <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click">Send</Button>
+                </StackPanel>
+            </ScrollViewer>
+        </SplitView>
     </Grid>
 </Page>
