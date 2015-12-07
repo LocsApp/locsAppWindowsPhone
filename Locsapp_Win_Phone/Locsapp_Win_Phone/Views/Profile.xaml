@@ -8,14 +8,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <SplitView x:Name="SplitView" Background="Black" OpenPaneLength="240" CompactPaneLength="48" 
-        DisplayMode="CompactOverlay" IsPaneOpen="False" PaneBackground="DarkSeaGreen">
+        <SplitView x:Name="SplitView" OpenPaneLength="240" CompactPaneLength="48" 
+        DisplayMode="CompactOverlay" IsPaneOpen="False" >
             <SplitView.Pane>
-                <TextBlock Text="User Menu"
-                   FontSize="24"/>
+                <StackPanel Background="IndianRed">
+                    <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                    Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"
+                    Width="50" Height="50" Background="Transparent"/>
+                        <TextBlock Text="Edit Profil" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
             </SplitView.Pane>
             <ScrollViewer>
                 <StackPanel x:Name="Sign_up_Scroll">
+                    <Button HorizontalAlignment="Right" Margin="10" Click="Button_Click_1">Logout</Button>
                     <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                     <TextBlock x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
                     <TextBox x:Name="email" PlaceholderText="E-Mail"></TextBox>

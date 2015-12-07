@@ -10,6 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
             <StackPanel x:Name="Sign_up_Scroll">
+                <Button Content="&#xE72B;" FontFamily="Segoe MDL2 Assets" Click="Button_Click"></Button>
                 <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                 <TextBox x:Name="email" PlaceholderText="E-Mail"></TextBox>
                 <TextBox x:Name="username" PlaceholderText="UserName"></TextBox>

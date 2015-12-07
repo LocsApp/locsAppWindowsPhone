@@ -46,7 +46,25 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
+            {
+               var dialog = new Windows.UI.Popups.MessageDialog(
+                 "Account succesfuly create ",
+                 "Congratulation");
+
+                var result = dialog.ShowAsync();
+                Frame.Navigate(typeof(MainPage));
                 Debug.WriteLine("La clé est : " + API.SetResponse.APIResponseString);
+            }
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFram = Window.Current.Content as Frame;
+            if (rootFram != null && rootFram.CanGoBack)
+            {
+                rootFram.GoBack();
+            }
         }
     }
 }

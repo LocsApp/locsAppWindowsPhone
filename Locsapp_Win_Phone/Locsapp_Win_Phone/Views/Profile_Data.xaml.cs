@@ -24,7 +24,7 @@ using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone
 {
-    public sealed partial class Profile : Page
+    public sealed partial class Profile_Data : Page
     {
         private string _Key;
 
@@ -34,12 +34,8 @@ namespace Locsapp_Win_Phone
             set { _Key = value; }
         }
 
-        static string NullToString(object Value)
-        {
-            return Value == null ? "" : Value.ToString();
-        }
 
-        public Profile()
+        public Profile_Data()
         {
             this.InitializeComponent();
         }
@@ -56,12 +52,12 @@ namespace Locsapp_Win_Phone
             {
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
-                Hello.Text = Hello.Text + " " +results.username;
-                username.Text = results.username;
-                email.Text = NullToString(results.email);
-                first_name.Text = NullToString(results.first_name);
-                last_name.Text = NullToString(results.last_name);
-                phone_number.Text = NullToString(results.phone);
+                Hello.Text = Hello.Text + " " + results.username;
+                username.Text = username.Text + " " + results.username;
+                email.Text = email.Text + " " +  results.email;
+                first_name.Text = first_name.Text + " " + results.first_name;
+                last_name.Text = last_name.Text + " " + results.last_name;
+                phone_number.Text = phone_number.Text + " " + results.phone;
             }
         }
 
@@ -69,8 +65,6 @@ namespace Locsapp_Win_Phone
         {
             UserInfos data = new UserInfos();
             data.first_name = first_name.Text;
-            data.last_name = last_name.Text;
-            data.phone = phone_number.Text;
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
@@ -80,9 +74,6 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("OKAY : UpSuccess" + API.SetResponse.APIResponseString);
-                /*Debug.WriteLine("Login Sucess");
-                var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);*/
-                Frame.Navigate(typeof(Profile_Data), Key);
             }
         }
 
@@ -101,11 +92,6 @@ namespace Locsapp_Win_Phone
                 var result = dialog.ShowAsync();
                 Frame.Navigate(typeof(MainPage));
             }
-        }
-
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-            SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
         }
     }
 }

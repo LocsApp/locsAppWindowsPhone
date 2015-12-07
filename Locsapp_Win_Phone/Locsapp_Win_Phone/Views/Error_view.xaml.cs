@@ -21,17 +21,44 @@ using Locsapp_Win_Phone.Models;
 using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Locsapp_Win_Phone
 {
     public sealed partial class Error_view : Page
     {
 
+        private Dictionary<string, object> deserializeToDictionary(string jo)
+        {
+            var values = JsonConvert.DeserializeObject<Dictionary<string, object>>(jo);
+            var values2 = new Dictionary<string, object>();
+            foreach (KeyValuePair<string, object> d in values)
+            {
+                if (d.Value is JObject)
+                {
+                    values2.Add(d.Key, deserializeToDictionary(d.Value.ToString()));
+                }
+                else
+                {
+                    values2.Add(d.Key, d.Value);
+                }
+            }
+            return values2;
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             MainViewModel text = e.Parameter as MainViewModel;
             ErrorText.Text = text.SetResponse.ErrorMessage;
-            ErrorJson.Text = text.SetResponse.JsonError;
+            ErrorJson.Text = "";
+            if (text.SetResponse.JsonError != "")
+            {
+                Dictionary<string, object> values = deserializeToDictionary(text.SetResponse.JsonError);
+                foreach (KeyValuePair<string, object> entry in values)
+                {
+                    ErrorJson.Text = ErrorJson.Text + entry.Key + " : " + entry.Value.ToString().Trim(new Char[] { '\n', '{', '}', '[', ']', '"' }) + '\n';
+                }
+            }
         }
 
         public Error_view()
