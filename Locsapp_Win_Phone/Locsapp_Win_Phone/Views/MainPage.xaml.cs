@@ -51,7 +51,7 @@ namespace Locsapp_Win_Phone
             {
                 Debug.WriteLine("Login Sucess");
                 var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                Frame.Navigate(typeof(Profile), results.key);
+                Frame.Navigate(typeof(Profile_Data), results.key);
             } 
         }
 

@@ -74,7 +74,6 @@
       <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="Pane" />
       <RootProperty Name="Content" />
-      <RootProperty Name="PaneBackground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Background" />

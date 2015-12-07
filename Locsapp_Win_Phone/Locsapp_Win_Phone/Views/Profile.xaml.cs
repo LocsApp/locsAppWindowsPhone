@@ -107,5 +107,15 @@ namespace Locsapp_Win_Phone
         {
             SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
         }
+
+        private void MenuButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Profile_Data), Key);
+        }
+
+        private void MenuButton2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Profile), Key);
+        }
     }
 }

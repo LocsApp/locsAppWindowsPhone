@@ -9,27 +9,38 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <SplitView x:ConnectionId='1' x:Name="SplitView" OpenPaneLength="240" CompactPaneLength="48" 
-        DisplayMode="CompactOverlay" IsPaneOpen="False" PaneBackground="IndianRed">
+        DisplayMode="CompactOverlay" IsPaneOpen="False" >
             <SplitView.Pane>
-                <TextBlock Text="User Menu"
-                   FontSize="24"/>
+                <StackPanel Background="IndianRed">
+                    <Button x:ConnectionId='2' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent"                              />
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='4' x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                    Width="50" Height="50" Background="Transparent"                          />
+                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:ConnectionId='3' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"
+                    Width="50" Height="50" Background="Transparent"                          />
+                        <TextBlock Text="Edit Profil" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
             </SplitView.Pane>
             <ScrollViewer>
-                <StackPanel x:ConnectionId='2' x:Name="Sign_up_Scroll">
-                    <Button x:ConnectionId='3' HorizontalAlignment="Right" Margin="10"                       >Logout</Button>
+                <StackPanel x:ConnectionId='5' x:Name="Sign_up_Scroll">
+                    <Button x:ConnectionId='6' HorizontalAlignment="Right" Margin="10"                       >Logout</Button>
                     <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
-                    <TextBlock x:ConnectionId='4' x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
-                    <TextBlock x:ConnectionId='5' x:Name="email" >Email : </TextBlock>
-                    <TextBlock x:ConnectionId='6' x:Name="username">Username : </TextBlock>
-                    <TextBlock x:ConnectionId='7' x:Name="first_name">First Name : </TextBlock>
-                    <TextBlock x:ConnectionId='8' x:Name="last_name">Last Name : </TextBlock>
-                    <TextBlock x:ConnectionId='9' x:Name="phone_number">Phone Number : </TextBlock>
-                    <TextBlock x:ConnectionId='10' x:Name="biling_adrress">Biling Adress : </TextBlock>
-                    <TextBlock x:ConnectionId='11' x:Name="living_adrress">Living Adress : </TextBlock>
+                    <TextBlock x:ConnectionId='7' x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
+                    <TextBlock x:ConnectionId='8' x:Name="email" >Email :</TextBlock>
+                    <TextBlock x:ConnectionId='9' x:Name="username">Username :</TextBlock>
+                    <TextBlock x:ConnectionId='10' x:Name="first_name">First Name :</TextBlock>
+                    <TextBlock x:ConnectionId='11' x:Name="last_name">Last Name :</TextBlock>
+                    <TextBlock x:ConnectionId='12' x:Name="phone_number">Phone Number :</TextBlock>
+                    <TextBlock x:ConnectionId='13' x:Name="biling_adrress">Biling Adress :</TextBlock>
+                    <TextBlock x:ConnectionId='14' x:Name="living_adrress">Living Adress :</TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>
-
     </Grid>
 </Page>
 

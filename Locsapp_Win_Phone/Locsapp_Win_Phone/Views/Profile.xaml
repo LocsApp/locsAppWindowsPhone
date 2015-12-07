@@ -16,12 +16,12 @@
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                    Width="50" Height="50" Background="Transparent"/>
-                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center" />
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton1_Click"/>
+                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"
-                    Width="50" Height="50" Background="Transparent"/>
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
                         <TextBlock Text="Edit Profil" FontSize="18" VerticalAlignment="Center" />
                     </StackPanel>
                 </StackPanel>

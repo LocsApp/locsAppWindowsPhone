@@ -9,26 +9,37 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <SplitView x:Name="SplitView" OpenPaneLength="240" CompactPaneLength="48" 
-        DisplayMode="CompactOverlay" IsPaneOpen="False" PaneBackground="IndianRed">
+        DisplayMode="CompactOverlay" IsPaneOpen="False" >
             <SplitView.Pane>
-                <TextBlock Text="User Menu"
-                   FontSize="24"/>
+                <StackPanel Background="IndianRed">
+                    <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton1_Click"/>
+                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
+                        <TextBlock Text="Edit Profil" FontSize="18" VerticalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
             </SplitView.Pane>
             <ScrollViewer>
                 <StackPanel x:Name="Sign_up_Scroll">
                     <Button HorizontalAlignment="Right" Margin="10" Click="Button_Click_1">Logout</Button>
                     <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                     <TextBlock x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
-                    <TextBlock x:Name="email" >Email : </TextBlock>
-                    <TextBlock x:Name="username">Username : </TextBlock>
-                    <TextBlock x:Name="first_name">First Name : </TextBlock>
-                    <TextBlock x:Name="last_name">Last Name : </TextBlock>
-                    <TextBlock x:Name="phone_number">Phone Number : </TextBlock>
-                    <TextBlock x:Name="biling_adrress">Biling Adress : </TextBlock>
-                    <TextBlock x:Name="living_adrress">Living Adress : </TextBlock>
+                    <TextBlock x:Name="email" >Email :</TextBlock>
+                    <TextBlock x:Name="username">Username :</TextBlock>
+                    <TextBlock x:Name="first_name">First Name :</TextBlock>
+                    <TextBlock x:Name="last_name">Last Name :</TextBlock>
+                    <TextBlock x:Name="phone_number">Phone Number :</TextBlock>
+                    <TextBlock x:Name="biling_adrress">Biling Adress :</TextBlock>
+                    <TextBlock x:Name="living_adrress">Living Adress :</TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>
-
     </Grid>
 </Page>

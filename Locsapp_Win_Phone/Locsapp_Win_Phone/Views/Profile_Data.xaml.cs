@@ -93,5 +93,20 @@ namespace Locsapp_Win_Phone
                 Frame.Navigate(typeof(MainPage));
             }
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
+        }
+
+        private void MenuButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Profile_Data), Key);
+        }
+
+        private void MenuButton2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Profile), Key);
+        }
     }
 }
