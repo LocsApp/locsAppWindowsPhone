@@ -36,9 +36,15 @@
                     <TextBox x:ConnectionId='10' x:Name="first_name"  PlaceholderText="FirstName"></TextBox>
                     <TextBox x:ConnectionId='11' x:Name="last_name"  PlaceholderText="LastName"></TextBox>
                     <TextBox x:ConnectionId='12' x:Name="phone_number"  PlaceholderText="PhoneNumber"></TextBox>
-                    <TextBox x:ConnectionId='13' x:Name="biling_adrress"  PlaceholderText="BilingAdrress"></TextBox>
-                    <TextBox x:ConnectionId='14' x:Name="living_adrress"  PlaceholderText="LivingAdrress"></TextBox>
-                    <Button x:ConnectionId='15' Margin="10" HorizontalAlignment="Center"                     >Send</Button>
+                    <DatePicker x:ConnectionId='13' HorizontalAlignment="Center" x:Name="birthday"/>
+                    <TextBox x:ConnectionId='14' x:Name="biling_adrress"  PlaceholderText="BilingAddress"></TextBox>
+                    <TextBox x:ConnectionId='15' x:Name="living_adrress"  PlaceholderText="LivingAddress"></TextBox>
+                    <Button x:ConnectionId='16' Margin="10" HorizontalAlignment="Center"                     >Send</Button>
+                    <TextBlock HorizontalAlignment="Center">Change Password</TextBlock>
+                    <PasswordBox x:ConnectionId='17' x:Name="old"  PlaceholderText="Old"></PasswordBox>
+                    <PasswordBox x:ConnectionId='18' x:Name="new1"  PlaceholderText="New1"></PasswordBox>
+                    <PasswordBox x:ConnectionId='19' x:Name="new2"  PlaceholderText="New2"></PasswordBox>
+                    <Button x:ConnectionId='20' Margin="10" HorizontalAlignment="Center"                      >Send Pass</Button>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>

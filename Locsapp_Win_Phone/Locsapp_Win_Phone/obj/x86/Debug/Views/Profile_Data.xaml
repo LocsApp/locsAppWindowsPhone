@@ -36,8 +36,9 @@
                     <TextBlock x:ConnectionId='10' x:Name="first_name">First Name :</TextBlock>
                     <TextBlock x:ConnectionId='11' x:Name="last_name">Last Name :</TextBlock>
                     <TextBlock x:ConnectionId='12' x:Name="phone_number">Phone Number :</TextBlock>
-                    <TextBlock x:ConnectionId='13' x:Name="biling_adrress">Biling Adress :</TextBlock>
-                    <TextBlock x:ConnectionId='14' x:Name="living_adrress">Living Adress :</TextBlock>
+                    <TextBlock x:ConnectionId='13' x:Name="birthday">Birthday :</TextBlock>
+                    <TextBlock x:ConnectionId='14' x:Name="biling_adrress">Biling Adress :</TextBlock>
+                    <TextBlock x:ConnectionId='15' x:Name="living_adrress">Living Adress :</TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>

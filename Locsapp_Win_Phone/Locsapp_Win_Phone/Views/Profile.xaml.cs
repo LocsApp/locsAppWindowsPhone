@@ -71,6 +71,7 @@ namespace Locsapp_Win_Phone
             data.first_name = first_name.Text;
             data.last_name = last_name.Text;
             data.phone = phone_number.Text;
+            data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
@@ -100,6 +101,23 @@ namespace Locsapp_Win_Phone
 
                 var result = dialog.ShowAsync();
                 Frame.Navigate(typeof(MainPage));
+            }
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Change_passwd json = new Change_passwd();
+            json.old_password = old.Password;
+            json.new_password1 = new1.Password;
+            json.new_password2 = new2.Password;
+            string json2 = JsonConvert.SerializeObject(json);
+            var API = new MainViewModel();
+            API.API_req(API.URL_API + "/api/v1/rest-auth/password/change/", "POST", json2, Key);
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Error_view), API);
+            if (API.SetResponse.error == false)
+            {
+                Frame.Navigate(typeof(Profile_Data), Key);
             }
         }
 

@@ -21,6 +21,7 @@ using Locsapp_Win_Phone.Models;
 using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
+using Windows.UI;
 
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -38,21 +39,28 @@ namespace Locsapp_Win_Phone
 
         private void Sign_Up_Click(object sender, RoutedEventArgs e)
         {
-            LoginDetails data = new LoginDetails();
-            data.username = Login.Text;
-            data.password = Password.Password;
-            string json = JsonConvert.SerializeObject(data);
-            Debug.WriteLine(json);
-            var API = new MainViewModel();
-            API.API_req( API.URL_API + "/api/v1/rest-auth/login/", "POST", json);
-            if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
-            if (API.SetResponse.error == false)
+            if (Login.Text != "" && Password.Password != "")
             {
-                Debug.WriteLine("Login Sucess");
-                var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                Frame.Navigate(typeof(Profile_Data), results.key);
-            } 
+                LoginDetails data = new LoginDetails();
+                data.username = Login.Text;
+                data.password = Password.Password;
+                string json = JsonConvert.SerializeObject(data);
+                Debug.WriteLine(json);
+                var API = new MainViewModel();
+                API.API_req(API.URL_API + "/api/v1/rest-auth/login/", "POST", json);
+                if (API.SetResponse.error == true)
+                    Frame.Navigate(typeof(Error_view), API);
+                if (API.SetResponse.error == false)
+                {
+                    Debug.WriteLine("Login Sucess");
+                    var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
+                    Frame.Navigate(typeof(Profile_Data), results.key);
+                }
+            }
+            if (Login.Text == "")
+                Login.BorderBrush = new SolidColorBrush(Colors.Red);
+             if (Password.Password == "")
+                Password.BorderBrush = new SolidColorBrush(Colors.Red);
         }
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)

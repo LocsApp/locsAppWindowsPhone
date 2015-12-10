@@ -36,6 +36,7 @@
                     <TextBlock x:Name="first_name">First Name :</TextBlock>
                     <TextBlock x:Name="last_name">Last Name :</TextBlock>
                     <TextBlock x:Name="phone_number">Phone Number :</TextBlock>
+                    <TextBlock x:Name="birthday">Birthday :</TextBlock>
                     <TextBlock x:Name="biling_adrress">Biling Adress :</TextBlock>
                     <TextBlock x:Name="living_adrress">Living Adress :</TextBlock>
                 </StackPanel>

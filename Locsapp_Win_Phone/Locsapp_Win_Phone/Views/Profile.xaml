@@ -36,9 +36,15 @@
                     <TextBox x:Name="first_name"  PlaceholderText="FirstName"></TextBox>
                     <TextBox x:Name="last_name"  PlaceholderText="LastName"></TextBox>
                     <TextBox x:Name="phone_number"  PlaceholderText="PhoneNumber"></TextBox>
-                    <TextBox x:Name="biling_adrress"  PlaceholderText="BilingAdrress"></TextBox>
-                    <TextBox x:Name="living_adrress"  PlaceholderText="LivingAdrress"></TextBox>
+                    <DatePicker HorizontalAlignment="Center" x:Name="birthday"/>
+                    <TextBox x:Name="biling_adrress"  PlaceholderText="BilingAddress"></TextBox>
+                    <TextBox x:Name="living_adrress"  PlaceholderText="LivingAddress"></TextBox>
                     <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click">Send</Button>
+                    <TextBlock HorizontalAlignment="Center">Change Password</TextBlock>
+                    <PasswordBox x:Name="old"  PlaceholderText="Old"></PasswordBox>
+                    <PasswordBox x:Name="new1"  PlaceholderText="New1"></PasswordBox>
+                    <PasswordBox x:Name="new2"  PlaceholderText="New2"></PasswordBox>
+                    <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click2">Send Pass</Button>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>

@@ -38,7 +38,6 @@ namespace Locsapp_Win_Phone
             data.username  = username.Text;
             data.password1 = password1.Password;
             data.password2 = password2.Password;
-            //data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();

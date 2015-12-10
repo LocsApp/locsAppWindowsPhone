@@ -61,6 +61,13 @@ namespace Locsapp_Win_Phone.Models
         public string password { get; set; }
     }
 
+    class Change_passwd
+    {
+        public string old_password { get; set; }
+        public string new_password1 { get; set; }
+        public string new_password2 { get; set; }
+    }
+
     class KeyRegister
     {
         [JsonProperty("key")]
