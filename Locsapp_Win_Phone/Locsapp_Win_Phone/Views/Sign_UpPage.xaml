@@ -17,6 +17,11 @@
                 <PasswordBox x:Name="password1" PlaceholderText="Password"></PasswordBox>
                 <PasswordBox x:Name="password2" PlaceholderText="Confirm Password"></PasswordBox>
                 <Button Margin="10" HorizontalAlignment="Center" Click="Button_Sub">Subscribre</Button>
+                <TextBlock HorizontalAlignment="Center">Sign up with Facebook</TextBlock>
+                <TextBox x:Name="fb_username" PlaceholderText="UserName"></TextBox>
+                <TextBox x:Name="fb_email" PlaceholderText="E-Mail"></TextBox>
+                <PasswordBox x:Name="fb_password" PlaceholderText="Password"></PasswordBox>
+                <Button Margin="10" HorizontalAlignment="Center" Click="Button_Sub">Subscribre</Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
