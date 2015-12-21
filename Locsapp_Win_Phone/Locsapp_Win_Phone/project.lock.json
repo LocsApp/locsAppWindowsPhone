@@ -8,6 +8,14 @@
           "System.ComponentModel.DataAnnotations"
         ]
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1624,6 +1632,14 @@
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
         ]
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
       },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
@@ -3332,6 +3348,14 @@
           "System.ComponentModel.DataAnnotations"
         ]
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -5010,6 +5034,14 @@
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
         ]
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
       },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
@@ -6723,6 +6755,14 @@
           "System.ComponentModel.DataAnnotations"
         ]
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8401,6 +8441,14 @@
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
         ]
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
       },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
@@ -10114,6 +10162,14 @@
           "System.ComponentModel.DataAnnotations"
         ]
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.2.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -11815,6 +11871,37 @@
         "tools/init.ps1",
         "tools/install.ps1",
         "tools/migrate.exe"
+      ]
+    },
+    "Facebook/7.0.6": {
+      "sha512": "D9nlWZb88S4U+eh1pUDQ+AkSkiht6m0eFpxKFddZnQSSFTnncvDMBEnNODy4fOIOjWQIiOXRVbuY04jCPyWqkw==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "Facebook.nuspec",
+        "lib/net35-client/Facebook.dll",
+        "lib/net35-client/Facebook.xml",
+        "lib/net40-client/Facebook.dll",
+        "lib/net40-client/Facebook.xml",
+        "lib/net45/Facebook.dll",
+        "lib/net45/Facebook.xml",
+        "lib/portable-win81+wpa81/Facebook.dll",
+        "lib/portable-win81+wpa81/Facebook.xml",
+        "lib/sl5/Facebook.dll",
+        "lib/sl5/Facebook.xml",
+        "lib/win8/Facebook.dll",
+        "lib/win8/Facebook.xml",
+        "lib/wp71/Facebook.dll",
+        "lib/wp71/Facebook.xml",
+        "lib/wp8/Facebook.dll",
+        "lib/wp8/Facebook.xml",
+        "lib/wp81/Facebook.dll",
+        "lib/wp81/Facebook.xml",
+        "LICENSE.txt",
+        "package/services/metadata/core-properties/85cf59e716cf4742ab986922052c89f8.psmdcp",
+        "readme.txt",
+        "serializers/JsonNetSerializer.cs"
       ]
     },
     "Microsoft.ApplicationInsights/1.2.0": {
@@ -15437,6 +15524,7 @@
   "projectFileDependencyGroups": {
     "": [
       "EntityFramework >= 6.1.3",
+      "Facebook >= 7.0.6",
       "Microsoft.ApplicationInsights >= 1.2.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
