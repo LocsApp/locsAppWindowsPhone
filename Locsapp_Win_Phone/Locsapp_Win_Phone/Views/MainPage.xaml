@@ -15,16 +15,17 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Image Source="ms-appx:///Assets/locsapp_logo.png" Grid.Row="0"  Grid.ColumnSpan="2"></Image>
+            <Image Source="ms-appx:///Assets/locsapp_logo.png" Margin="15" Grid.Row="0"  Grid.ColumnSpan="2"></Image>
             <TextBox x:Name="Login" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Login" />
             <PasswordBox x:Name="Password" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Password"/>
-            <Button x:Name="Valide_Login" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Login" Width="100" Click="Sign_Up_Click"/>
-            <Button x:Name="Sign_Up" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Sign Up" Width="100" Click="Subscribe_Click"/>
+            <Button x:Name="Valide_Login" Foreground="White" Background="#C51A1C" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Login" Click="Sign_Up_Click" Width="500" Height="50" />
+            <Button x:Name="Sign_Up" Foreground="White" Background="#3B5998" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Sign in with Facebook" Width="500" Height="50" />
+            <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="Subscribe_Click">No account yet ? Create one</TextBlock>
+            <TextBlock Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center">Forget your password</TextBlock>
         </Grid>
     </Grid>
 </Page>
