@@ -135,5 +135,20 @@ namespace Locsapp_Win_Phone
         {
             Frame.Navigate(typeof(Profile), Key);
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Add_secondaryemail json = new Add_secondaryemail();
+            json.new_email = secondary_emails.Text;
+            string json2 = JsonConvert.SerializeObject(json);
+            var API = new MainViewModel();
+            API.API_req(API.URL_API + "/api/v1/rest-auth/user/add-email/", "POST", json2, Key);
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Error_view), API);
+            if (API.SetResponse.error == false)
+            {
+                Frame.Navigate(typeof(Profile_Data), Key);
+            }
+        }
     }
 }

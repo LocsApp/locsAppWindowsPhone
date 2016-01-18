@@ -67,10 +67,5 @@ namespace Locsapp_Win_Phone
         {
            Frame.Navigate(typeof(Sign_UpPage));
         }
-
-        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Debug.WriteLine("Ok ça marche");
-        }
     }
 }

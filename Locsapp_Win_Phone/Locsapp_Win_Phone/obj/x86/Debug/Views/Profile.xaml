@@ -45,6 +45,9 @@
                     <PasswordBox x:ConnectionId='18' x:Name="new1"  PlaceholderText="New1"></PasswordBox>
                     <PasswordBox x:ConnectionId='19' x:Name="new2"  PlaceholderText="New2"></PasswordBox>
                     <Button x:ConnectionId='20' Margin="10" HorizontalAlignment="Center"                      >Send Pass</Button>
+                    <TextBlock HorizontalAlignment="Center">Add secondary emails</TextBlock>
+                    <TextBox x:ConnectionId='21' x:Name="secondary_emails"  PlaceholderText="Add secondary email"></TextBox>
+                    <Button x:ConnectionId='22' Margin="10" HorizontalAlignment="Center"                       >Add secondary email</Button>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>

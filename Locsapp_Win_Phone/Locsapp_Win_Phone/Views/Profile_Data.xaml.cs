@@ -59,6 +59,7 @@ namespace Locsapp_Win_Phone
                 last_name.Text = last_name.Text + " " + results.last_name;
                 phone_number.Text = phone_number.Text + " " + results.phone;
                 birthday.Text = birthday.Text + " " + results.birthdate;
+                secondary_email.Text = secondary_email.Text + " " + results.secondary_emails;
             }
         }
 

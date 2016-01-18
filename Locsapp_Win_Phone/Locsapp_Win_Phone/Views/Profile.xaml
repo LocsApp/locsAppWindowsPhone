@@ -45,6 +45,9 @@
                     <PasswordBox x:Name="new1"  PlaceholderText="New1"></PasswordBox>
                     <PasswordBox x:Name="new2"  PlaceholderText="New2"></PasswordBox>
                     <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click2">Send Pass</Button>
+                    <TextBlock HorizontalAlignment="Center">Add secondary emails</TextBlock>
+                    <TextBox x:Name="secondary_emails"  PlaceholderText="Add secondary email"></TextBox>
+                    <Button Margin="10" HorizontalAlignment="Center" Click="Button_Click_2">Add secondary email</Button>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>

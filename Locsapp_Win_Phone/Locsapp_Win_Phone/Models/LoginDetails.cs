@@ -51,6 +51,7 @@ namespace Locsapp_Win_Phone.Models
         public string phone { get; set; }
         public string living_address { get; set; }
         public string billing_address { get; set; }
+        public string secondary_emails { get; set; }
         public string logo_url { get; set; }
         public string is_active { get; set; }
     }
@@ -66,6 +67,11 @@ namespace Locsapp_Win_Phone.Models
         public string old_password { get; set; }
         public string new_password1 { get; set; }
         public string new_password2 { get; set; }
+    }
+
+    class Add_secondaryemail
+    {
+        public string new_email { get; set; }
     }
 
     class KeyRegister

@@ -39,6 +39,7 @@
                     <TextBlock x:Name="birthday">Birthday :</TextBlock>
                     <TextBlock x:Name="biling_adrress">Biling Adress :</TextBlock>
                     <TextBlock x:Name="living_adrress">Living Adress :</TextBlock>
+                    <TextBlock x:Name="secondary_email">Secondary E-mails :</TextBlock>
                 </StackPanel>
             </ScrollViewer>
         </SplitView>
