@@ -21,6 +21,7 @@ using Locsapp_Win_Phone.Models;
 using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Locsapp_Win_Phone
 {
@@ -33,7 +34,6 @@ namespace Locsapp_Win_Phone
             get { return _Key; }
             set { _Key = value; }
         }
-
 
         public Profile_Data()
         {
@@ -59,7 +59,6 @@ namespace Locsapp_Win_Phone
                 last_name.Text = last_name.Text + " " + results.last_name;
                 phone_number.Text = phone_number.Text + " " + results.phone;
                 birthday.Text = birthday.Text + " " + results.birthdate;
-                secondary_email.Text = secondary_email.Text + " " + results.secondary_emails;
             }
         }
 

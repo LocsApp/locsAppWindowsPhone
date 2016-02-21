@@ -28,7 +28,7 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
     {
-        private static string _URL_API = "http://192.168.198.133:8000";
+        private static string _URL_API = "http://192.168.198.134:8000";
 
         private string _Data_JSON;
 
@@ -46,6 +46,11 @@ namespace Locsapp_Win_Phone.ViewModels
         public API_Response SetResponse = new API_Response(false, "");
 
         private static ManualResetEvent allDone = new ManualResetEvent(false);
+
+        public void Ping_API()
+        {
+            
+        }
 
         public void API_req(String API_URL, String Method, String JSON_data = "", String Key = "")
         {
@@ -109,22 +114,32 @@ namespace Locsapp_Win_Phone.ViewModels
                 response = (HttpWebResponse)e.Response;
                 SetResponse.error = true;
                 SetResponse.ErrorMessage = e.Message;
+               
+                if (response != null)
+                {
+                    Stream streamResponse = response.GetResponseStream();
 
-                Stream streamResponse = response.GetResponseStream();
-                StreamReader streamRead = new StreamReader(streamResponse);
+                    StreamReader streamRead = new StreamReader(streamResponse);
 
-                string responseString = streamRead.ReadToEnd();
-                Debug.WriteLine(response.Headers);
+                    string responseString = streamRead.ReadToEnd();
+                    Debug.WriteLine(response.Headers);
 
-                SetResponse.APIResponseString = responseString;
+                    SetResponse.APIResponseString = responseString;
 
-                SetResponse.JsonError = responseString;
+                    SetResponse.JsonError = responseString;
 
-                // Close the stream object
-                streamResponse.Dispose();
-                streamRead.Dispose();
-                // Release the HttpWebResponse
-                response.Dispose();
+                    // Close the stream object
+                    streamResponse.Dispose();
+                    streamRead.Dispose();
+                    // Release the HttpWebResponse
+                    response.Dispose();
+                }
+                else
+                {
+                    SetResponse.APIResponseString = "Can't find API";
+                    SetResponse.JsonError = "";
+                }
+
             }
             if (SetResponse.error == false)
             {
