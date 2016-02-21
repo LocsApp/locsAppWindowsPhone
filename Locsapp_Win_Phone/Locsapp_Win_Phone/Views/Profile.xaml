@@ -8,6 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot>
+            <PivotItem Header="Profile">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Article">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Notation">
+                <Grid/>
+            </PivotItem>
+        </Pivot>
+        
         <SplitView x:Name="SplitView" OpenPaneLength="240" CompactPaneLength="48" 
         DisplayMode="CompactOverlay" IsPaneOpen="False" >
             <SplitView.Pane>
