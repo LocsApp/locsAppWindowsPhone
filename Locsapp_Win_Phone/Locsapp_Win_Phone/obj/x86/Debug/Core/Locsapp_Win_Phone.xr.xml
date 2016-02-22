@@ -67,6 +67,9 @@
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
       <RootProperty Name="OpenPaneLength" />
       <RootProperty Name="CompactPaneLength" />
@@ -85,6 +88,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.Profile" />
     <RootType FullName="Locsapp_Win_Phone.Profile_Data" />

@@ -19,7 +19,6 @@
                 <Grid/>
             </PivotItem>
         </Pivot>
-        
         <SplitView x:Name="SplitView" OpenPaneLength="240" CompactPaneLength="48" 
         DisplayMode="CompactOverlay" IsPaneOpen="False" >
             <SplitView.Pane>
@@ -42,6 +41,8 @@
                 <StackPanel x:Name="Sign_up_Scroll">
                     <Button HorizontalAlignment="Right" Margin="10" Click="Button_Click_1">Logout</Button>
                     <Image Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
+                    <Image Source="ms-appx:///Assets/Profile_Assets/emoticon.png" Height="24"></Image>
+                    <Image Source="ms-appx:///Assets/Profile_Assets/emoticon.png" Height="24"></Image>
                     <TextBlock x:Name="Hello" FontSize="48" HorizontalAlignment="Center" FontFamily="Trebuchet MS">Hello</TextBlock>
                     <TextBox x:Name="email" PlaceholderText="E-Mail"></TextBox>
                     <TextBox x:Name="username" PlaceholderText="UserName"></TextBox>

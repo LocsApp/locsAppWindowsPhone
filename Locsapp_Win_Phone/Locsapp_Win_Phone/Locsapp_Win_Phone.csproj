@@ -127,6 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\locsapp_logo.png" />
+    <Content Include="Assets\Profile_Assets\account.png" />
+    <Content Include="Assets\Profile_Assets\cake-variant.png" />
+    <Content Include="Assets\Profile_Assets\emoticon.png" />
+    <Content Include="Assets\Profile_Assets\gender-male-female.png" />
+    <Content Include="Assets\Profile_Assets\map-marker.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
