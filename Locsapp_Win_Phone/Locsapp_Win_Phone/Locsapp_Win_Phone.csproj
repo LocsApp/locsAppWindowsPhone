@@ -132,6 +132,7 @@
     <Content Include="Assets\Profile_Assets\emoticon.png" />
     <Content Include="Assets\Profile_Assets\gender-male-female.png" />
     <Content Include="Assets\Profile_Assets\map-marker.png" />
+    <Content Include="Assets\Profile_Assets\RandomDude.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -163,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Profile_Data.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Profil_Design.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

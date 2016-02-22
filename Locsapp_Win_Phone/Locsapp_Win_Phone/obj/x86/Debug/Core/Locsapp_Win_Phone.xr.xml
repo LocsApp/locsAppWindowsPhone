@@ -7,6 +7,7 @@
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
+      <RootProperty Name="TopAppBar" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
@@ -95,6 +96,17 @@
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.Profile" />
     <RootType FullName="Locsapp_Win_Phone.Profile_Data" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="IsSticky" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Icon" />
+    </RootType>
+    <RootType FullName="Locsapp_Win_Phone.Profil_Design" />
     <RootType FullName="Locsapp_Win_Phone.Sign_UpPage" />
   </Roots.RootTypes>
 </Roots>
