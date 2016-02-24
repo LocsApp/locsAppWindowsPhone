@@ -28,7 +28,7 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class MainViewModel
     {
-        private static string _URL_API = "http://192.168.198.134:8000";
+        private static string _URL_API = "http://192.168.198.136:8000";
 
         private string _Data_JSON;
 

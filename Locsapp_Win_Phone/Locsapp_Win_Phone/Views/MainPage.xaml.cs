@@ -55,7 +55,7 @@ namespace Locsapp_Win_Phone
                     Debug.WriteLine("Login Sucess");
                     Debug.WriteLine(API.SetResponse.APIResponseString);
                     var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                    Frame.Navigate(typeof(Profile_Data), results.key);
+                    Frame.Navigate(typeof(Profil_Design), results.key);
                 }
             }
             if (Login.Text == "")
