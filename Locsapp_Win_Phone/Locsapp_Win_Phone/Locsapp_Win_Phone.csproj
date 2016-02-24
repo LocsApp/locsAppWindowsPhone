@@ -115,6 +115,9 @@
     <Compile Include="Views\Profile_Data.xaml.cs">
       <DependentUpon>Profile_Data.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Profil_Design.xaml.cs">
+      <DependentUpon>Profil_Design.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Sign_UpPage.xaml.cs">
       <DependentUpon>Sign_UpPage.xaml</DependentUpon>
     </Compile>
