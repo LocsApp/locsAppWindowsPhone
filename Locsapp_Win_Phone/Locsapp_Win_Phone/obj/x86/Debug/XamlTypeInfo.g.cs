@@ -249,6 +249,7 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
             case 7:   //  Locsapp_Win_Phone.Profil_Design
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_7_Profil_Design;
+                userType.AddMemberName("Key");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -284,6 +285,16 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
             var that = (global::Locsapp_Win_Phone.Profile_Data)instance;
             that.Key = (global::System.String)Value;
         }
+        private object get_2_Profil_Design_Key(object instance)
+        {
+            var that = (global::Locsapp_Win_Phone.Profil_Design)instance;
+            return that.Key;
+        }
+        private void set_2_Profil_Design_Key(object instance, object Value)
+        {
+            var that = (global::Locsapp_Win_Phone.Profil_Design)instance;
+            that.Key = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -303,6 +314,12 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
                 xamlMember = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlMember(this, "Key", "String");
                 xamlMember.Getter = get_1_Profile_Data_Key;
                 xamlMember.Setter = set_1_Profile_Data_Key;
+                break;
+            case "Locsapp_Win_Phone.Profil_Design.Key":
+                userType = (global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Locsapp_Win_Phone.Profil_Design");
+                xamlMember = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlMember(this, "Key", "String");
+                xamlMember.Getter = get_2_Profil_Design_Key;
+                xamlMember.Setter = set_2_Profil_Design_Key;
                 break;
             }
             return xamlMember;

@@ -10,7 +10,7 @@
     <Page.TopAppBar>
         <AppBar Background="#C51A1C" IsOpen="True" IsSticky="True">
             <Grid>
-                <AppBarButton Name="Show" Icon="AllApps"/>
+                <AppBarButton Name="Show" Icon="AllApps" Click="HamburgerButton_Click"/>
             </Grid>
         </AppBar>
     </Page.TopAppBar>
@@ -25,13 +25,8 @@
                     Width="50" Height="50" Background="Transparent"/>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                    Width="50" Height="50" Background="Transparent"/>
-                        <TextBlock Text="User" FontSize="18" VerticalAlignment="Center"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"
-                    Width="50" Height="50" Background="Transparent"/>
-                        <TextBlock Text="Edit Profil" FontSize="18" VerticalAlignment="Center" />
+                    Width="50" Height="50" Background="Transparent" Click="Logout"/>
+                        <TextBlock Text="Logout" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
             </SplitView.Pane>
@@ -41,10 +36,10 @@
                         <PivotItem Header="Profile">
                             <StackPanel>
                                 <Image Source="ms-appx:///Assets/Profile_Assets/RandomDude.jpg" Stretch="Fill" Height="250" ></Image>
-                                <Border Margin="8,8,8,0" BorderThickness="1" BorderBrush="Black" Height="60">
-                                    <TextBlock VerticalAlignment="Center" Margin="20,0,0,0">Basic Informations</TextBlock>
+                                <Border Margin="8,0,8,8" BorderThickness="0,0,0,1" BorderBrush="Black" Height="60">
+                                    <TextBlock VerticalAlignment="Center" Margin="20,0,0,0" FontWeight="Bold">Basic Informations</TextBlock>
                                 </Border>
-                                <Border  Margin="8,0,8,8" BorderThickness="1,0,1,1" BorderBrush="Black" Height="150">
+                                <Border  Margin="8,0,8,8" BorderThickness="0,0,0,0" BorderBrush="Black" Height="150">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition/>
@@ -58,21 +53,21 @@
                                             <ColumnDefinition Width="4*"/>
                                         </Grid.ColumnDefinitions>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/account.png"  Width="24" Grid.Column="0" Grid.Row="0" ></Image>
-                                        <TextBlock Grid.Column="1" Grid.Row="0">Username</TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="0" x:Name="View_Username">Username</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/gender-male-female.png" Width="24" Grid.Column="0" Grid.Row="1"></Image>
-                                        <TextBlock Grid.Column="1" Grid.Row="1">Sex</TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="1" x:Name="View_Sex">Sex</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/cake-variant.png" Width="24" Grid.Column="0" Grid.Row="2" ></Image>
-                                        <TextBlock Grid.Column="1" Grid.Row="2">Birthday</TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="2" x:Name="View_Birthday">Birthday</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/map-marker.png" Width="24" Grid.Column="0" Grid.Row="3" ></Image>
-                                        <TextBlock Grid.Column="1" Grid.Row="3">Map</TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="3" x:Name="View_Map">Map</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/emoticon.png" Width="24" Grid.Column="0" Grid.Row="4" ></Image>
-                                        <TextBlock Grid.Column="1" Grid.Row="4">Subscribed</TextBlock>
+                                        <TextBlock Grid.Column="1" Grid.Row="4" x:Name="View_Subscribed">Subscribed</TextBlock>
                                     </Grid>
                                 </Border>
-                                <Border Margin="8,8,8,0" BorderThickness="1" BorderBrush="Black" Height="60">
-                                    <TextBlock VerticalAlignment="Center">Rent Informations</TextBlock>
+                                <Border Margin="8,0,8,8" BorderThickness="0,0,0,1" BorderBrush="Black" Height="60">
+                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold" >Rent Informations</TextBlock>
                                 </Border>
-                                <Border  Margin="8,0,8,8" BorderThickness="1,0,1,1" BorderBrush="Black" Height="60">
+                                <Border  Margin="8,0,8,8" BorderThickness="0,0,0,0" BorderBrush="Black" Height="60">
                                 </Border>
                             </StackPanel>
                         </PivotItem>
@@ -101,24 +96,24 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/gender-male-female.png"  Width="24" Grid.Column="0" Grid.Row="0" ></Image>
-                                    <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Man</TextBlock>
-                                    <RadioButton Grid.Column="2" Grid.Row="0"/>
-                                    <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Woman</TextBlock>
-                                    <RadioButton Grid.Column="4" Grid.Row="0"/>
+                                    <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">Man</TextBlock>
+                                    <RadioButton Grid.Column="2" Grid.Row="0" x:Name="EditProfile_Man"/>
+                                    <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">Woman</TextBlock>
+                                    <RadioButton Grid.Column="4" Grid.Row="0" x:Name="EditProfile_Woman"/>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/account.png"  Width="24" Grid.Column="0" Grid.Row="1" ></Image>
-                                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" PlaceholderText="Name" Margin="0,0,0,10"></TextBox>
-                                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" PlaceholderText="First Name" Margin="0,0,0,10"></TextBox>
+                                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" PlaceholderText="Name" Margin="0,0,0,10" x:Name="EditProfile_Name"></TextBox>
+                                    <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" PlaceholderText="First Name" Margin="0,0,0,10" x:Name="EditProfile_FirstName"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/phone.png"  Width="24" Grid.Column="0" Grid.Row="3" ></Image>
-                                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" PlaceholderText="Phone" Margin="0,0,0,10"></TextBox>
+                                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" PlaceholderText="Phone" Margin="0,0,0,10" x:Name="EditProfile_Phone"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/cake-variant.png"  Width="24" Grid.Column="0" Grid.Row="4" ></Image>
-                                    <DatePicker Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Margin="0,0,0,10"></DatePicker>
+                                    <DatePicker Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Margin="0,0,0,10" x:Name="EditProfile_Birthday"></DatePicker>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/email.png"  Width="24" Grid.Column="0" Grid.Row="5" ></Image>
-                                    <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" PlaceholderText="Email" Margin="0,0,0,10"></TextBox>
+                                    <TextBox Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" PlaceholderText="Email" Margin="0,0,0,10" x:Name="EditProfile_Email"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/lock.png"  Width="24" Grid.Column="0" Grid.Row="6" ></Image>
-                                    <PasswordBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" PlaceholderText="Old Password" Margin="0,0,0,10"></PasswordBox>
-                                    <PasswordBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" PlaceholderText="New Password" Margin="0,0,0,10"></PasswordBox>
-                                    <PasswordBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" PlaceholderText="Confirm Password" Margin="0,0,0,10"></PasswordBox>
-                                    <Button Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto"></Button>
+                                    <PasswordBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" PlaceholderText="Old Password" Margin="0,0,0,10" x:Name="EditProfile_OldPass"></PasswordBox>
+                                    <PasswordBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
+                                    <PasswordBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
+                                    <Button Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send" Click="Send_Data"></Button>
                                 </Grid>
                             </StackPanel>
                         </PivotItem>
