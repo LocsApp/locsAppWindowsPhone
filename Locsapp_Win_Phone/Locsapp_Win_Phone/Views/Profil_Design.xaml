@@ -41,10 +41,10 @@
                         <PivotItem Header="Profile">
                             <StackPanel>
                                 <Image Source="ms-appx:///Assets/Profile_Assets/RandomDude.jpg" Stretch="Fill" Height="250" ></Image>
-                                <Border Margin="8,8,8,0" BorderThickness="2" BorderBrush="Black" Height="60">
-                                    <TextBlock VerticalAlignment="Center">Basic Informations</TextBlock>
+                                <Border Margin="8,8,8,0" BorderThickness="1" BorderBrush="Black" Height="60">
+                                    <TextBlock VerticalAlignment="Center" Margin="20,0,0,0">Basic Informations</TextBlock>
                                 </Border>
-                                <Border  Margin="8,0,8,8" BorderThickness="2,0,2,2" BorderBrush="Black" Height="150">
+                                <Border  Margin="8,0,8,8" BorderThickness="1,0,1,1" BorderBrush="Black" Height="150">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition/>
@@ -69,10 +69,10 @@
                                         <TextBlock Grid.Column="1" Grid.Row="4">Subscribed</TextBlock>
                                     </Grid>
                                 </Border>
-                                <Border Margin="8,8,8,0" BorderThickness="2" BorderBrush="Black" Height="60">
+                                <Border Margin="8,8,8,0" BorderThickness="1" BorderBrush="Black" Height="60">
                                     <TextBlock VerticalAlignment="Center">Rent Informations</TextBlock>
                                 </Border>
-                                <Border  Margin="8,0,8,8" BorderThickness="2,0,2,2" BorderBrush="Black" Height="60">
+                                <Border  Margin="8,0,8,8" BorderThickness="1,0,1,1" BorderBrush="Black" Height="60">
                                 </Border>
                             </StackPanel>
                         </PivotItem>
