@@ -54,6 +54,7 @@ namespace Locsapp_Win_Phone.Models
         public object secondary_emails { get; set; }
         public string logo_url { get; set; }
         public string is_active { get; set; }
+        public string registered_date { get; set; }
     }
 
     class LoginDetails

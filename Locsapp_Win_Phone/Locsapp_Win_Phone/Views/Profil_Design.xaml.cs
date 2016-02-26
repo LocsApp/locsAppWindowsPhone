@@ -63,7 +63,8 @@ namespace Locsapp_Win_Phone
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
                 View_Username.Text = results.username;
-                View_Birthday.Text = results.birthdate;
+                View_Birthday.Text = NullToString(results.birthdate);
+                View_Subscribed.Text = NullToString(results.registered_date);
                 EditProfile_Email.Text = NullToString(results.email);
                 EditProfile_FirstName.Text = NullToString(results.first_name);
                 EditProfile_Name.Text = NullToString(results.last_name);
