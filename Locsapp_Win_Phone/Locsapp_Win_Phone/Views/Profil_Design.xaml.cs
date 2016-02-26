@@ -104,8 +104,27 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("OKAY : UpSuccess" + API.SetResponse.APIResponseString);
-                /*Debug.WriteLine("Login Sucess");
-                var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);*/
+                API = null;
+                if (EditProfile_OldPass.Password != "")
+                {
+                    var API2 = new MainViewModel();
+                    Change_passwd jsonPass = new Change_passwd();
+                    jsonPass.old_password = EditProfile_OldPass.Password;
+                    jsonPass.new_password1 = EditProfile_NewPass1.Password;
+                    jsonPass.new_password2 = EditProfile_NewPass2.Password;
+                    string json2 = JsonConvert.SerializeObject(jsonPass);
+                    API2.API_req(API2.URL_API + "/api/v1/rest-auth/password/change/", "POST", json2, Key);
+                    if (API2.SetResponse.error == true)
+                        Frame.Navigate(typeof(Error_view), API2);
+                    if (API2.SetResponse.error == false)
+                    {
+                        Frame.Navigate(typeof(Profil_Design), Key);
+                    }
+                }
+                else
+                {
+                    Frame.Navigate(typeof(Profil_Design), Key);
+                }
             }
         }
 

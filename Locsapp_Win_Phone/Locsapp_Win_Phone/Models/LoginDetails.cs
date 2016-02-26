@@ -62,6 +62,11 @@ namespace Locsapp_Win_Phone.Models
         public string password { get; set; }
     }
 
+    class ChangeUserName
+    {
+        public string username { get; set; }
+    }
+
     class Change_passwd
     {
         public string old_password { get; set; }
@@ -78,6 +83,12 @@ namespace Locsapp_Win_Phone.Models
     class Add_secondaryemail
     {
         public string new_email { get; set; }
+    }
+
+    class FaceBook_Login
+    {
+        public string access_token { get; set; }
+        public string code { get; set; }
     }
 
 }

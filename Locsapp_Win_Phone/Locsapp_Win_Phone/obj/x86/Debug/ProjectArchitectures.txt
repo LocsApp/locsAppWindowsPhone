@@ -1,1 +1,1 @@
-C:\Users\Tagzz\Desktop\locsAppWindowsPhone\Locsapp_Win_Phone\Locsapp_Win_Phone\Locsapp_Win_Phone.csproj;x86
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\Locsapp_Win_Phone.csproj;x86

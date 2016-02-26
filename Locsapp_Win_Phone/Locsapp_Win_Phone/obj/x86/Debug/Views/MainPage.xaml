@@ -23,7 +23,7 @@
             <TextBox x:ConnectionId='1' x:Name="Login" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Login" />
             <PasswordBox x:ConnectionId='2' x:Name="Password" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" PlaceholderText="Password"/>
             <Button x:ConnectionId='3' x:Name="Valide_Login" Foreground="White" Background="#C51A1C" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Login"                       Width="500" Height="50" />
-            <Button x:ConnectionId='4' x:Name="Sign_Up" Foreground="White" Background="#3B5998" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Sign in with Facebook" Width="500" Height="50" />
+            <Button x:ConnectionId='4' x:Name="Sign_Up" Foreground="White" Background="#3B5998" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Sign in with Facebook" Width="500" Height="50"                          />
             <TextBlock x:ConnectionId='5' Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"                         >No account yet ? Create one</TextBlock>
             <TextBlock Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center">Forget your password</TextBlock>
         </Grid>
