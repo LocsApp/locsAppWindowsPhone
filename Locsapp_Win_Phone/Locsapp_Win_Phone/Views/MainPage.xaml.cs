@@ -48,7 +48,7 @@ namespace Locsapp_Win_Phone
                 string json = JsonConvert.SerializeObject(data);
                 Debug.WriteLine(json);
                 var API = new MainViewModel();
-                API.API_req(API.URL_API + "/api/v1/rest-auth/login/", "POST", json);
+                API.API_req(API.URL_API + "api/v1/rest-auth/login/", "POST", json);
                 if (API.SetResponse.error == true)
                     Frame.Navigate(typeof(Error_view), API);
                 if (API.SetResponse.error == false)
@@ -74,7 +74,7 @@ namespace Locsapp_Win_Phone
         {
             Debug.WriteLine(key);
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "GET", "", key);
+            API.API_req(API.URL_API + "api/v1/rest-auth/user/", "GET", "", key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
@@ -95,10 +95,10 @@ namespace Locsapp_Win_Phone
                         ChangeUserName jsonUsername = new ChangeUserName();
                         jsonUsername.username = Login.Text;
                         string json2 = JsonConvert.SerializeObject(jsonUsername);
-                        API.API_req(API.URL_API + "/api/v1/auth/change-username/", "POST", json2, key);
+                        API.API_req(API.URL_API + "api/v1/auth/change-username/", "POST", json2, key);
                         Debug.WriteLine("Change Username OK");
                         string json = JsonConvert.SerializeObject(log_Facebook);
-                        API.API_req(API.URL_API + "/api/v1/rest-auth/facebook/", "POST", json);
+                        API.API_req(API.URL_API + "api/v1/rest-auth/facebook/", "POST", json);
                         if (API.SetResponse.error == true)
                             Frame.Navigate(typeof(Error_view), API);
                         if (API.SetResponse.error == false)
@@ -127,7 +127,7 @@ namespace Locsapp_Win_Phone
                string json = JsonConvert.SerializeObject(log_Facebook);
                Debug.WriteLine(json);
                var API = new MainViewModel();
-               API.API_req(API.URL_API + "/api/v1/rest-auth/facebook/", "POST", json);
+               API.API_req(API.URL_API + "api/v1/rest-auth/facebook/", "POST", json);
             Debug.WriteLine("OK1");
             if (API.SetResponse.error == true)
                    Frame.Navigate(typeof(Error_view), API);

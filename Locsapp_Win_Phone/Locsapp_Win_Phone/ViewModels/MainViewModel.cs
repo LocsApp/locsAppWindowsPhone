@@ -26,9 +26,9 @@ using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone.ViewModels
 {
-    class MainViewModel
+    public class MainViewModel
     {
-        private static string _URL_API = "http://192.168.198.136:8000";
+        private static string _URL_API = "http://151.80.38.31:8000/";
 
         private string _Data_JSON;
 

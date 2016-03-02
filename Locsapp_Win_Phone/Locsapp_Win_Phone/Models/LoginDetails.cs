@@ -26,7 +26,7 @@ using Newtonsoft.Json;
 
 namespace Locsapp_Win_Phone.Models
 {
-    class SignUpDetails
+    public class SignUpDetails
     {
         [JsonProperty("email")]
         public string email { get; set; }
@@ -36,7 +36,7 @@ namespace Locsapp_Win_Phone.Models
         public string password2 { get; set; }
     }
 
-    class UserInfos
+    public class UserInfos
     {
         [JsonProperty("email")]
         public string email { get; set; }
@@ -57,39 +57,44 @@ namespace Locsapp_Win_Phone.Models
         public string registered_date { get; set; }
     }
 
-    class LoginDetails
+    public class LoginDetails
     {
         public string username { get; set; }
         public string password { get; set; }
     }
 
-    class ChangeUserName
+    public class ChangeUserName
     {
         public string username { get; set; }
     }
 
-    class Change_passwd
+    public class Change_passwd
     {
         public string old_password { get; set; }
         public string new_password1 { get; set; }
         public string new_password2 { get; set; }
     }
 
-    class KeyRegister
+    public class KeyRegister
     {
         [JsonProperty("key")]
         public string key { get; set; }
     }
 
-    class Add_secondaryemail
+    public class Add_secondaryemail
     {
         public string new_email { get; set; }
     }
 
-    class FaceBook_Login
+    public class FaceBook_Login
     {
         public string access_token { get; set; }
         public string code { get; set; }
+    }
+
+    public class Return_Logout
+    {
+        public string success { get; set; }
     }
 
 }

@@ -12,7 +12,7 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     //Handle Errors
 
-    class API_Response
+    public class API_Response
     {
         public Boolean _IsError;
         public string _ErrorMessage;

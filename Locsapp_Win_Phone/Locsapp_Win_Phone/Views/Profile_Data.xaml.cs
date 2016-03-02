@@ -45,7 +45,7 @@ namespace Locsapp_Win_Phone
             string text = e.Parameter as string;
             Key = text;
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "GET", "", Key);
+            API.API_req(API.URL_API + "api/v1/rest-auth/user/", "GET", "", Key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
@@ -69,7 +69,7 @@ namespace Locsapp_Win_Phone
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "PUT", json, Key);
+            API.API_req(API.URL_API + "api/v1/rest-auth/user/", "PUT", json, Key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
@@ -81,7 +81,7 @@ namespace Locsapp_Win_Phone
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/rest-auth/logout/", "POST", "", Key);
+            API.API_req(API.URL_API + "api/v1/rest-auth/logout/", "POST", "", Key);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)

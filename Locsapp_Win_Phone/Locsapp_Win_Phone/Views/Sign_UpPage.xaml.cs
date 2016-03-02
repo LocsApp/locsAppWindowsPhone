@@ -41,7 +41,7 @@ namespace Locsapp_Win_Phone
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/rest-auth/registration/", "POST", json);
+            API.API_req(API.URL_API + "api/v1/rest-auth/registration/", "POST", json);
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Error_view), API);
             if (API.SetResponse.error == false)
