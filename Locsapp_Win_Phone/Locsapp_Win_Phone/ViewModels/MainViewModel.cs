@@ -28,29 +28,24 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     public class MainViewModel
     {
-        private static string _URL_API = "http://151.80.38.31:8000/";
+        private static string URLAPI = "http://151.80.38.31:8000/";
 
-        private string _Data_JSON;
+        private string DataJSON;
 
         public string Data_JSON
         {
-            get { return _Data_JSON; }
-            set { _Data_JSON = value; }
+            get { return DataJSON; }
+            set { DataJSON = value; }
         }
 
         public string URL_API
         {
-            get { return _URL_API; }
+            get { return URLAPI; }
         }
 
-        public API_Response SetResponse = new API_Response(false, "");
+        public APIResponse SetResponse = new APIResponse(false, "");
 
         private static ManualResetEvent allDone = new ManualResetEvent(false);
-
-        public void Ping_API()
-        {
-            
-        }
 
         public void API_req(String API_URL, String Method, String JSON_data = "", String Key = "")
         {

@@ -81,15 +81,6 @@
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\clretwrc.dll">
-      <PackagePath>clretwrc.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\coreclr.dll">
-      <PackagePath>coreclr.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\dbgshim.dll">
-      <PackagePath>dbgshim.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\entrypoint\UnitTestProject.exe">
       <PackagePath>entrypoint\UnitTestProject.exe</PackagePath>
     </AppxPackagedFile>
@@ -152,21 +143,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\mscordaccore.dll">
-      <PackagePath>mscordaccore.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\mscordbi.dll">
-      <PackagePath>mscordbi.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\mscorlib.ni.dll">
-      <PackagePath>mscorlib.ni.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\mscorrc.debug.dll">
-      <PackagePath>mscorrc.debug.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\mscorrc.dll">
-      <PackagePath>mscorrc.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\UnitTestProject\bin\x86\Debug\Core\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>

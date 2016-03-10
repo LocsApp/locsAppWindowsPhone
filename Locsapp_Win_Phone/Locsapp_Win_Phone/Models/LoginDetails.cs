@@ -29,72 +29,89 @@ namespace Locsapp_Win_Phone.Models
     public class SignUpDetails
     {
         [JsonProperty("email")]
-        public string email { get; set; }
+        public string Email { get; set; }
         [JsonProperty("username")]
-        public string username { get; set; }
-        public string password1 { get; set; }
-        public string password2 { get; set; }
+        public string Username { get; set; }
+        [JsonProperty("password1")]
+        public string Password1 { get; set; }
+        [JsonProperty("password2")]
+        public string Password2 { get; set; }
     }
 
     public class UserInfos
     {
         [JsonProperty("email")]
-        public string email { get; set; }
+        public string Email { get; set; }
         [JsonProperty("first_name")]
-        public string first_name { get; set; }
-        public string last_name { get; set; }
+        public string FirstName { get; set; }
+        [JsonProperty("last_name")]
+        public string LastName { get; set; }
         [JsonProperty("username")]
-        public string username { get; set; }
-        public string password1 { get; set; }
-        public string password2 { get; set; }
-        public string birthdate { get; set; }
-        public string phone { get; set; }
-        public string living_address { get; set; }
-        public string billing_address { get; set; }
-        public object secondary_emails { get; set; }
-        public string logo_url { get; set; }
-        public string is_active { get; set; }
-        public string registered_date { get; set; }
+        public string Username { get; set; }
+        [JsonProperty("password1")]
+        public string Password1 { get; set; }
+        [JsonProperty("password2")]
+        public string Password2 { get; set; }
+        [JsonProperty("birthday")]
+        public string Birthdate { get; set; }
+        [JsonProperty("phone")]
+        public string Phone { get; set; }
+        [JsonProperty("living_address")]
+        public string LivingAddress { get; set; }
+        [JsonProperty("billing_address")]
+        public string BillingAddress { get; set; }
+        [JsonProperty("secondary_emails")]
+        public object SecondaryEmails { get; set; }
+        [JsonProperty("logo_url")]
+        public string LogoUrl { get; set; }
+        [JsonProperty("is_active")]
+        public string IsActive { get; set; }
+        [JsonProperty("registered_date")]
+        public string RegisteredDate { get; set; }
     }
 
     public class LoginDetails
     {
-        public string username { get; set; }
-        public string password { get; set; }
+        [JsonProperty("username")]
+        public string Username { get; set; }
+        [JsonProperty("password")]
+        public string Password { get; set; }
     }
 
     public class ChangeUserName
     {
-        public string username { get; set; }
+        [JsonProperty("username")]
+        public string Username { get; set; }
     }
 
-    public class Change_passwd
+    public class ChangePasswd
     {
-        public string old_password { get; set; }
-        public string new_password1 { get; set; }
-        public string new_password2 { get; set; }
+        [JsonProperty("old_password")]
+        public string OldPassword { get; set; }
+        [JsonProperty("new_password1")]
+        public string NewPassword1 { get; set; }
+        [JsonProperty("new_password2")]
+        public string NewPassword2 { get; set; }
     }
 
     public class KeyRegister
     {
         [JsonProperty("key")]
-        public string key { get; set; }
+        public string Key { get; set; }
     }
 
-    public class Add_secondaryemail
+    public class FaceBookLogin
     {
-        public string new_email { get; set; }
+        [JsonProperty("access_token")]
+        public string AccessToken { get; set; }
+        [JsonProperty("code")]
+        public string Code { get; set; }
     }
 
-    public class FaceBook_Login
+    public class ReturnLogout
     {
-        public string access_token { get; set; }
-        public string code { get; set; }
-    }
-
-    public class Return_Logout
-    {
-        public string success { get; set; }
+        [JsonProperty("success")]
+        public string Success { get; set; }
     }
 
 }

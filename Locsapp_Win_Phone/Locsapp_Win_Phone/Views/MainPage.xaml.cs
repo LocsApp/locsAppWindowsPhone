@@ -43,20 +43,20 @@ namespace Locsapp_Win_Phone
             if (Login.Text != "" && Password.Password != "")
             {
                 LoginDetails data = new LoginDetails();
-                data.username = Login.Text;
-                data.password = Password.Password;
+                data.Username = Login.Text;
+                data.Password = Password.Password;
                 string json = JsonConvert.SerializeObject(data);
                 Debug.WriteLine(json);
                 var API = new MainViewModel();
                 API.API_req(API.URL_API + "api/v1/rest-auth/login/", "POST", json);
                 if (API.SetResponse.error == true)
-                    Frame.Navigate(typeof(Error_view), API);
+                    Frame.Navigate(typeof(Errorview), API);
                 if (API.SetResponse.error == false)
                 {
                     Debug.WriteLine("Login Sucess");
                     Debug.WriteLine(API.SetResponse.APIResponseString);
                     var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                    Frame.Navigate(typeof(Profil_Design), results.key);
+                    Frame.Navigate(typeof(ProfilDesign), results.Key);
                 }
             }
             if (Login.Text == "")
@@ -67,46 +67,46 @@ namespace Locsapp_Win_Phone
 
         private void Subscribe_Click(object sender, RoutedEventArgs e)
         {
-           Frame.Navigate(typeof(Sign_UpPage));
+           Frame.Navigate(typeof(SignUpPage));
         }
 
-        private void Verify_UserName_Facebook(string key, FaceBook_Login log_Facebook)
+        private void Verify_UserName_Facebook(string key, FaceBookLogin log_Facebook)
         {
             Debug.WriteLine(key);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/rest-auth/user/", "GET", "", key);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
+                Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
-                if (results.username == "")
+                if (results.Username == "")
                 {
                     Debug.WriteLine("Le username est Vide");
                     Debug.WriteLine("Creation d'un username");
                     if (Login.Text == "")
                     {
                         Login.BorderBrush = new SolidColorBrush(Colors.Red);
-                        var dialog = new Windows.UI.Popups.MessageDialog( "Please insert a Username", "Username");
+                        new Windows.UI.Popups.MessageDialog( "Please insert a Username", "Username");
                     }
                     else
                     {
                         ChangeUserName jsonUsername = new ChangeUserName();
-                        jsonUsername.username = Login.Text;
+                        jsonUsername.Username = Login.Text;
                         string json2 = JsonConvert.SerializeObject(jsonUsername);
                         API.API_req(API.URL_API + "api/v1/auth/change-username/", "POST", json2, key);
                         Debug.WriteLine("Change Username OK");
                         string json = JsonConvert.SerializeObject(log_Facebook);
                         API.API_req(API.URL_API + "api/v1/rest-auth/facebook/", "POST", json);
                         if (API.SetResponse.error == true)
-                            Frame.Navigate(typeof(Error_view), API);
+                            Frame.Navigate(typeof(Errorview), API);
                         if (API.SetResponse.error == false)
                         {
                             Debug.WriteLine("Key Get");
                             Debug.WriteLine(API.SetResponse.APIResponseString);
                             var key_login = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                            Frame.Navigate(typeof(Profil_Design), key_login);
+                            Frame.Navigate(typeof(ProfilDesign), key_login);
                         }
                     }
                 }
@@ -114,30 +114,30 @@ namespace Locsapp_Win_Phone
                 {
                     Debug.WriteLine("Le username est Plein");
                     Debug.WriteLine("On peut Logger");
-                    Frame.Navigate(typeof(Profil_Design), key);
+                    Frame.Navigate(typeof(ProfilDesign), key);
                 }
             }
         }
 
         private void Sign_Up_Facebook(object sender, RoutedEventArgs e)
         {
-               var log_Facebook = new FaceBook_Login();
-               log_Facebook.access_token = "CAACEdEose0cBAHpIZB71P0hfFNKF6UAIUxnZB13ak053y6a75NaHTqdKyASFXBX4uUiCiXMto249jeL4HAIPL9AXkAW58fhkdv8Ikgk8ZBZA7ZAzdiBPf3ZArF36TGRDEGBCZBhZCzlD0RbLSxwSs8gV8eA4RZCV0UWQ5fQUpNWzd5AzEN2f7O3g3b5x6C6pR0XrJrYBnj41NxAZDZD";
-               log_Facebook.code = "1011661268854723";
+               var log_Facebook = new FaceBookLogin();
+               log_Facebook.AccessToken = "CAAOYHPhJOa8BAMDZBbEGIPkpZA27VZA1Ll8dmAeCGYZAYy6Pro6YmQgbUS1KEdbbWEc19ZBO9rnYs4NDzHzYHsMaXYZCmxr7rbYijDfvzSRZCJ8zsmJZBlpZAfbZBB2cY7BVqZBaaYQOe0lC4XPofD1AmglGd8tW2ki0zk8LXbowcfKeTMTbAKAGaZC75TzWigu6y73e2pgCaOhjPgZDZD";
+               log_Facebook.Code = "1011661268854723";
                string json = JsonConvert.SerializeObject(log_Facebook);
                Debug.WriteLine(json);
                var API = new MainViewModel();
                API.API_req(API.URL_API + "api/v1/rest-auth/facebook/", "POST", json);
             Debug.WriteLine("OK1");
             if (API.SetResponse.error == true)
-                   Frame.Navigate(typeof(Error_view), API);
+                   Frame.Navigate(typeof(Errorview), API);
                if (API.SetResponse.error == false)
                {
                 Debug.WriteLine("OK2");
                 Debug.WriteLine("Key Get");
                    Debug.WriteLine(API.SetResponse.APIResponseString);
                     var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                    Verify_UserName_Facebook(results.key, log_Facebook);
+                    Verify_UserName_Facebook(results.Key, log_Facebook);
                }
         }
         }

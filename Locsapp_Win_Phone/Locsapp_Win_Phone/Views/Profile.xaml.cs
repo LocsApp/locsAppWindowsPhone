@@ -51,39 +51,39 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "GET", "", Key);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
+                Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
-                Hello.Text = Hello.Text + " " +results.username;
-                username.Text = results.username;
-                email.Text = NullToString(results.email);
-                first_name.Text = NullToString(results.first_name);
-                last_name.Text = NullToString(results.last_name);
-                phone_number.Text = NullToString(results.phone);
+                Hello.Text = Hello.Text + " " +results.Username;
+                username.Text = results.Username;
+                email.Text = NullToString(results.Email);
+                first_name.Text = NullToString(results.FirstName);
+                last_name.Text = NullToString(results.LastName);
+                phone_number.Text = NullToString(results.Phone);
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             UserInfos data = new UserInfos();
-            data.first_name = first_name.Text;
-            data.last_name = last_name.Text;
-            data.phone = phone_number.Text;
-            data.birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+            data.FirstName = first_name.Text;
+            data.LastName = last_name.Text;
+            data.Phone = phone_number.Text;
+            data.Birthdate = birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "/api/v1/rest-auth/user/", "PUT", json, Key);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
+                Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("OKAY : UpSuccess" + API.SetResponse.APIResponseString);
                 /*Debug.WriteLine("Login Sucess");
                 var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);*/
-                Frame.Navigate(typeof(Profile_Data), Key);
+                Frame.Navigate(typeof(ProfileData), Key);
             }
         }
 
@@ -92,7 +92,7 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             API.API_req(API.URL_API + "/api/v1/rest-auth/logout/", "POST", "", Key);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
+                Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
                 var dialog = new Windows.UI.Popups.MessageDialog(
@@ -106,18 +106,18 @@ namespace Locsapp_Win_Phone
 
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Change_passwd json = new Change_passwd();
-            json.old_password = old.Password;
-            json.new_password1 = new1.Password;
-            json.new_password2 = new2.Password;
+            ChangePasswd json = new ChangePasswd();
+            json.OldPassword = old.Password;
+            json.NewPassword1 = new1.Password;
+            json.NewPassword2 = new2.Password;
             string json2 = JsonConvert.SerializeObject(json);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "/api/v1/rest-auth/password/change/", "POST", json2, Key);
             if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Error_view), API);
+                Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
-                Frame.Navigate(typeof(Profile_Data), Key);
+                Frame.Navigate(typeof(ProfileData), Key);
             }
         }
 
@@ -128,7 +128,7 @@ namespace Locsapp_Win_Phone
 
         private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Profile_Data), Key);
+            Frame.Navigate(typeof(ProfileData), Key);
         }
 
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
@@ -136,19 +136,5 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(Profile), Key);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Add_secondaryemail json = new Add_secondaryemail();
-            json.new_email = secondary_emails.Text;
-            string json2 = JsonConvert.SerializeObject(json);
-            var API = new MainViewModel();
-            API.API_req(API.URL_API + "/api/v1/user/add-email/", "POST", json2, Key);
-            //if (API.SetResponse.error == true)
-            //    Frame.Navigate(typeof(Error_view), API);
-            //if (API.SetResponse.error == false)
-            ///{
-             //   Frame.Navigate(typeof(Profile_Data), Key);
-            //}
-        }
     }
 }

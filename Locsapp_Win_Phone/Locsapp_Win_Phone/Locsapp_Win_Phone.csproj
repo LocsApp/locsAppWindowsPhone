@@ -75,6 +75,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -100,8 +101,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\API_Response.cs" />
-    <Compile Include="Views\Error_view.xaml.cs">
-      <DependentUpon>Error_view.xaml</DependentUpon>
+    <Compile Include="Views\Errorview.xaml.cs">
+      <DependentUpon>Errorview.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -112,14 +113,14 @@
     <Compile Include="Views\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Profile_Data.xaml.cs">
-      <DependentUpon>Profile_Data.xaml</DependentUpon>
+    <Compile Include="Views\ProfileData.xaml.cs">
+      <DependentUpon>ProfileData.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Profil_Design.xaml.cs">
-      <DependentUpon>Profil_Design.xaml</DependentUpon>
+    <Compile Include="Views\ProfilDesign.xaml.cs">
+      <DependentUpon>ProfilDesign.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Sign_UpPage.xaml.cs">
-      <DependentUpon>Sign_UpPage.xaml</DependentUpon>
+    <Compile Include="Views\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +158,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Error_view.xaml">
+    <Page Include="Views\Errorview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,15 +170,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Profile_Data.xaml">
+    <Page Include="Views\ProfileData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Profil_Design.xaml">
+    <Page Include="Views\ProfilDesign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Sign_UpPage.xaml">
+    <Page Include="Views\SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
