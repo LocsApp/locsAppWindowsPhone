@@ -25,7 +25,7 @@
                     <Button x:ConnectionId='2' Grid.Row="0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
                     <Image Grid.Row="1"  Source="ms-appx:///Assets/locsapp_logo.png" Height="120"></Image>
                     <TextBox x:ConnectionId='3' Grid.Row="2" x:Name="fb_username" PlaceholderText="Username"></TextBox>
-                    <Button x:ConnectionId='4' Grid.Row="3" Margin="10" HorizontalAlignment="Center"                    Foreground="White" Background="#3B5998" Width="600">Sign up with Facebook</Button>
+                    <Button x:ConnectionId='4' Grid.Row="3" Margin="10" HorizontalAlignment="Center"                        Foreground="White" Background="#3B5998" Width="600">Sign up with Facebook</Button>
                     <Border Grid.Row="3" BorderBrush="Black" BorderThickness="0,0,0,2"/>
                     <TextBox x:ConnectionId='5' Grid.Row="4" x:Name="username" PlaceholderText="UserName"></TextBox>
                     <TextBox x:ConnectionId='6' Grid.Row="5" x:Name="email" PlaceholderText="E-Mail"></TextBox>

@@ -23,6 +23,8 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Windows.UI;
 using Facebook;
+using Windows.Security.Authentication.Web;
+using Windows.ApplicationModel.Store;
 
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -119,26 +121,40 @@ namespace Locsapp_Win_Phone
             }
         }
 
-        private void Sign_Up_Facebook(object sender, RoutedEventArgs e)
+        private async void Sign_Up_Facebook(object sender, RoutedEventArgs e)
         {
-               var log_Facebook = new FaceBookLogin();
-               log_Facebook.AccessToken = "CAAOYHPhJOa8BAMDZBbEGIPkpZA27VZA1Ll8dmAeCGYZAYy6Pro6YmQgbUS1KEdbbWEc19ZBO9rnYs4NDzHzYHsMaXYZCmxr7rbYijDfvzSRZCJ8zsmJZBlpZAfbZBB2cY7BVqZBaaYQOe0lC4XPofD1AmglGd8tW2ki0zk8LXbowcfKeTMTbAKAGaZC75TzWigu6y73e2pgCaOhjPgZDZD";
-               log_Facebook.Code = "1011661268854723";
-               string json = JsonConvert.SerializeObject(log_Facebook);
-               Debug.WriteLine(json);
-               var API = new MainViewModel();
-               API.API_req(API.URL_API + "api/v1/rest-auth/facebook/", "POST", json);
-            Debug.WriteLine("OK1");
-            if (API.SetResponse.error == true)
-                   Frame.Navigate(typeof(Errorview), API);
-               if (API.SetResponse.error == false)
-               {
-                Debug.WriteLine("OK2");
-                Debug.WriteLine("Key Get");
-                   Debug.WriteLine(API.SetResponse.APIResponseString);
-                    var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                    Verify_UserName_Facebook(results.Key, log_Facebook);
-               }
+            var Facebook = new FaceBook();
+            await Facebook.AuthenticateFacebookAsync();
+            if (Facebook.isTokenGet)
+            {
+                var log_Facebook = new FaceBookLogin();
+                Debug.WriteLine("Le token utilisé est : " + Facebook.TokenFB);
+                log_Facebook.FacebookToken = Facebook.TokenFB;
+                string json = JsonConvert.SerializeObject(log_Facebook);
+                Debug.WriteLine(json);
+                var API = new MainViewModel();
+                API.API_req(API.URL_API + "api/v1/auth/facebook-login/", "POST", json);
+                Debug.WriteLine("OK1");
+                if (API.SetResponse.error == true)
+                    Frame.Navigate(typeof(Errorview), API);
+                if (API.SetResponse.error == false)
+                {
+                    Debug.WriteLine("OK2");
+                    Debug.WriteLine("Key Get");
+                    Debug.WriteLine(API.SetResponse.APIResponseString);
+                    var key_login = JsonConvert.DeserializeObject<FaceBookKey>(API.SetResponse.APIResponseString);
+                    Frame.Navigate(typeof(ProfilDesign), key_login.Key);
+                }
+                else
+                {
+                 var dialog = new Windows.UI.Popups.MessageDialog(
+                 "Error on facebook Token",
+                 "Facebook Error");
+
+                    var result = dialog.ShowAsync();
+                }
+            }
+            
         }
         }
 

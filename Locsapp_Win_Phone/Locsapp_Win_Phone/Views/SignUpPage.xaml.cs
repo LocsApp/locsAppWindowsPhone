@@ -21,6 +21,7 @@ using Locsapp_Win_Phone.Models;
 using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
+using Windows.UI;
 
 namespace Locsapp_Win_Phone
 {
@@ -63,6 +64,38 @@ namespace Locsapp_Win_Phone
             if (rootFram != null && rootFram.CanGoBack)
             {
                 rootFram.GoBack();
+            }
+        }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (fb_username.Text == "")
+            {
+                fb_username.BorderBrush = new SolidColorBrush(Colors.Red);
+            }
+            else
+            {
+                var Facebook = new FaceBook();
+                await Facebook.AuthenticateFacebookAsync();
+                var log_Facebook = new FaceBookRegister();
+                log_Facebook.FacebookToken = Facebook.TokenFB;
+                log_Facebook.Username = fb_username.Text;
+                string json = JsonConvert.SerializeObject(log_Facebook);
+                Debug.WriteLine(json);
+                var API = new MainViewModel();
+                API.API_req(API.URL_API + "api/v1/auth/facebook-register/", "POST", json);
+                Debug.WriteLine("OK1");
+                if (API.SetResponse.error == true)
+                    Frame.Navigate(typeof(Errorview), API);
+                if (API.SetResponse.error == false)
+                {
+                    Debug.WriteLine("OK2");
+                    Debug.WriteLine("Key Get");
+                    Debug.WriteLine(API.SetResponse.APIResponseString);
+                    var dialog = new Windows.UI.Popups.MessageDialog(
+                      "Account succesfuly create ",
+                      "Congratulation"); ;
+                }
             }
         }
     }

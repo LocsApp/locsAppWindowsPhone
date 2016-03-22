@@ -100,12 +100,29 @@ namespace Locsapp_Win_Phone.Models
         public string Key { get; set; }
     }
 
+    public class FaceBookRegister
+    {
+        [JsonProperty("facebook_token")]
+        public string FacebookToken { get; set; }
+        [JsonProperty("username")]
+        public string Username { get; set; }
+    }
+
     public class FaceBookLogin
     {
-        [JsonProperty("access_token")]
-        public string AccessToken { get; set; }
-        [JsonProperty("code")]
-        public string Code { get; set; }
+        [JsonProperty("facebook_token")]
+        public string FacebookToken { get; set; }
+    }
+
+    //{"message": "Facebook login done", "key": "8dd25509b11768138bced77a4c03327e5990a561", "id": 2}
+    public class FaceBookKey
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+        [JsonProperty("key")]
+        public string Key { get; set; }
+        [JsonProperty("id")]
+        public string Id { get; set; }
     }
 
     public class ReturnLogout
