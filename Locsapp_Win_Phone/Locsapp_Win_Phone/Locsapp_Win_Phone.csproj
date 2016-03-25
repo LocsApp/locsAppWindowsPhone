@@ -134,12 +134,14 @@
     <None Include="Locsapp_Win_Phone_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Article\heart.png" />
     <Content Include="Assets\Article\Robe 1.jpg" />
     <Content Include="Assets\Article\Robe 2.jpg" />
     <Content Include="Assets\Article\Robe 3.jpg" />
     <Content Include="Assets\Article\Robe1Redim.jpg" />
     <Content Include="Assets\Article\Robe2Redim.jpg" />
     <Content Include="Assets\Article\Robe3Redim.jpg" />
+    <Content Include="Assets\Article\share-variant.png" />
     <Content Include="Assets\locsapp_logo.png" />
     <Content Include="Assets\Profile_Assets\account.png" />
     <Content Include="Assets\Profile_Assets\cake-variant.png" />

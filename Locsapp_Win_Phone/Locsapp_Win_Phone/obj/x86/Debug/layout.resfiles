@@ -1,11 +1,13 @@
 WinMetadata\Windows.winmd
 ApplicationInsights.config
+Assets\Article\heart.png
 Assets\Article\Robe 1.jpg
 Assets\Article\Robe 2.jpg
 Assets\Article\Robe 3.jpg
 Assets\Article\Robe1Redim.jpg
 Assets\Article\Robe2Redim.jpg
 Assets\Article\Robe3Redim.jpg
+Assets\Article\share-variant.png
 Assets\LockScreenLogo.scale-200.png
 Assets\locsapp_logo.png
 Assets\Profile_Assets\account.png
