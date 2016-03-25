@@ -28,7 +28,9 @@ namespace Locsapp_Win_Phone
     public sealed partial class Article : Page
     {
         List<string> Images1 = new List<string>();
+        List<string> Images2 = new List<string>();
         int imgCount = 0;
+        int imgCountRec = 0;
 
         public Article()
         {
@@ -42,6 +44,9 @@ namespace Locsapp_Win_Phone
             Images1.Add("Robe1Redim.jpg");
             Images1.Add("Robe2Redim.jpg");
             Images1.Add("Robe3Redim.jpg");
+            Images2.Add("Robe1Redim.jpg");
+            Images2.Add("Robe2Redim.jpg");
+            Images2.Add("Robe3Redim.jpg");
         }
 
         private void SlidshowBack(object sender, RoutedEventArgs e)
@@ -58,6 +63,22 @@ namespace Locsapp_Win_Phone
             if (imgCount <= 0)
                 imgCount = Images1.Count - 1;
             sceneriesBtn.Source = new BitmapImage(new Uri("ms-appx:///Assets/Article/" + Images1[imgCount]));
+        }
+
+        private void SlidshowBackRec(object sender, RoutedEventArgs e)
+        {
+            imgCountRec++;
+            if (imgCountRec >= Images2.Count)
+                imgCountRec = 0;
+            recommand.Source = new BitmapImage(new Uri("ms-appx:///Assets/Article/" + Images2[imgCountRec]));
+        }
+
+        private void SlidshowForwardRec(object sender, RoutedEventArgs e)
+        {
+            imgCountRec--;
+            if (imgCountRec <= 0)
+                imgCountRec = Images2.Count - 1;
+            recommand.Source = new BitmapImage(new Uri("ms-appx:///Assets/Article/" + Images2[imgCountRec]));
         }
     }
 }
