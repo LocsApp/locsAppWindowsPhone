@@ -7,6 +7,7 @@
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="TopAppBar" />
+      <RootProperty Name="BottomAppBar" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
@@ -18,8 +19,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Background" />
       <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -40,6 +41,23 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontWeight" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
@@ -48,18 +66,6 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
       <RootProperty Name="Orientation" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Inlines" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontWeight" />
-      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Margin" />
@@ -118,10 +124,6 @@
       <RootProperty Name="IsPaneOpen" />
       <RootProperty Name="Pane" />
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />

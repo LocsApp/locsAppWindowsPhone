@@ -20,6 +20,26 @@
         </AppBar>
     </Page.TopAppBar>
 
+    <Page.BottomAppBar>
+        <AppBar Background="White" IsOpen="True" IsSticky="True">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0">Begin Location Date</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0">End Location Date</TextBlock>
+                <DatePicker Grid.Column="0" Grid.Row="1" ></DatePicker>
+                <DatePicker Grid.Column="1" Grid.Row="1" ></DatePicker>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
         <StackPanel>
