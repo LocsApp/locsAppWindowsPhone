@@ -69,6 +69,5 @@ namespace Locsapp_Win_Phone.ViewModels
             }
             return null;
         }
-
     }
 }

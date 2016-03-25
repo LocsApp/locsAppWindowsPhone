@@ -102,6 +102,9 @@
     </Compile>
     <Compile Include="ViewModels\API_Response.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
+    <Compile Include="Views\Article.xaml.cs">
+      <DependentUpon>Article.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Errorview.xaml.cs">
       <DependentUpon>Errorview.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,12 @@
     <None Include="Locsapp_Win_Phone_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Article\Robe 1.jpg" />
+    <Content Include="Assets\Article\Robe 2.jpg" />
+    <Content Include="Assets\Article\Robe 3.jpg" />
+    <Content Include="Assets\Article\Robe1Redim.jpg" />
+    <Content Include="Assets\Article\Robe2Redim.jpg" />
+    <Content Include="Assets\Article\Robe3Redim.jpg" />
     <Content Include="Assets\locsapp_logo.png" />
     <Content Include="Assets\Profile_Assets\account.png" />
     <Content Include="Assets\Profile_Assets\cake-variant.png" />
@@ -141,6 +150,7 @@
     <Content Include="Assets\Profile_Assets\map-marker.png" />
     <Content Include="Assets\Profile_Assets\phone.png" />
     <Content Include="Assets\Profile_Assets\RandomDude.jpg" />
+    <Content Include="Assets\Profile_Assets\star.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -158,6 +168,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Article.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Errorview.xaml">
       <SubType>Designer</SubType>
@@ -187,6 +201,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

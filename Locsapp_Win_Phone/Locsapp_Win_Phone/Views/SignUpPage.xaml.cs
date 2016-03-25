@@ -77,24 +77,34 @@ namespace Locsapp_Win_Phone
             {
                 var Facebook = new FaceBook();
                 await Facebook.AuthenticateFacebookAsync();
-                var log_Facebook = new FaceBookRegister();
-                log_Facebook.FacebookToken = Facebook.TokenFB;
-                log_Facebook.Username = fb_username.Text;
-                string json = JsonConvert.SerializeObject(log_Facebook);
-                Debug.WriteLine(json);
-                var API = new MainViewModel();
-                API.API_req(API.URL_API + "api/v1/auth/facebook-register/", "POST", json);
-                Debug.WriteLine("OK1");
-                if (API.SetResponse.error == true)
-                    Frame.Navigate(typeof(Errorview), API);
-                if (API.SetResponse.error == false)
+                if (Facebook.isTokenGet)
                 {
-                    Debug.WriteLine("OK2");
-                    Debug.WriteLine("Key Get");
-                    Debug.WriteLine(API.SetResponse.APIResponseString);
+                    var log_Facebook = new FaceBookRegister();
+                    log_Facebook.FacebookToken = Facebook.TokenFB;
+                    log_Facebook.Username = fb_username.Text;
+                    string json = JsonConvert.SerializeObject(log_Facebook);
+                    Debug.WriteLine(json);
+                    var API = new MainViewModel();
+                    API.API_req(API.URL_API + "api/v1/auth/facebook-register/", "POST", json);
+                    Debug.WriteLine("OK1");
+                    if (API.SetResponse.error == true)
+                        Frame.Navigate(typeof(Errorview), API);
+                    if (API.SetResponse.error == false)
+                    {
+                        Debug.WriteLine("OK2");
+                        Debug.WriteLine("Key Get");
+                        Debug.WriteLine(API.SetResponse.APIResponseString);
+                        var dialog = new Windows.UI.Popups.MessageDialog(
+                          "Account succesfuly create ",
+                          "Congratulation"); ;
+                    }
+                }
+                else
+                {
                     var dialog = new Windows.UI.Popups.MessageDialog(
-                      "Account succesfuly create ",
-                      "Congratulation"); ;
+                        "Error on facebook Token",
+                        "Facebook Error");
+                    var result = dialog.ShowAsync();
                 }
             }
         }
