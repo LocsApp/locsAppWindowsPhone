@@ -27,6 +27,9 @@
                         <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                     Width="50" Height="50" Background="Transparent" Click="Logout"/>
                         <TextBlock Text="Logout" FontSize="18" VerticalAlignment="Center"/>
+                        <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE7C3;"
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
+                        <TextBlock Text="Article" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
             </SplitView.Pane>

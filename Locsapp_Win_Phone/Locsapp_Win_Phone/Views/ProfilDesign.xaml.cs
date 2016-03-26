@@ -129,5 +129,9 @@ namespace Locsapp_Win_Phone
             }
         }
 
+        private void MenuButton2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Article));
+        }
     }
 }
