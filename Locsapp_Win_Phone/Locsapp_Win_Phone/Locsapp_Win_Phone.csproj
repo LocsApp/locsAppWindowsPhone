@@ -106,6 +106,9 @@
     <Compile Include="Views\Article.xaml.cs">
       <DependentUpon>Article.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ArticleSearch.xaml.cs">
+      <DependentUpon>ArticleSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Errorview.xaml.cs">
       <DependentUpon>Errorview.xaml</DependentUpon>
     </Compile>
@@ -175,6 +178,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Article.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArticleSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
