@@ -136,6 +136,8 @@ namespace Locsapp_Win_Phone.Models
         public string Title { get; set; }
         public string Price { get; set; }
         public string Description { get; set; }
+        public string Range { get; set; }
+        public string Thumbnail { get; set; }
     }
 
 }
