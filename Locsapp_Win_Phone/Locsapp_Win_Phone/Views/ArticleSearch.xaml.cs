@@ -34,12 +34,12 @@ namespace Locsapp_Win_Phone
             this.InitializeComponent();
             ObservableCollection<SearchItems> dataList = new ObservableCollection<SearchItems>();
 
-            SearchItems c1 = new SearchItems() { Price = "420", Title = "Robe rouge et kek", Description = "Topkekus", Range = "25", Thumbnail = "Robe1Redim.jpg" };
-            SearchItems c2 = new SearchItems() { Price = "40", Title = "Robe rouge et lel", Description = "lalalal", Range = "45", Thumbnail = "Robe2Redim.jpg" };
-            SearchItems c3 = new SearchItems() { Price = "20", Title = "Robe rouge et Topkek", Description = "Coucou les amis comment ça va ?", Range = "75", Thumbnail = "Robe3Redim.jpg" };
-            SearchItems c4 = new SearchItems() { Price = "2", Title = "Robe rouge et kekgege", Description = "Topkekrgregerus", Range = "51", Thumbnail = "Robe1Redim.jpg" };
-            SearchItems c5 = new SearchItems() { Price = "201", Title = "Robe rouge et lelgez", Description = "lalagegegelal", Range = "568", Thumbnail = "Robe2Redim.jpg" };
-            SearchItems c6 = new SearchItems() { Price = "410", Title = "Robe rouge et Topkekezg", Description = "Coucou comment ça va ?", Range = "5", Thumbnail = "Robe3Redim.jpg" };
+            SearchItems c1 = new SearchItems() { Price = "420", Title = "Robe rouge et kek", Description = "Topkekus", Range = "25", Thumbnail = "ms-appx:///Assets/Article/Robe1Redim.jpg" };
+            SearchItems c2 = new SearchItems() { Price = "40", Title = "Robe rouge et lel", Description = "lalalal", Range = "45", Thumbnail = "ms-appx:///Assets/Article/Robe2Redim.jpg" };
+            SearchItems c3 = new SearchItems() { Price = "20", Title = "Robe rouge et Topkek", Description = "Coucou les amis comment ça va ?", Range = "75", Thumbnail = "ms-appx:///Assets/Article/Robe3Redim.jpg" };
+            SearchItems c4 = new SearchItems() { Price = "2", Title = "Robe rouge et kekgege", Description = "Topkekrgregerus", Range = "51", Thumbnail = "ms-appx:///Assets/Article/Robe1Redim.jpg" };
+            SearchItems c5 = new SearchItems() { Price = "201", Title = "Robe rouge et lelgez", Description = "lalagegegelal", Range = "568", Thumbnail = "ms-appx:///Assets/Article/Robe2Redim.jpg" };
+            SearchItems c6 = new SearchItems() { Price = "410", Title = "Robe rouge et Topkekezg", Description = "Coucou comment ça va ?", Range = "5", Thumbnail = "ms-appx:///Assets/Article/Robe3Redim.jpg" };
 
             dataList.Add(c1);
             dataList.Add(c2);

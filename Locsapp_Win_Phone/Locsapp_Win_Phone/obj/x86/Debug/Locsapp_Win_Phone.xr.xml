@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Range" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="Thumbnail" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">

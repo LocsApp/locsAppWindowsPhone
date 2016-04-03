@@ -10,21 +10,27 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView x:Name="MyList">
             <ListView.ItemTemplate>
-
                 <DataTemplate>
-
-                    <StackPanel>
-                        
-                        <TextBlock Text="{Binding Title}"></TextBlock>
-
-                        <TextBlock Text="{Binding Price}"></TextBlock>
-
-                        <TextBlock Text="{Binding Description}"></TextBlock>
-
-                    </StackPanel>
-
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.25*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding Thumbnail}"></Image>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{Binding Title}"></TextBlock>
+                            <TextBlock Grid.Row="1" Text="{Binding Price}"></TextBlock>
+                            <TextBlock Grid.Row="2" Text="{Binding Description}"></TextBlock>
+                            <TextBlock Grid.Row="3" Text="{Binding Range}"></TextBlock>
+                        </Grid>
+                    </Grid>
                 </DataTemplate>
-
             </ListView.ItemTemplate>
         </ListView>
     </Grid>
