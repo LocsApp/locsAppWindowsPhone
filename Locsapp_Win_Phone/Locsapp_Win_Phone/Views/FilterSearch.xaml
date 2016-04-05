@@ -85,9 +85,22 @@
         
         
         <Grid Grid.Row="3">
-            <TextBlock>Transaction modality</TextBlock>
-            <TextBlock>Payement Methods</TextBlock>
-            <TextBlock>Caution</TextBlock>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Transaction modality</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0">Payement Methods</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0">Caution</TextBlock>
+            <CheckBox Grid.Row="2" Grid.Column="1"/>
         </Grid>
+        
+        
     </Grid>
 </Page>
