@@ -15,25 +15,79 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock>Your research</TextBlock>
-            <TextBlock>search only in title</TextBlock>
-        </Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Foreground="#C51A1C">Your research</TextBlock>
+            <TextBox Grid.Row="1" PlaceholderText="You keywords"></TextBox>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0">search only in title</TextBlock>
+                <CheckBox Grid.Column="1"/>
+            </Grid>
+         </Grid>
+        
+        
         <Grid Grid.Row="1">
-            <TextBlock>Your disponibility</TextBlock>
-            <TextBlock>Position</TextBlock>
-            <TextBlock>Date</TextBlock>
-            <TextBlock>Cloth Properties</TextBlock>
-            <TextBlock>Category</TextBlock>
-            <TextBlock>Sub-Category</TextBlock>
-            <TextBlock>Brand</TextBlock>
-            <TextBlock>Gender</TextBlock>
-            <TextBlock>Size</TextBlock>
-            <TextBlock>Color</TextBlock>
-            <TextBlock>State</TextBlock>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Your disponibility</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0">Position</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1">Bayonne(10)</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0">Date</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1">From 1/05/2015 to 1/12/2015</TextBlock>
+        </Grid>
+        
+        
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Cloth Properties</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0">Category</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0">Sub-Category</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0">Brand</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0">Gender</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0">Size</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="0">Color</TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1">All</TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="0">State</TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1">All</TextBlock>
+        </Grid>
+        
+        
+        <Grid Grid.Row="3">
             <TextBlock>Transaction modality</TextBlock>
             <TextBlock>Payement Methods</TextBlock>
             <TextBlock>Caution</TextBlock>
         </Grid>
-
     </Grid>
 </Page>
