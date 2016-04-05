@@ -58,6 +58,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontWeight" />
       <RootEvent Name="Tapped" />
@@ -119,6 +120,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
+    <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />

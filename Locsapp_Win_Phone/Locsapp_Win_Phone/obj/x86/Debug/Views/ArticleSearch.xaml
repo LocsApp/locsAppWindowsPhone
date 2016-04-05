@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="MyList">
+        <ListView x:ConnectionId='1' x:Name="MyList">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -35,3 +35,4 @@
         </ListView>
     </Grid>
 </Page>
+
