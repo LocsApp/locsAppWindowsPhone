@@ -125,6 +125,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="IsChecked" />
+      <RootProperty Name="FlowDirection" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -163,6 +164,21 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton" />
     <RootType FullName="Locsapp_Win_Phone.ProfilDesign" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem" />
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="HorizontalContentAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
     <RootType FullName="Locsapp_Win_Phone.State" />
     <RootType FullName="Locsapp_Win_Phone.SignUpPage" />
   </Roots.RootTypes>
