@@ -131,7 +131,20 @@ namespace Locsapp_Win_Phone
 
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Article));
+            var API2 = new MainViewModel();
+            Address jsonPass = new Address();
+            jsonPass.Alias = "Test";
+            jsonPass.biling_address = new string[5,5];
+            string json2 = JsonConvert.SerializeObject(jsonPass);
+            API2.API_req(API2.URL_API + "api/v1/user/1/billing_addresses/", "POST", json2, Key);
+            if (API2.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API2);
+            if (API2.SetResponse.error == false)
+            {
+                Frame.Navigate(typeof(ProfilDesign), Key);
+            }
+            Debug.Write(json2);
+            //Frame.Navigate(typeof(Article));
         }
     }
 }

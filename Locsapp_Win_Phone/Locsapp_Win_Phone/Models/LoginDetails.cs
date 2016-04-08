@@ -125,6 +125,13 @@ namespace Locsapp_Win_Phone.Models
         public string Id { get; set; }
     }
 
+    public class Address
+    {
+        [JsonProperty("alias")]
+        public string Alias { get; set; }
+        public string[,] biling_address;
+    }
+
     public class ReturnLogout
     {
         [JsonProperty("success")]
