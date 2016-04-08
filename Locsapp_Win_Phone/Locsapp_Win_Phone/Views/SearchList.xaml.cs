@@ -33,14 +33,35 @@ namespace Locsapp_Win_Phone
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            type = e.ToString();
-            Debug.WriteLine("Le type qui a été choisis est : " + type);
+            type = e.Parameter as string;
+            Debug.WriteLine("3 - Le type qui a été choisis est : " + type);
+            Debug.WriteLine("1 - Le type qui a été choisis est : " + type);
+            MyList.ItemsSource = new BuildSearch(type).getlist();
+            Debug.WriteLine("2 - Le type qui a été choisis est : " + type);
         }
 
         public SearchList()
         {
             this.InitializeComponent();
-            MyList.ItemsSource = new BuildSearch(type).getlist();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFram = Window.Current.Content as Frame;
+            if (rootFram != null && rootFram.CanGoBack)
+            {
+                rootFram.GoBack();
+            }
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Frame rootFram = Window.Current.Content as Frame;
+            if (rootFram != null && rootFram.CanGoBack)
+            {
+                rootFram.GoBack();
+            }
+        }
+
     }
 }
