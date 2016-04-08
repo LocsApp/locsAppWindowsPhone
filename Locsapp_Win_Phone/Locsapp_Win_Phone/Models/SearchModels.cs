@@ -37,4 +37,32 @@ namespace Locsapp_Win_Phone.Models
         public bool CheckSearch { get; set; }
     }
 
+    class BuildSearch
+    {
+
+        ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
+
+        public BuildSearch(string type = "")
+        {
+           switch (type)
+            {
+                case "Brand":
+                    lists.Add(new BuildSearchList { CheckSearch = true, FieldSearch = "Well-Worn" });
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "A Little Used" });
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "Minimal Wear" });
+                    lists.Add(new BuildSearchList { CheckSearch = true, FieldSearch = "Factory New" });
+                    break;
+                default:
+                    lists.Add(new BuildSearchList { CheckSearch = true, FieldSearch = "lel" });
+                    break;
+            }
+        }
+
+        public ObservableCollection<BuildSearchList> getlist()
+        {
+            return (lists);
+        }
+
+    }
+
 }
