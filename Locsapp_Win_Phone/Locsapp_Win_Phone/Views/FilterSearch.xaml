@@ -67,20 +67,20 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Cloth Properties</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0">Category</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="0">Sub-Category</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="0">Brand</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="0">Gender</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="0">Size</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="0">Color</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="0">State</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="1" Grid.Column="0">Category</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" >All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="2" Grid.Column="0">Sub-Category</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="3" Grid.Column="0">Brand</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="4" Grid.Column="0">Gender</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="5" Grid.Column="0">Size</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="6" Grid.Column="0">Color</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="7" Grid.Column="0">State</TextBlock>
+            <TextBlock Tapped="Grid_Tapped" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
         </Grid>
         
         
@@ -95,8 +95,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Transaction modality</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0">Payement Methods</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock Tapped="Grid_TappedPayement" Grid.Row="1" Grid.Column="0">Payement Methods</TextBlock>
+            <TextBlock Tapped="Grid_TappedPayement" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0">Caution</TextBlock>
             <CheckBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right"/>
         </Grid>

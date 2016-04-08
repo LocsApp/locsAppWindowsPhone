@@ -113,6 +113,9 @@
     <Compile Include="Views\Errorview.xaml.cs">
       <DependentUpon>Errorview.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FilterSearch.xaml.cs">
+      <DependentUpon>FilterSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,8 +131,8 @@
     <Compile Include="Views\ProfilDesign.xaml.cs">
       <DependentUpon>ProfilDesign.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\State.xaml.cs">
-      <DependentUpon>State.xaml</DependentUpon>
+    <Compile Include="Views\SearchList.xaml.cs">
+      <DependentUpon>SearchList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
@@ -213,7 +216,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\State.xaml">
+    <Page Include="Views\SearchList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,9 +228,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\SearchTabs\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

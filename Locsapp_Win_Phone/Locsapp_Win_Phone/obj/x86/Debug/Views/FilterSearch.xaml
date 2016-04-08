@@ -67,20 +67,20 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Cloth Properties</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0">Category</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="0">Sub-Category</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="0">Brand</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="0">Gender</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="0">Size</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="0">Color</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="0">State</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='3'                      Grid.Row="1" Grid.Column="0">Category</TextBlock>
+            <TextBlock x:ConnectionId='4'                      Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" >All</TextBlock>
+            <TextBlock x:ConnectionId='5'                      Grid.Row="2" Grid.Column="0">Sub-Category</TextBlock>
+            <TextBlock x:ConnectionId='6'                      Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='7'                      Grid.Row="3" Grid.Column="0">Brand</TextBlock>
+            <TextBlock x:ConnectionId='8'                      Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='9'                      Grid.Row="4" Grid.Column="0">Gender</TextBlock>
+            <TextBlock x:ConnectionId='10'                      Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='11'                      Grid.Row="5" Grid.Column="0">Size</TextBlock>
+            <TextBlock x:ConnectionId='12'                      Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='13'                      Grid.Row="6" Grid.Column="0">Color</TextBlock>
+            <TextBlock x:ConnectionId='14'                      Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='15'                      Grid.Row="7" Grid.Column="0">State</TextBlock>
+            <TextBlock x:ConnectionId='16'                      Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
         </Grid>
         
         
@@ -95,8 +95,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Foreground="#C51A1C">Transaction modality</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0">Payement Methods</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
+            <TextBlock x:ConnectionId='1'                              Grid.Row="1" Grid.Column="0">Payement Methods</TextBlock>
+            <TextBlock x:ConnectionId='2'                              Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right">All</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0">Caution</TextBlock>
             <CheckBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right"/>
         </Grid>

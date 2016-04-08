@@ -26,12 +26,21 @@ using System.Collections.ObjectModel;
 
 namespace Locsapp_Win_Phone
 {
-    public sealed partial class State : Page
+    public sealed partial class SearchList : Page
     {
-        public State()
+
+        private string type = "Unknown";
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            type = e.ToString();
+            Debug.WriteLine("Le type qui a été choisis est : " + type);
+        }
+
+        public SearchList()
         {
             this.InitializeComponent();
-            MyList.ItemsSource = new BuildSearch("Brand").getlist();
+            MyList.ItemsSource = new BuildSearch(type).getlist();
         }
     }
 }

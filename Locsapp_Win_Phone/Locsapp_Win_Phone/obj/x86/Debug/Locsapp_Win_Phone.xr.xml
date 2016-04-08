@@ -179,7 +179,7 @@
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
     </RootType>
-    <RootType FullName="Locsapp_Win_Phone.State" />
+    <RootType FullName="Locsapp_Win_Phone.SearchList" />
     <RootType FullName="Locsapp_Win_Phone.SignUpPage" />
   </Roots.RootTypes>
 </Roots>
