@@ -6,6 +6,8 @@
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Thumbnail" />
+    <RootPropertyPathName Name="FieldSearch" />
+    <RootPropertyPathName Name="CheckSearch" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -120,7 +122,10 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="IsChecked" />
+    </RootType>
     <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -158,6 +163,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton" />
     <RootType FullName="Locsapp_Win_Phone.ProfilDesign" />
+    <RootType FullName="Locsapp_Win_Phone.State" />
     <RootType FullName="Locsapp_Win_Phone.SignUpPage" />
   </Roots.RootTypes>
 </Roots>

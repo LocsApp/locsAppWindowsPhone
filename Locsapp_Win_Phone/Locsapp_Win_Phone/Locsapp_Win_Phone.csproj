@@ -101,6 +101,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchModels.cs" />
     <Compile Include="ViewModels\API_Response.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
     <Compile Include="Views\Article.xaml.cs">
@@ -126,6 +127,9 @@
     </Compile>
     <Compile Include="Views\ProfilDesign.xaml.cs">
       <DependentUpon>ProfilDesign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\State.xaml.cs">
+      <DependentUpon>State.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
@@ -209,6 +213,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\State.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -217,7 +225,9 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\SearchTabs\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
