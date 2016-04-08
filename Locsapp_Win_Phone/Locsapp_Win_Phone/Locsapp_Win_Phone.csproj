@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Models\SearchModels.cs" />
     <Compile Include="ViewModels\API_Response.cs" />
+    <Compile Include="ViewModels\Cache.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
     <Compile Include="Views\Article.xaml.cs">
       <DependentUpon>Article.xaml</DependentUpon>

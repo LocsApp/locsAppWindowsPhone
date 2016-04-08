@@ -23,6 +23,7 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.ObjectModel;
+using Windows.Storage;
 
 namespace Locsapp_Win_Phone
 {
@@ -54,8 +55,10 @@ namespace Locsapp_Win_Phone
             }
         }
 
-        private void Button_Click2(object sender, RoutedEventArgs e)
+        private async void Button_Click2(object sender, RoutedEventArgs e)
         {
+            Cache toto = new Cache();
+            await toto.Save();
             Frame rootFram = Window.Current.Content as Frame;
             if (rootFram != null && rootFram.CanGoBack)
             {

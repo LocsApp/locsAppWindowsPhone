@@ -76,11 +76,11 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(SearchList), GridToSearchScreen(row));
         }
 
-        private void Grid_TappedPayement(object sender, TappedRoutedEventArgs e)
+        private async void Grid_TappedPayement(object sender, TappedRoutedEventArgs e)
         {
-            TextBlock grd = sender as TextBlock;
-            int d = Grid.GetRow(grd);
-            Debug.WriteLine(" Le row est : " + d.ToString());
+            Cache toto = new Cache();
+            await toto.Save();
+
         }
 
     }
