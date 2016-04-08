@@ -26,12 +26,6 @@ using System.Collections.ObjectModel;
 
 namespace Locsapp_Win_Phone
 {
-                /*Debug.WriteLine("Salut les amis");
-            ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
-    lists.Add(new BuildSearchList { CheckSearch = true, FieldSearch = "Well-Worn" });
-            lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "A Little Used" });
-            lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "Minimal Wear" });
-            lists.Add(new BuildSearchList { CheckSearch = true, FieldSearch = "Factory New" });*/
     public sealed partial class State : Page
     {
         public State()
