@@ -84,9 +84,9 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
@@ -129,9 +129,10 @@
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FlowDirection" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="IsChecked" />
-      <RootProperty Name="FlowDirection" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
