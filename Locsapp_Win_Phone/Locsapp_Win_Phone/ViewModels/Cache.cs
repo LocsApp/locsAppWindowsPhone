@@ -68,5 +68,13 @@ namespace Locsapp_Win_Phone.ViewModels
             var result = (Dictionary<string, List<string>>)saveddata.ReadObject(Read);
             return result;
         }
+
+        public async Task<bool> isCacheExist(string file)
+        {
+            var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
+            if (Read == null)
+                return false;
+            return true;
+        }
     }
 }
