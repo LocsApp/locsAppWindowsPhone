@@ -123,7 +123,9 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+    </RootType>
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">

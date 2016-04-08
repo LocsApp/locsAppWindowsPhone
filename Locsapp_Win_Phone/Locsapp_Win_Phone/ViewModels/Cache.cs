@@ -39,18 +39,15 @@ namespace Locsapp_Win_Phone.ViewModels
     class Cache
     {
 
-        public async Task<bool> Save()
+        public async Task<bool> Save(string file, Dictionary<string, List<string>> data)
         {
-            List<string> toto = new List<string>();
-            toto.Add("kek0");
-            toto.Add("kek1");
             try
             {
-                StorageFile SavedCache = await ApplicationData.Current.LocalCacheFolder.CreateFileAsync("list", CreationCollisionOption.ReplaceExisting);
+                StorageFile SavedCache = await ApplicationData.Current.LocalCacheFolder.CreateFileAsync(file, CreationCollisionOption.ReplaceExisting);
                 using (Stream write = await SavedCache.OpenStreamForWriteAsync())
                 {
-                    DataContractSerializer kek = new DataContractSerializer(typeof(List<string>));
-                    kek.WriteObject(write, toto);
+                    DataContractSerializer kek = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
+                    kek.WriteObject(write, data);
                     await write.FlushAsync();
                     write.Dispose();
                 }
@@ -62,13 +59,13 @@ namespace Locsapp_Win_Phone.ViewModels
             return true;
         }
 
-        public async Task<List<string>> get()
+        public async Task<Dictionary<string, List<string>>> get(string file)
         {
-            var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync("list");
+            var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
             if (Read == null)
-                return new List<string>();
-            DataContractSerializer saveddata = new DataContractSerializer(typeof(List<string>));
-            var result = (List<string>)saveddata.ReadObject(Read);
+                return new Dictionary<string, List<string>>();
+            DataContractSerializer saveddata = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
+            var result = (Dictionary<string, List<string>>)saveddata.ReadObject(Read);
             return result;
         }
     }

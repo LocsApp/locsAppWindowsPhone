@@ -35,10 +35,8 @@ namespace Locsapp_Win_Phone
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             type = e.Parameter as string;
-            Debug.WriteLine("3 - Le type qui a été choisis est : " + type);
-            Debug.WriteLine("1 - Le type qui a été choisis est : " + type);
             MyList.ItemsSource = new BuildSearch(type).getlist();
-            Debug.WriteLine("2 - Le type qui a été choisis est : " + type);
+            MyList.UpdateLayout();
         }
 
         public SearchList()
@@ -57,8 +55,22 @@ namespace Locsapp_Win_Phone
 
         private async void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Cache toto = new Cache();
-            await toto.Save();
+            Cache cach = new Cache();
+            /*var Data = new Dictionary<string, List<string>>();
+            var active = new List<string>();
+            int i = 0;
+            while (i != MyList.Items.Count)
+            {
+                BuildSearchList item = (BuildSearchList)MyList.Items[i];
+                if (item.CheckSearch)
+                    active.Add(item.FieldSearch);
+                i++;
+            }
+            Data.Add(type, active);
+            await cach.Save("CurrentSearch", Data);*/
+            Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
+            dic = await cach.get("CurrentSearch");
+            Debug.WriteLine(dic[type][0]);
             Frame rootFram = Window.Current.Content as Frame;
             if (rootFram != null && rootFram.CanGoBack)
             {

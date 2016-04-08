@@ -78,8 +78,6 @@ namespace Locsapp_Win_Phone
 
         private async void Grid_TappedPayement(object sender, TappedRoutedEventArgs e)
         {
-            Cache toto = new Cache();
-            await toto.Save();
 
         }
 

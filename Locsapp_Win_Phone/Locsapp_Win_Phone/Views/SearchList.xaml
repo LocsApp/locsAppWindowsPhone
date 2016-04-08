@@ -34,7 +34,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition  Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <CheckBox Grid.Column="1" IsChecked="{Binding CheckSearch}" HorizontalAlignment="Right" FlowDirection="RightToLeft"></CheckBox>
+                        <CheckBox Grid.Column="1" IsChecked="{Binding CheckSearch, Mode=TwoWay}" HorizontalAlignment="Right" FlowDirection="RightToLeft"></CheckBox>
                         <TextBlock Grid.Column="0" Text="{Binding FieldSearch}"></TextBlock>
                     </Grid>
                 </DataTemplate>
