@@ -81,5 +81,9 @@ namespace Locsapp_Win_Phone
 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ArticleSearch));
+        }
     }
 }

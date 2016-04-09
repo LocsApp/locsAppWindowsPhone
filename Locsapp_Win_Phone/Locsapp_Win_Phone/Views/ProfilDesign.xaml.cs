@@ -131,22 +131,20 @@ namespace Locsapp_Win_Phone
 
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
         {
-            var API2 = new MainViewModel();
-            /*
-            {
-    "billing_address" : [ "alias",
-    {
-        "first_name" : "lol",
-        "last_name" : "kek",
-        "address" : "12 rue des allahuakbar",
-        "postal_code" : 76888,
-        "city" : "Paris"
-    }]
+            Frame.Navigate(typeof(Article));
+        }
+
+        private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ArticleSearch));
+        }
+    }
 }
 
-            */
-            string address = "{\"billing_address\" : [ \"";
-            address += "Maison";
+
+    /*
+    string address = "{\"billing_address\" : [ \"";
+    address += "Maison";
             address += "\",{\"first_name\" : \"";
             address += "Maxime";
             address += "\",\"last_name\" : \"";
@@ -165,9 +163,4 @@ namespace Locsapp_Win_Phone
             if (API2.SetResponse.error == false)
             {
                 Frame.Navigate(typeof(ProfilDesign), Key);
-            }
-            //Debug.Write(json2);
-            //Frame.Navigate(typeof(Article));
-        }
-    }
-}
+            }*/
