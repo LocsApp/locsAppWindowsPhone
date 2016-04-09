@@ -132,18 +132,41 @@ namespace Locsapp_Win_Phone
         private void MenuButton2_Click(object sender, RoutedEventArgs e)
         {
             var API2 = new MainViewModel();
-            Address jsonPass = new Address();
-            jsonPass.Alias = "Test";
-            jsonPass.biling_address = new string[5,5];
-            string json2 = JsonConvert.SerializeObject(jsonPass);
-            API2.API_req(API2.URL_API + "api/v1/user/1/billing_addresses/", "POST", json2, Key);
+            /*
+            {
+    "billing_address" : [ "alias",
+    {
+        "first_name" : "lol",
+        "last_name" : "kek",
+        "address" : "12 rue des allahuakbar",
+        "postal_code" : 76888,
+        "city" : "Paris"
+    }]
+}
+
+            */
+            string address = "{\"billing_address\" : [ \"";
+            address += "Maison";
+            address += "\",{\"first_name\" : \"";
+            address += "Maxime";
+            address += "\",\"last_name\" : \"";
+            address += "Duboy";
+            address += "\",\"address\" : \"";
+            address += "Topkek City 155";
+            address += "\",\"postal_code\" : ";
+            address += "64600";
+            address += ",\"city\" : \"";
+            address += "Parius";
+            address += "\"}]}";
+            Debug.WriteLine(address);
+            API2.API_req(API2.URL_API + "api/v1/user/1/billing_addresses/", "POST", address, Key);
             if (API2.SetResponse.error == true)
                 Frame.Navigate(typeof(Errorview), API2);
             if (API2.SetResponse.error == false)
             {
                 Frame.Navigate(typeof(ProfilDesign), Key);
             }
-            Debug.Write(json2);
+            //Debug.Write(json2);
             //Frame.Navigate(typeof(Article));
         }
     }
