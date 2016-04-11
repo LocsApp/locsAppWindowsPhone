@@ -1,5 +1,6 @@
 App.xbf
 Themes\Generic.xbf
+Views\AddAddress.xbf
 Views\Article.xbf
 Views\ArticleSearch.xbf
 Views\Errorview.xbf

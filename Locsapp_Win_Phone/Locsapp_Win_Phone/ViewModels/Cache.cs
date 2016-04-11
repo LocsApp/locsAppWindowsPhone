@@ -38,7 +38,6 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class Cache
     {
-
         public async Task<bool> Save(string file, Dictionary<string, List<string>> data)
         {
             try

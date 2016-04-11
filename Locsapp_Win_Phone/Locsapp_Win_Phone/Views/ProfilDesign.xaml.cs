@@ -138,6 +138,23 @@ namespace Locsapp_Win_Phone
         {
             Frame.Navigate(typeof(ArticleSearch));
         }
+
+        private void AddAddressBilling(object sender, RoutedEventArgs e)
+        {
+            AddAddressContext billing = new AddAddressContext();
+            billing.Key = Key;
+            billing.Type = "billing";
+            //Frame.Navigate(typeof(Article, biling));
+        }
+
+        private void AddAddressLiving(object sender, RoutedEventArgs e)
+        {
+            AddAddressContext living = new AddAddressContext();
+            living.Key = Key;
+            living.Type = "living";
+            //Frame.Navigate(typeof(Article, biling));
+        }
+
     }
 }
 

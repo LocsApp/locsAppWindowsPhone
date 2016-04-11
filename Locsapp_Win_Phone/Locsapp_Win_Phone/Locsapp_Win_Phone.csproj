@@ -105,6 +105,9 @@
     <Compile Include="ViewModels\API_Response.cs" />
     <Compile Include="ViewModels\Cache.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
+    <Compile Include="Views\AddAddress.xaml.cs">
+      <DependentUpon>AddAddress.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Article.xaml.cs">
       <DependentUpon>Article.xaml</DependentUpon>
     </Compile>
@@ -184,6 +187,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Article.xaml">
       <SubType>Designer</SubType>

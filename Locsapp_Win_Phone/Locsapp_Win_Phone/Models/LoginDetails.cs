@@ -149,4 +149,11 @@ namespace Locsapp_Win_Phone.Models
         public string Thumbnail { get; set; }
     }
 
+    public class AddAddressContext
+    {
+        [JsonProperty("key")]
+        public string Key { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
+    }
 }
