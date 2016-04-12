@@ -134,6 +134,7 @@
                                     <PasswordBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
                                     <PasswordBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
                                     <Button Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send" Click="Send_Data"></Button>
+                                    <Button Click="AddAddressLiving">Add Address</Button>
                                 </Grid>
                             </StackPanel>
                         </PivotItem>

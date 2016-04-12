@@ -29,8 +29,9 @@ namespace Locsapp_Win_Phone
     public sealed partial class AddAddress : Page
     {
 
-        public string type_adrress = "";
-        public string secretKey = "";
+        private string type_adrress = "";
+        private string secretKey = "";
+        private string id = "toto";
 
         public AddAddress()
         {
@@ -40,6 +41,7 @@ namespace Locsapp_Win_Phone
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             AddAddressContext context = e.Parameter as AddAddressContext;
+            id = context.IdUser;
             type_adrress = context.Type;
             Title.Text = "Add " + context.Type + " Address";
             secretKey = context.Key;
@@ -69,19 +71,18 @@ namespace Locsapp_Win_Phone
         {
             if (Alias.Text != "" && FName.Text != "" && LName.Text != "" && Address.Text != "" && City.Text != "")
             {
-                string APIRoute = "api/v1/rest-auth/login/";
+                string APIRoute = "api/v1/user/" + id + "/" + type_adrress + "_addresses/";
                 string data = BuildAddressToSend(type_adrress);
                 Debug.WriteLine(data);
                 var API = new MainViewModel();
-                API.API_req(API.URL_API + APIRoute, "POST", data, );
+                Debug.WriteLine("La route utilisée est : " + API.URL_API + APIRoute);
+                API.API_req(API.URL_API + APIRoute, "POST", data, secretKey);
                 if (API.SetResponse.error == true)
                     Frame.Navigate(typeof(Errorview), API);
                 if (API.SetResponse.error == false)
                 {
-                    Debug.WriteLine("Login Sucess");
-                    Debug.WriteLine(API.SetResponse.APIResponseString);
-                    var results = JsonConvert.DeserializeObject<KeyRegister>(API.SetResponse.APIResponseString);
-                    Frame.Navigate(typeof(ProfilDesign), results.Key);
+                    Debug.WriteLine("Send Adrress Success");
+                    Frame.Navigate(typeof(ProfilDesign), secretKey);
                 }
             }
             else
@@ -93,18 +94,10 @@ namespace Locsapp_Win_Phone
                 if (LName.Text == "")
                     LName.BorderBrush = new SolidColorBrush(Colors.Red);
                 if (Address.Text == "")
-                   Address.BorderBrush = new SolidColorBrush(Colors.Red);
+                    Address.BorderBrush = new SolidColorBrush(Colors.Red);
                 if (City.Text == "")
                     City.BorderBrush = new SolidColorBrush(Colors.Red);
-             }
-            
-            /*API2.API_req(API2.URL_API + "api/v1/user/1/billing_addresses/", "POST", address, Key);
-            if (API2.SetResponse.error == true)
-                Frame.Navigate(typeof(Errorview), API2);
-            if (API2.SetResponse.error == false)
-            {
-                Frame.Navigate(typeof(ProfilDesign), Key);
-            }*/
+            }
         }
     }
 }

@@ -40,6 +40,8 @@ namespace Locsapp_Win_Phone.Models
 
     public class UserInfos
     {
+        [JsonProperty("id")]
+        public string Id { get; set; }
         [JsonProperty("email")]
         public string Email { get; set; }
         [JsonProperty("first_name")]
@@ -155,5 +157,7 @@ namespace Locsapp_Win_Phone.Models
         public string Key { get; set; }
         [JsonProperty("type")]
         public string Type { get; set; }
+        [JsonProperty("iduser")]
+        public string IdUser { get; set; }
     }
 }

@@ -28,11 +28,18 @@ namespace Locsapp_Win_Phone
     {
 
         private string _Key;
+        private string _Id;
 
         public string Key
         {
             get { return _Key; }
             set { _Key = value; }
+        }
+
+        public string Id
+        {
+            get { return _Id; }
+            set { _Id = value; }
         }
 
         static string NullToString(object Value)
@@ -54,6 +61,7 @@ namespace Locsapp_Win_Phone
         {
             string text = e.Parameter as string;
             Key = text;
+            
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/rest-auth/user/", "GET", "", Key);
             if (API.SetResponse.error == true)
@@ -62,6 +70,7 @@ namespace Locsapp_Win_Phone
             {
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
+                Id = results.Id;
                 View_Username.Text = results.Username;
                 View_Birthday.Text = NullToString(results.Birthdate);
                 View_Subscribed.Text = NullToString(results.RegisteredDate);
@@ -142,6 +151,7 @@ namespace Locsapp_Win_Phone
         private void AddAddressBilling(object sender, RoutedEventArgs e)
         {
             AddAddressContext billing = new AddAddressContext();
+            billing.IdUser = Id;
             billing.Key = Key;
             billing.Type = "billing";
             //Frame.Navigate(typeof(Article, biling));
@@ -149,10 +159,12 @@ namespace Locsapp_Win_Phone
 
         private void AddAddressLiving(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("L'Id qui est envoyé est : " + Id);
             AddAddressContext living = new AddAddressContext();
+            living.IdUser = Id;
             living.Key = Key;
             living.Type = "living";
-            //Frame.Navigate(typeof(Article, biling));
+            Frame.Navigate(typeof(AddAddress), living);
         }
 
     }
