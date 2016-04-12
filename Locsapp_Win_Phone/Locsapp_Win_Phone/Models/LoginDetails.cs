@@ -58,10 +58,10 @@ namespace Locsapp_Win_Phone.Models
         public string Birthdate { get; set; }
         [JsonProperty("phone")]
         public string Phone { get; set; }
-        /*[JsonProperty("living_address")]
-        public string LivingAddress { get; set; }
+        [JsonProperty("living_address")]
+        public List<List<string>> LivingAddress { get; set; }
         [JsonProperty("billing_address")]
-        public string BillingAddress { get; set; }*/
+        public List<List<string>> BillingAddress { get; set; }
         [JsonProperty("secondary_emails")]
         public object SecondaryEmails { get; set; }
         [JsonProperty("logo_url")]
@@ -70,8 +70,6 @@ namespace Locsapp_Win_Phone.Models
         public string IsActive { get; set; }
         [JsonProperty("registered_date")]
         public string RegisteredDate { get; set; }
-        /*[JsonProperty("billing_address")]
-        public Array BillingAddress { get; set; }*/
     }
 
     public class LoginDetails
@@ -149,6 +147,20 @@ namespace Locsapp_Win_Phone.Models
         public string Description { get; set; }
         public string Range { get; set; }
         public string Thumbnail { get; set; }
+    }
+
+    public class AddressDetails
+    {
+        [JsonProperty("last_name")]
+        public string LastName { get; set; }
+        [JsonProperty("address")]
+        public string Address { get; set; }
+        [JsonProperty("postal_code")]
+        public int PostalCode { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
+        [JsonProperty("first_name")]
+        public string FirstName { get; set; }
     }
 
     public class AddAddressContext

@@ -57,6 +57,18 @@ namespace Locsapp_Win_Phone
             SplitView.IsPaneOpen = !SplitView.IsPaneOpen;
         }
 
+        private void InitAddress(List<List<string>> Living, List<List<string>> Billing)
+        {
+            foreach (List<string> Field in Living)
+            {
+                Debug.WriteLine("Nouvelle sub liste : " + Field);
+                foreach (string Data in Field)
+                {
+                    Debug.WriteLine("Nouvelle Data : " + Data);
+                }
+            }
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string text = e.Parameter as string;
@@ -78,6 +90,7 @@ namespace Locsapp_Win_Phone
                 EditProfile_FirstName.Text = NullToString(results.FirstName);
                 EditProfile_Name.Text = NullToString(results.LastName);
                 EditProfile_Phone.Text = NullToString(results.Phone);
+                InitAddress(results.LivingAddress, results.BillingAddress);
             }
         }
 
