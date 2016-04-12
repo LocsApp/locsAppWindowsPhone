@@ -59,14 +59,14 @@ namespace Locsapp_Win_Phone
 
         private void InitAddress(List<List<string>> Living, List<List<string>> Billing)
         {
+            List<AddressDisplay> LivingList = new List<AddressDisplay>();
             foreach (List<string> Field in Living)
             {
-                Debug.WriteLine("Nouvelle sub liste : " + Field);
-                foreach (string Data in Field)
-                {
-                    Debug.WriteLine("Nouvelle Data : " + Data);
-                }
+                var results = JsonConvert.DeserializeObject<AddressDisplay>(Field[1]);
+                results.Alias = Field[0];
+                LivingList.Add(results);
             }
+            Debug.WriteLine("La list des data est : " + LivingList[0].Alias + " LALAL : " + LivingList[0].City);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

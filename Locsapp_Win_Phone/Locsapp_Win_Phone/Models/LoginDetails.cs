@@ -127,13 +127,6 @@ namespace Locsapp_Win_Phone.Models
         public string Id { get; set; }
     }
 
-    public class Address
-    {
-        [JsonProperty("alias")]
-        public string Alias { get; set; }
-        public string[,] biling_address;
-    }
-
     public class ReturnLogout
     {
         [JsonProperty("success")]
@@ -151,6 +144,22 @@ namespace Locsapp_Win_Phone.Models
 
     public class AddressDetails
     {
+        [JsonProperty("last_name")]
+        public string LastName { get; set; }
+        [JsonProperty("address")]
+        public string Address { get; set; }
+        [JsonProperty("postal_code")]
+        public int PostalCode { get; set; }
+        [JsonProperty("city")]
+        public string City { get; set; }
+        [JsonProperty("first_name")]
+        public string FirstName { get; set; }
+    }
+
+    public class AddressDisplay
+    {
+        [JsonProperty("alias")]
+        public string Alias { get; set; }
         [JsonProperty("last_name")]
         public string LastName { get; set; }
         [JsonProperty("address")]
