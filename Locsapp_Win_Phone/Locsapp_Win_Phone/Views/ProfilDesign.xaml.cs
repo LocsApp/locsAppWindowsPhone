@@ -61,17 +61,24 @@ namespace Locsapp_Win_Phone
         {
             List<AddressDisplay> LivingList = new List<AddressDisplay>();
             List<AddressDisplay> BillingList = new List<AddressDisplay>();
-            foreach (List<string> Field in Living)
+            if (Living != null)
             {
-                var results = JsonConvert.DeserializeObject<AddressDisplay>(Field[1]);
-                results.Alias = Field[0];
-                LivingList.Add(results);
+                foreach (List<string> Field in Living)
+                {
+                    var results = JsonConvert.DeserializeObject<AddressDisplay>(Field[1]);
+                    results.Alias = Field[0];
+                    LivingList.Add(results);
+                }
+                LivingListView.ItemsSource = LivingList;
             }
-            foreach (List<string> Field in Billing)
+            if (Billing != null)
             {
-                var results = JsonConvert.DeserializeObject<AddressDisplay>(Field[1]);
-                results.Alias = Field[0];
-                BillingList.Add(results);
+                foreach (List<string> Field in Billing)
+                {
+                    var results = JsonConvert.DeserializeObject<AddressDisplay>(Field[1]);
+                    results.Alias = Field[0];
+                    BillingList.Add(results);
+                }
             }
         }
 

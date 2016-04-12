@@ -107,6 +107,8 @@
                                         <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
@@ -134,7 +136,35 @@
                                     <PasswordBox Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
                                     <PasswordBox Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
                                     <Button Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send" Click="Send_Data"></Button>
-                                    <Button Click="AddAddressLiving">Add Address</Button>
+                                    <Button Grid.Row="10" Click="AddAddressLiving">Add Living Address</Button>
+                                    <ListView x:Name="LivingListView" Grid.Row="11" Grid.ColumnSpan="5" >
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid >
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Grid.Row="0" Text="{Binding Alias}"></TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding FirstName}"></TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding LastName}"></TextBlock>
+                                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Address}"></TextBlock>
+                                                        <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding City}"></TextBlock>
+                                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding PostalCode}"></TextBlock>
+                                                        <Button Grid.Column="3" Grid.RowSpan="4" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;"></Button>
+                                                        <Button Grid.Column="4" Grid.RowSpan="4" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"></Button>
+                                                    </Grid>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
                                 </Grid>
                             </StackPanel>
                         </PivotItem>

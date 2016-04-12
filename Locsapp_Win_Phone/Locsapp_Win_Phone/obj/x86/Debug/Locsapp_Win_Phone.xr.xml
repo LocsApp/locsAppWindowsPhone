@@ -6,6 +6,12 @@
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Thumbnail" />
+    <RootPropertyPathName Name="PostalCode" />
+    <RootPropertyPathName Name="City" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="LastName" />
+    <RootPropertyPathName Name="FirstName" />
+    <RootPropertyPathName Name="Alias" />
     <RootPropertyPathName Name="FieldSearch" />
     <RootPropertyPathName Name="CheckSearch" />
   </Roots.PropertyPathNames>

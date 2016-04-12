@@ -73,15 +73,15 @@
                                             <ColumnDefinition Width="4*"/>
                                         </Grid.ColumnDefinitions>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/account.png"  Width="24" Grid.Column="0" Grid.Row="0" ></Image>
-                                        <TextBlock x:ConnectionId='20' Grid.Column="1" Grid.Row="0" x:Name="View_Username">Username</TextBlock>
+                                        <TextBlock x:ConnectionId='21' Grid.Column="1" Grid.Row="0" x:Name="View_Username">Username</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/gender-male-female.png" Width="24" Grid.Column="0" Grid.Row="1"></Image>
-                                        <TextBlock x:ConnectionId='21' Grid.Column="1" Grid.Row="1" x:Name="View_Sex">Sex</TextBlock>
+                                        <TextBlock x:ConnectionId='22' Grid.Column="1" Grid.Row="1" x:Name="View_Sex">Sex</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/cake-variant.png" Width="24" Grid.Column="0" Grid.Row="2" ></Image>
-                                        <TextBlock x:ConnectionId='22' Grid.Column="1" Grid.Row="2" x:Name="View_Birthday">Birthday</TextBlock>
+                                        <TextBlock x:ConnectionId='23' Grid.Column="1" Grid.Row="2" x:Name="View_Birthday">Birthday</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/map-marker.png" Width="24" Grid.Column="0" Grid.Row="3" ></Image>
-                                        <TextBlock x:ConnectionId='23' Grid.Column="1" Grid.Row="3" x:Name="View_Map">Map</TextBlock>
+                                        <TextBlock x:ConnectionId='24' Grid.Column="1" Grid.Row="3" x:Name="View_Map">Map</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/emoticon.png" Width="24" Grid.Column="0" Grid.Row="4" ></Image>
-                                        <TextBlock x:ConnectionId='24' Grid.Column="1" Grid.Row="4" x:Name="View_Subscribed">Subscribed</TextBlock>
+                                        <TextBlock x:ConnectionId='25' Grid.Column="1" Grid.Row="4" x:Name="View_Subscribed">Subscribed</TextBlock>
                                     </Grid>
                                 </Border>
                                 <Border Margin="8,0,8,8" BorderThickness="0,0,0,1" BorderBrush="Black" Height="60">
@@ -97,6 +97,8 @@
                                 <Button HorizontalAlignment="Stretch" Width="auto" Margin="0,0,0,20" Background="#2196f3">Change Profile Picture</Button>
                                 <Grid>
                                     <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
@@ -134,7 +136,35 @@
                                     <PasswordBox x:ConnectionId='16' Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
                                     <PasswordBox x:ConnectionId='17' Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
                                     <Button x:ConnectionId='18' Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send"                  ></Button>
-                                    <Button x:ConnectionId='19'                         >Add Address</Button>
+                                    <Button x:ConnectionId='19' Grid.Row="10"                         >Add Living Address</Button>
+                                    <ListView x:ConnectionId='20' x:Name="LivingListView" Grid.Row="11" Grid.ColumnSpan="5" >
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid >
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                            <RowDefinition/>
+                                                        </Grid.RowDefinitions>
+                                                        <TextBlock Grid.Row="0" Text="{Binding Alias}"></TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding FirstName}"></TextBlock>
+                                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding LastName}"></TextBlock>
+                                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Address}"></TextBlock>
+                                                        <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding City}"></TextBlock>
+                                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding PostalCode}"></TextBlock>
+                                                        <Button Grid.Column="3" Grid.RowSpan="4" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;"></Button>
+                                                        <Button Grid.Column="4" Grid.RowSpan="4" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;"></Button>
+                                                    </Grid>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
                                 </Grid>
                             </StackPanel>
                         </PivotItem>
