@@ -193,29 +193,12 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(AddAddress), living);
         }
 
+        private void DeleteAddress(object sender, RoutedEventArgs e)
+        {
+            var data = (Button)sender;
+            Debug.WriteLine(data.Tag);
+        }
+
+
     }
 }
-
-
-    /*
-    string address = "{\"billing_address\" : [ \"";
-    address += "Maison";
-            address += "\",{\"first_name\" : \"";
-            address += "Maxime";
-            address += "\",\"last_name\" : \"";
-            address += "Duboy";
-            address += "\",\"address\" : \"";
-            address += "Topkek City 155";
-            address += "\",\"postal_code\" : ";
-            address += "64600";
-            address += ",\"city\" : \"";
-            address += "Parius";
-            address += "\"}]}";
-            Debug.WriteLine(address);
-            API2.API_req(API2.URL_API + "api/v1/user/1/billing_addresses/", "POST", address, Key);
-            if (API2.SetResponse.error == true)
-                Frame.Navigate(typeof(Errorview), API2);
-            if (API2.SetResponse.error == false)
-            {
-                Frame.Navigate(typeof(ProfilDesign), Key);
-            }*/

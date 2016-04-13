@@ -6,12 +6,12 @@
     <RootPropertyPathName Name="Price" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Thumbnail" />
+    <RootPropertyPathName Name="Alias" />
     <RootPropertyPathName Name="PostalCode" />
     <RootPropertyPathName Name="City" />
     <RootPropertyPathName Name="Address" />
     <RootPropertyPathName Name="LastName" />
     <RootPropertyPathName Name="FirstName" />
-    <RootPropertyPathName Name="Alias" />
     <RootPropertyPathName Name="FieldSearch" />
     <RootPropertyPathName Name="CheckSearch" />
   </Roots.PropertyPathNames>
@@ -44,6 +44,7 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -79,6 +80,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Tag" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.AddAddress" />
