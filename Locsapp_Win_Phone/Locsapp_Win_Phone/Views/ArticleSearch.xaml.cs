@@ -31,6 +31,7 @@ namespace Locsapp_Win_Phone
         
         public ArticleSearch()
         {
+            
             this.InitializeComponent();
             ObservableCollection<SearchItems> dataList = new ObservableCollection<SearchItems>();
 
@@ -50,6 +51,30 @@ namespace Locsapp_Win_Phone
 
 
             MyList.ItemsSource = dataList;
+
+
+            Debug.WriteLine("Search Article");
+
+            var pre_json = new Pagination();
+            pre_json.PageNumber = 1;
+            pre_json.ItemsPerPage = 4;
+            var json = new MetaDataSearch();
+            json.Pagination = pre_json;
+            string json2 = JsonConvert.SerializeObject(json);
+            var API = new MainViewModel();
+            API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, "409421d9b1a17cd4efb1d17809ea6b61afaf3ff6");
+            if (API.SetResponse.error == true)
+            {
+                Debug.WriteLine("Il y a une erreur");
+                Frame.Navigate(typeof(Errorview), API);
+            }
+            if (API.SetResponse.error == false)
+            {
+                Debug.WriteLine("OKKKKKKKKKKKKK !!!");
+                Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
+            }
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

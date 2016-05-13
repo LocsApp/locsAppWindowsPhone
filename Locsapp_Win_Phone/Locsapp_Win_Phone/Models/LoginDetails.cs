@@ -181,4 +181,82 @@ namespace Locsapp_Win_Phone.Models
         [JsonProperty("iduser")]
         public string IdUser { get; set; }
     }
+
+    public class Pagination
+    {
+        [JsonProperty("page_number")]
+        public int PageNumber { get; set; }
+        [JsonProperty("items_per_page")]
+        public int ItemsPerPage { get; set; }
+    }
+
+    public class MetaDataSearch
+    {
+        [JsonProperty("_pagination")]
+        public Pagination Pagination { get; set; }
+    }
+
+
+    /* Resultat Search Article */
+
+    public class ListSearchMetadatas
+    {
+        [JsonProperty("total_items")]
+        public int TotalItems { get; set; }
+        [JsonProperty("page_number")]
+        public int PageNumber { get; set; }
+        [JsonProperty("total_pages")]
+        public int TotalPages { get; set; }
+    }
+
+    public class ListSearchArticle
+    {
+        [JsonProperty("availibility_start")]
+        public string AvailibilityStart { get; set; }
+        [JsonProperty("size")]
+        public string Size { get; set; }
+        [JsonProperty("_id")]
+        public string Id { get; set; }
+        [JsonProperty("gender")]
+        public string Gender { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
+        [JsonProperty("base_category")]
+        public string BaseCategory { get; set; }
+        [JsonProperty("article_state")]
+        public string ArticleState { get; set; }
+        [JsonProperty("creation_date")]
+        public string CreationDate { get; set; }
+        [JsonProperty("payment_methods")]
+        public string PaymentMethods { get; set; }
+        [JsonProperty("color")]
+        public string Color { get; set; }
+        [JsonProperty("availibility_end")]
+        public string AvailibilityEnd { get; set; }
+        [JsonProperty("clothe_condition")]
+        public string ClotheCondition { get; set; }
+        [JsonProperty("sub_category")]
+        public string SubCategory { get; set; }
+        [JsonProperty("location")]
+        public string Location { get; set; }
+        [JsonProperty("Price")]
+        public int price { get; set; }
+        [JsonProperty("Brand")]
+        public string brand { get; set; }
+        [JsonProperty("id_author")]
+        public int IdAuthor { get; set; }
+        [JsonProperty("url_thumbnail")]
+        public string UrlThumbnail { get; set; }
+    }
+
+    public class ListSearchResults
+    {
+        [JsonProperty("metadatas")]
+        public ListSearchMetadatas Metadatas { get; set; }
+        [JsonProperty("articles")]
+        public List<ListSearchArticle> Articles { get; set; }
+    }
+
 }

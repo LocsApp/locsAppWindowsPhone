@@ -29,6 +29,8 @@ namespace Locsapp_Win_Phone
 
         private string _Key;
         private string _Id;
+        private List<AddressDisplay> _LivingList;
+        //private List<AddressDisplay> _BillingList;
 
         public string Key
         {
@@ -70,6 +72,7 @@ namespace Locsapp_Win_Phone
                     LivingList.Add(results);
                 }
                 LivingListView.ItemsSource = LivingList;
+                _LivingList = LivingList;
             }
             if (Billing != null)
             {
@@ -193,10 +196,33 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(AddAddress), living);
         }
 
+        // private void DeleteAddress(object sender, RoutedEventArgs e)
+        // {
+        /* var data = (Button)sender;
+         Debug.WriteLine(data.Tag);
+         string APIRoute = "api/v1/user/" + Id + "/living_addresses/";
+         string data = "{Alias : \"\"}";
+         Debug.WriteLine(data);
+         var API = new MainViewModel();
+         Debug.WriteLine("La route utilisée est : " + API.URL_API + APIRoute);
+         API.API_req(API.URL_API + APIRoute, "POST", data, secretKey);
+         if (API.SetResponse.error == true)
+             Frame.Navigate(typeof(Errorview), API);
+         if (API.SetResponse.error == false)
+         {
+             Debug.WriteLine("Send Adrress Success");
+             Frame.Navigate(typeof(ProfilDesign), secretKey);
+         }*/
+        //}
+
+        //POST /user/userId/living_addresses/delete/
+        //You have to pass the same JSON from the POST at the route /user/userID/living_addresses/
+
         private void DeleteAddress(object sender, RoutedEventArgs e)
         {
-            var data = (Button)sender;
-            Debug.WriteLine(data.Tag);
+            var test = (Button)sender;
+            Debug.WriteLine("Le tag du boutton est : " + test.Tag);
+            //_LivingList[];
         }
 
 
