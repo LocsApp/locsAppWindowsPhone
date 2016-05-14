@@ -49,10 +49,10 @@
 
             </SplitView.Pane>
 
-        <ListView x:Name="MyList">
+        <ListView x:Name="MyList" Tapped="MyList_Tapped">
             <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
+                    <DataTemplate>
+                        <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.25*"/>
                             <ColumnDefinition/>

@@ -242,7 +242,7 @@ namespace Locsapp_Win_Phone.Models
         [JsonProperty("location")]
         public string Location { get; set; }
         [JsonProperty("Price")]
-        public int price { get; set; }
+        public string price { get; set; }
         [JsonProperty("Brand")]
         public string brand { get; set; }
         [JsonProperty("id_author")]

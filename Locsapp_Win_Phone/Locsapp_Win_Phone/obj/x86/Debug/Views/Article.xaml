@@ -74,12 +74,12 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button x:ConnectionId='5' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
-                        <Image x:ConnectionId='6' Grid.Column="1" x:Name="sceneriesBtn" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
-                        <Button x:ConnectionId='7' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                        ></Button>
+                        <Button x:ConnectionId='7' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
+                        <Image x:ConnectionId='8' Grid.Column="1" x:Name="sceneriesBtn" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
+                        <Button x:ConnectionId='9' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                        ></Button>
                     </Grid>
 
-                    <TextBlock Grid.Row="1" FontSize="26.667" Margin="10,0,0,0">Robe Rouge</TextBlock>
+                    <TextBlock x:ConnectionId='1' Grid.Row="1" FontSize="26.667" Margin="10,0,0,0" Name="Title">Robe Rouge</TextBlock>
 
                     <!-- Grid definition for the Author, score, and number of vote  -->
                     <Grid Grid.Row="2">
@@ -107,8 +107,8 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Margin="10,0,0,0">Price</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">43 € / Day</TextBlock>
+                        <TextBlock Grid.Column="0" Margin="10,0,0,0" >Price</TextBlock>
+                        <TextBlock x:ConnectionId='6' Grid.Column="1" Margin="0,0,10,0" Name="Price" HorizontalAlignment="Right">43 € / Day</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -234,7 +234,7 @@
                     </Grid>
 
                     <Border Margin="10,10,10,10" Grid.Row="14" BorderThickness="1,1,0.5,0.5" BorderBrush="Black" >
-                        <TextBlock x:ConnectionId='4' x:Name="Description">dz</TextBlock>
+                        <TextBlock x:ConnectionId='5' x:Name="Description">dz</TextBlock>
                     </Border>
 
                     <Grid Grid.Row="15">
@@ -263,9 +263,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button x:ConnectionId='1' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                        ></Button>
-                        <Image x:ConnectionId='2' Grid.Column="1" x:Name="recommand" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
-                        <Button x:ConnectionId='3' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                           ></Button>
+                        <Button x:ConnectionId='2' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                        ></Button>
+                        <Image x:ConnectionId='3' Grid.Column="1" x:Name="recommand" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
+                        <Button x:ConnectionId='4' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                           ></Button>
                     </Grid>
                 </Grid>
         </StackPanel>

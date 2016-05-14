@@ -32,11 +32,19 @@ namespace Locsapp_Win_Phone
         int imgCount = 0;
         int imgCountRec = 0;
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            ListSearchArticle art = e.Parameter as ListSearchArticle;
+            Price.Text = art.price;
+            Description.Text = art.Description;
+            Title.Text = art.Title;
+        }
+
         public Article()
         {
             this.InitializeComponent();
             LoadSlideShow();
-            Description.Text = "This is a very pretty red dress\r\nRed, good idea for a party\r\nSuch happy with this dress !";
+            //Description.Text = "This is a very pretty red dress\r\nRed, good idea for a party\r\nSuch happy with this dress !";
         }
 
         private void LoadSlideShow()
