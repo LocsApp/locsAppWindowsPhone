@@ -230,7 +230,7 @@ namespace Locsapp_Win_Phone.Models
         [JsonProperty("creation_date")]
         public string CreationDate { get; set; }
         [JsonProperty("payment_methods")]
-        public string PaymentMethods { get; set; }
+        public List<string> PaymentMethods { get; set; }
         [JsonProperty("color")]
         public string Color { get; set; }
         [JsonProperty("availibility_end")]
@@ -249,6 +249,8 @@ namespace Locsapp_Win_Phone.Models
         public int IdAuthor { get; set; }
         [JsonProperty("url_thumbnail")]
         public string UrlThumbnail { get; set; }
+        [JsonProperty("url_pictures")]
+        public List<string> UrlPictures { get; set; }
     }
 
     public class ListSearchResults
@@ -257,6 +259,30 @@ namespace Locsapp_Win_Phone.Models
         public ListSearchMetadatas Metadatas { get; set; }
         [JsonProperty("articles")]
         public List<ListSearchArticle> Articles { get; set; }
+    }
+
+    /* Notation */
+
+    public class Notation
+    {
+        [JsonProperty("note")]
+        public int Note { get; set; }
+    }
+
+    /* History */
+
+    public class HistoryArticleList
+    {
+        [JsonProperty("_id")]
+        public string Id { get; set; }
+        [JsonProperty("history_type")]
+        public string HistoryType { get; set; }
+        [JsonProperty("url_thumbnail")]
+        public string UrlThumbnail { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
+        [JsonProperty("accept")]
+        public bool Accept { get; set; }
     }
 
 }

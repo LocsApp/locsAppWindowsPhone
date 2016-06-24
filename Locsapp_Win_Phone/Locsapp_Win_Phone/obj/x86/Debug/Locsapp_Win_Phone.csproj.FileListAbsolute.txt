@@ -1943,11 +1943,8 @@ C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_
 C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\AddAddress.g.cs
 C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\AddAddress.xaml
 C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\AddAddress.xbf
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\layout.resfiles
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\layout.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\Resources.resfiles
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\Resources.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\pri.resfiles
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\pri.resfiles.intermediate
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml
-C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml.intermediate
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\HistoryArticle.g.i.cs
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\HistoryArticle.g.cs
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\HistoryArticle.xaml
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\obj\x86\Debug\Views\HistoryArticle.xbf
+C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Views\HistoryArticle.xbf

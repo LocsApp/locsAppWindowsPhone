@@ -5,6 +5,7 @@ Views\Article.xbf
 Views\ArticleSearch.xbf
 Views\Errorview.xbf
 Views\FilterSearch.xbf
+Views\HistoryArticle.xbf
 Views\MainPage.xbf
 Views\ProfilDesign.xbf
 Views\Profile.xbf

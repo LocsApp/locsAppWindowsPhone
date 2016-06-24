@@ -160,6 +160,7 @@
       <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
+    <RootType FullName="Locsapp_Win_Phone.HistoryArticle" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
