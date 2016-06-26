@@ -62,6 +62,17 @@ namespace Locsapp_Win_Phone
                 Debug.WriteLine("OK !");
                 var results = JsonConvert.DeserializeObject<ListSearchResults>(API.SetResponse.APIResponseString);
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
+
+                //Loop on result Search
+                foreach (var item in results.Articles)
+                {
+                    Debug.WriteLine("La réponse est : " + item.price.ToString());
+                    c1.Title = item.Title;
+                    c1.Price = item.price.ToString();
+                    c1.Description = item.Description;
+                    dataList.Add(c1);
+                    c1 = new SearchItems();
+                } 
                 c1.Title = results.Articles[0].Title;
                 c1.Price = results.Articles[0].price.ToString();
                 c1.Description = results.Articles[0].Description;
