@@ -132,7 +132,7 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "Locsapp_Win_Phone.AddAddress";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -141,15 +141,16 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
             _typeNameTable[5] = "Locsapp_Win_Phone.Errorview";
             _typeNameTable[6] = "Locsapp_Win_Phone.FilterSearch";
             _typeNameTable[7] = "Locsapp_Win_Phone.HistoryArticle";
-            _typeNameTable[8] = "Locsapp_Win_Phone.MainPage";
-            _typeNameTable[9] = "Locsapp_Win_Phone.Profile";
-            _typeNameTable[10] = "String";
-            _typeNameTable[11] = "Locsapp_Win_Phone.ProfileData";
-            _typeNameTable[12] = "Locsapp_Win_Phone.ProfilDesign";
-            _typeNameTable[13] = "Locsapp_Win_Phone.SearchList";
-            _typeNameTable[14] = "Locsapp_Win_Phone.SignUpPage";
+            _typeNameTable[8] = "Locsapp_Win_Phone.Likes";
+            _typeNameTable[9] = "Locsapp_Win_Phone.MainPage";
+            _typeNameTable[10] = "Locsapp_Win_Phone.Profile";
+            _typeNameTable[11] = "String";
+            _typeNameTable[12] = "Locsapp_Win_Phone.ProfileData";
+            _typeNameTable[13] = "Locsapp_Win_Phone.ProfilDesign";
+            _typeNameTable[14] = "Locsapp_Win_Phone.SearchList";
+            _typeNameTable[15] = "Locsapp_Win_Phone.SignUpPage";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::Locsapp_Win_Phone.AddAddress);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -158,13 +159,14 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
             _typeTable[5] = typeof(global::Locsapp_Win_Phone.Errorview);
             _typeTable[6] = typeof(global::Locsapp_Win_Phone.FilterSearch);
             _typeTable[7] = typeof(global::Locsapp_Win_Phone.HistoryArticle);
-            _typeTable[8] = typeof(global::Locsapp_Win_Phone.MainPage);
-            _typeTable[9] = typeof(global::Locsapp_Win_Phone.Profile);
-            _typeTable[10] = typeof(global::System.String);
-            _typeTable[11] = typeof(global::Locsapp_Win_Phone.ProfileData);
-            _typeTable[12] = typeof(global::Locsapp_Win_Phone.ProfilDesign);
-            _typeTable[13] = typeof(global::Locsapp_Win_Phone.SearchList);
-            _typeTable[14] = typeof(global::Locsapp_Win_Phone.SignUpPage);
+            _typeTable[8] = typeof(global::Locsapp_Win_Phone.Likes);
+            _typeTable[9] = typeof(global::Locsapp_Win_Phone.MainPage);
+            _typeTable[10] = typeof(global::Locsapp_Win_Phone.Profile);
+            _typeTable[11] = typeof(global::System.String);
+            _typeTable[12] = typeof(global::Locsapp_Win_Phone.ProfileData);
+            _typeTable[13] = typeof(global::Locsapp_Win_Phone.ProfilDesign);
+            _typeTable[14] = typeof(global::Locsapp_Win_Phone.SearchList);
+            _typeTable[15] = typeof(global::Locsapp_Win_Phone.SignUpPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -205,12 +207,13 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
         private object Activate_5_Errorview() { return new global::Locsapp_Win_Phone.Errorview(); }
         private object Activate_6_FilterSearch() { return new global::Locsapp_Win_Phone.FilterSearch(); }
         private object Activate_7_HistoryArticle() { return new global::Locsapp_Win_Phone.HistoryArticle(); }
-        private object Activate_8_MainPage() { return new global::Locsapp_Win_Phone.MainPage(); }
-        private object Activate_9_Profile() { return new global::Locsapp_Win_Phone.Profile(); }
-        private object Activate_11_ProfileData() { return new global::Locsapp_Win_Phone.ProfileData(); }
-        private object Activate_12_ProfilDesign() { return new global::Locsapp_Win_Phone.ProfilDesign(); }
-        private object Activate_13_SearchList() { return new global::Locsapp_Win_Phone.SearchList(); }
-        private object Activate_14_SignUpPage() { return new global::Locsapp_Win_Phone.SignUpPage(); }
+        private object Activate_8_Likes() { return new global::Locsapp_Win_Phone.Likes(); }
+        private object Activate_9_MainPage() { return new global::Locsapp_Win_Phone.MainPage(); }
+        private object Activate_10_Profile() { return new global::Locsapp_Win_Phone.Profile(); }
+        private object Activate_12_ProfileData() { return new global::Locsapp_Win_Phone.ProfileData(); }
+        private object Activate_13_ProfilDesign() { return new global::Locsapp_Win_Phone.ProfilDesign(); }
+        private object Activate_14_SearchList() { return new global::Locsapp_Win_Phone.SearchList(); }
+        private object Activate_15_SignUpPage() { return new global::Locsapp_Win_Phone.SignUpPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -272,52 +275,59 @@ namespace Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  Locsapp_Win_Phone.MainPage
+            case 8:   //  Locsapp_Win_Phone.Likes
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_MainPage;
+                userType.Activator = Activate_8_Likes;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Locsapp_Win_Phone.Profile
+            case 9:   //  Locsapp_Win_Phone.MainPage
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_Profile;
+                userType.Activator = Activate_9_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Locsapp_Win_Phone.Profile
+                userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_Profile;
                 userType.AddMemberName("Key");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  String
+            case 11:   //  String
                 xamlType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  Locsapp_Win_Phone.ProfileData
+            case 12:   //  Locsapp_Win_Phone.ProfileData
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_ProfileData;
+                userType.Activator = Activate_12_ProfileData;
                 userType.AddMemberName("Key");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Locsapp_Win_Phone.ProfilDesign
+            case 13:   //  Locsapp_Win_Phone.ProfilDesign
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_ProfilDesign;
+                userType.Activator = Activate_13_ProfilDesign;
                 userType.AddMemberName("Key");
                 userType.AddMemberName("Id");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Locsapp_Win_Phone.SearchList
+            case 14:   //  Locsapp_Win_Phone.SearchList
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_SearchList;
+                userType.Activator = Activate_14_SearchList;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Locsapp_Win_Phone.SignUpPage
+            case 15:   //  Locsapp_Win_Phone.SignUpPage
                 userType = new global::Locsapp_Win_Phone.Locsapp_Win_Phone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_SignUpPage;
+                userType.Activator = Activate_15_SignUpPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

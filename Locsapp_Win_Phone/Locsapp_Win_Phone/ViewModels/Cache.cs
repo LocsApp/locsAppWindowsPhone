@@ -58,6 +58,26 @@ namespace Locsapp_Win_Phone.ViewModels
             return true;
         }
 
+        public async Task<bool> Save(string file, String data)
+        {
+            try
+                { 
+                    StorageFile SavedCache = await ApplicationData.Current.LocalCacheFolder.CreateFileAsync(file, CreationCollisionOption.ReplaceExisting);
+                    using (Stream write = await SavedCache.OpenStreamForWriteAsync())
+                     {
+                        DataContractSerializer kek = new DataContractSerializer(typeof(string));
+                        kek.WriteObject(write, data);
+                        await write.FlushAsync();
+                        write.Dispose();
+                     }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Probleme avec le cache : " + e.Message);
+            }
+            return true;
+        }
+
         public async Task<Dictionary<string, List<string>>> get(string file)
         {
             var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
@@ -65,6 +85,16 @@ namespace Locsapp_Win_Phone.ViewModels
                 return new Dictionary<string, List<string>>();
             DataContractSerializer saveddata = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
             var result = (Dictionary<string, List<string>>)saveddata.ReadObject(Read);
+            return result;
+        }
+
+        public async Task<String> getString(string file)
+        {
+            var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
+            if (Read == null)
+                return "";
+            DataContractSerializer saveddata = new DataContractSerializer(typeof(string));
+            var result = (String)saveddata.ReadObject(Read);
             return result;
         }
 

@@ -31,7 +31,13 @@ namespace Locsapp_Win_Phone
 
         public FilterSearch()
         {
+            InitSearchCach();
             this.InitializeComponent();
+        }
+
+        private async void InitSearchCach()
+        {
+            Cache cach = new Cache();
         }
 
         private string GridToSearchScreen(int row)
@@ -81,8 +87,13 @@ namespace Locsapp_Win_Phone
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (TitleSearch.Text != null)
+            {
+                Cache cach = new Cache();
+                await cach.Save("TitleSearch", TitleSearch.Text);
+            }
             Frame.Navigate(typeof(ArticleSearch));
         }
     }

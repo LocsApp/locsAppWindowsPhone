@@ -35,20 +35,34 @@ namespace Locsapp_Win_Phone
         {
             
             this.InitializeComponent();
+
+            SearchHandle();
+
+
+
+        }
+
+        private async void SearchHandle()
+        {
             ObservableCollection<SearchItems> dataList = new ObservableCollection<SearchItems>();
 
-            SearchItems c1 = new SearchItems() { Price = "420 €", Title = "Robe rouge", Description = "Topkekus", Range = "Within 25 kms", Thumbnail = "ms-appx:///Assets/Article/Robe1Redim.jpg" };
-
-            dataList.Add(c1);
-
+            SearchItems c1 = new SearchItems();
 
             Debug.WriteLine("Search Article");
 
             var pre_json = new Pagination();
             pre_json.PageNumber = 1;
-            pre_json.ItemsPerPage = 4;
+            pre_json.ItemsPerPage = 11;
             var json = new MetaDataSearch();
             json.Pagination = pre_json;
+
+
+
+            Cache cach = new Cache();
+            if (await cach.isCacheExist("TitleSearch"))
+                json.Title = await cach.getString("TitleSearch");
+
+
             string json2 = JsonConvert.SerializeObject(json);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, "409421d9b1a17cd4efb1d17809ea6b61afaf3ff6");
@@ -66,25 +80,17 @@ namespace Locsapp_Win_Phone
                 //Loop on result Search
                 foreach (var item in results.Articles)
                 {
-                    Debug.WriteLine("La réponse est : " + item.price.ToString());
+                    Debug.WriteLine("La réponse est : " + item.Title);
                     c1.Title = item.Title;
                     c1.Price = item.price.ToString();
                     c1.Description = item.Description;
                     dataList.Add(c1);
                     c1 = new SearchItems();
-                } 
-                c1.Title = results.Articles[0].Title;
-                c1.Price = results.Articles[0].price.ToString();
-                c1.Description = results.Articles[0].Description;
-                tmp = results.Articles[0];
+                }
             }
 
 
             MyList.ItemsSource = dataList;
-
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

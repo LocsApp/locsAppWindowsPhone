@@ -188,12 +188,15 @@ namespace Locsapp_Win_Phone.Models
         public int PageNumber { get; set; }
         [JsonProperty("items_per_page")]
         public int ItemsPerPage { get; set; }
+
     }
 
     public class MetaDataSearch
     {
         [JsonProperty("_pagination")]
         public Pagination Pagination { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
     }
 
 
