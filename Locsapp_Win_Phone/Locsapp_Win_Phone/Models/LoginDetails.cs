@@ -140,6 +140,8 @@ namespace Locsapp_Win_Phone.Models
         public string Description { get; set; }
         public string Range { get; set; }
         public string Thumbnail { get; set; }
+        [JsonProperty("_id")]
+        public string Id { get; set; }
     }
 
     public class AddressDetails

@@ -84,6 +84,7 @@ namespace Locsapp_Win_Phone
                     c1.Title = item.Title;
                     c1.Price = item.price.ToString();
                     c1.Description = item.Description;
+                    c1.Id = item.Id;
                     dataList.Add(c1);
                     c1 = new SearchItems();
                 }
@@ -115,12 +116,11 @@ namespace Locsapp_Win_Phone
         {
             var select = (ListView)sender;
             var rawDataArticle = (SearchItems)select.SelectedItem;
-            Debug.WriteLine("Le prix est : " + rawDataArticle.Price);
-            Debug.WriteLine("Le Title est : " + rawDataArticle.Title);
-            Debug.WriteLine("Le range est : " + rawDataArticle.Description);
             SelectArticle.Title = rawDataArticle.Title;
             SelectArticle.price = rawDataArticle.Price;
             SelectArticle.Description = rawDataArticle.Description;
+            SelectArticle.Id = rawDataArticle.Id;
+            Debug.WriteLine("L'Id de l'article est : " + SelectArticle.Id);
             Frame.Navigate(typeof(Article), SelectArticle);
         }
     }
