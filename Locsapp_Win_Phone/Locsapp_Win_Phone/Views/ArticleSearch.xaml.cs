@@ -29,7 +29,7 @@ namespace Locsapp_Win_Phone
     public sealed partial class ArticleSearch : Page
     {
 
-        public ListSearchArticle tmp;
+        public ListSearchArticle SelectArticle = new ListSearchArticle();
 
         public ArticleSearch()
         {
@@ -88,9 +88,7 @@ namespace Locsapp_Win_Phone
                     c1 = new SearchItems();
                 }
             }
-
-
-            MyList.ItemsSource = dataList;
+          MyList.ItemsSource = dataList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -115,7 +113,15 @@ namespace Locsapp_Win_Phone
 
         private void MyList_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Article), tmp);
+            var select = (ListView)sender;
+            var rawDataArticle = (SearchItems)select.SelectedItem;
+            Debug.WriteLine("Le prix est : " + rawDataArticle.Price);
+            Debug.WriteLine("Le Title est : " + rawDataArticle.Title);
+            Debug.WriteLine("Le range est : " + rawDataArticle.Description);
+            SelectArticle.Title = rawDataArticle.Title;
+            SelectArticle.price = rawDataArticle.Price;
+            SelectArticle.Description = rawDataArticle.Description;
+            Frame.Navigate(typeof(Article), SelectArticle);
         }
     }
 }

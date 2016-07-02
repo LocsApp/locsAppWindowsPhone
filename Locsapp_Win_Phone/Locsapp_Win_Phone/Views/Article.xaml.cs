@@ -35,9 +35,13 @@ namespace Locsapp_Win_Phone
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             ListSearchArticle art = e.Parameter as ListSearchArticle;
-            Price.Text = art.price;
-            Description.Text = art.Description;
-            Title.Text = art.Title;
+            Debug.WriteLine("Les différents paramètres envoyés sont : " + art);
+            if (art != null)
+            {
+                Price.Text = art.price;
+                Description.Text = art.Description;
+                Title.Text = art.Title;
+            }
         }
 
         public Article()
