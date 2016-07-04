@@ -62,8 +62,8 @@ namespace Locsapp_Win_Phone
             if (await cach.isCacheExist("TitleSearch"))
                 json.Title = await cach.getString("TitleSearch");
 
-            if (await cach.isCacheExist("KeyUser"))
-               Key = await cach.getString("KeyUser");
+            var sesInfo = SessionInfos.Instance();
+            Key = sesInfo.GetKey();
 
             string json2 = JsonConvert.SerializeObject(json);
             var API = new MainViewModel();

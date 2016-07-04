@@ -101,10 +101,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\CollectionModel.cs" />
     <Compile Include="Models\SearchModels.cs" />
     <Compile Include="ViewModels\API_Response.cs" />
     <Compile Include="ViewModels\Cache.cs" />
+    <Compile Include="ViewModels\Collections.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
+    <Compile Include="ViewModels\SessionInfos.cs" />
     <Compile Include="Views\AddAddress.xaml.cs">
       <DependentUpon>AddAddress.xaml</DependentUpon>
     </Compile>

@@ -91,7 +91,8 @@ namespace Locsapp_Win_Phone
             Key = text;
 
             //Save Key in Cache
-            SaveKeyInCache(Key);
+            var sesinfo = SessionInfos.Instance();
+            sesinfo.AddKey(Key);
 
 
             var API = new MainViewModel();
@@ -112,14 +113,6 @@ namespace Locsapp_Win_Phone
                 EditProfile_Phone.Text = NullToString(results.Phone);
                 InitAddress(results.LivingAddress, results.BillingAddress);
             }
-        }
-
-        private async void SaveKeyInCache(string Key)
-        {
-            var cach = new Cache();
-            await cach.Save("KeyUser", Key);
-            string lel = cach.getString("keyUser").ToString();
-            Debug.WriteLine("La clé est lol : " + lel);
         }
 
         private void Logout(object sender, RoutedEventArgs e)
