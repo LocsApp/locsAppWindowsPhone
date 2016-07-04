@@ -65,6 +65,8 @@ namespace Locsapp_Win_Phone
             var sesInfo = SessionInfos.Instance();
             Key = sesInfo.GetKey();
 
+            var collect = Collections.Instance();
+
             string json2 = JsonConvert.SerializeObject(json);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, Key);
