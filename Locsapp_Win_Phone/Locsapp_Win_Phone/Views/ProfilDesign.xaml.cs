@@ -89,7 +89,11 @@ namespace Locsapp_Win_Phone
         {
             string text = e.Parameter as string;
             Key = text;
-            
+
+            //Save Key in Cache
+            SaveKeyInCache(Key);
+
+
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/rest-auth/user/", "GET", "", Key);
             if (API.SetResponse.error == true)
@@ -108,6 +112,14 @@ namespace Locsapp_Win_Phone
                 EditProfile_Phone.Text = NullToString(results.Phone);
                 InitAddress(results.LivingAddress, results.BillingAddress);
             }
+        }
+
+        private async void SaveKeyInCache(string Key)
+        {
+            var cach = new Cache();
+            await cach.Save("KeyUser", Key);
+            string lel = cach.getString("keyUser").ToString();
+            Debug.WriteLine("La clé est lol : " + lel);
         }
 
         private void Logout(object sender, RoutedEventArgs e)

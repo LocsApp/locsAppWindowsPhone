@@ -45,7 +45,7 @@ namespace Locsapp_Win_Phone
         private async void SearchHandle()
         {
             ObservableCollection<SearchItems> dataList = new ObservableCollection<SearchItems>();
-
+            string Key = "";
             SearchItems c1 = new SearchItems();
 
             Debug.WriteLine("Search Article");
@@ -62,10 +62,12 @@ namespace Locsapp_Win_Phone
             if (await cach.isCacheExist("TitleSearch"))
                 json.Title = await cach.getString("TitleSearch");
 
+            if (await cach.isCacheExist("KeyUser"))
+               Key = await cach.getString("KeyUser");
 
             string json2 = JsonConvert.SerializeObject(json);
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, "409421d9b1a17cd4efb1d17809ea6b61afaf3ff6");
+            API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, Key);
             if (API.SetResponse.error == true)
             {
                 Debug.WriteLine("Il y a une erreur");
