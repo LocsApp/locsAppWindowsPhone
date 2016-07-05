@@ -38,12 +38,18 @@ namespace Locsapp_Win_Phone
             this.InitializeComponent();
         }
 
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             type = e.Parameter as string;
-            
-            MyList.ItemsSource = new BuildSearch(type).getlist();
-            await checkFromCache();
+            var Collect = Collections.Instance();
+
+            MyList.ItemsSource = Collect.BuildSearchField(type);
+            //ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
+            //lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "Well-Worn" });
+
+            //Save
+            //MyList.ItemsSource = new BuildSearch(type).getlist();
+            //await checkFromCache();
         }
 
         public async Task checkFromCache()

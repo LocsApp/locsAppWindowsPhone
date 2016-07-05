@@ -22,6 +22,7 @@ using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.ObjectModel;
 
 namespace Locsapp_Win_Phone.ViewModels
 {
@@ -91,7 +92,6 @@ namespace Locsapp_Win_Phone.ViewModels
                 Debug.WriteLine("Error Get Base Category");
             if (API.SetResponse.error == false)
                 SClothCol = JsonConvert.DeserializeObject<RootClothStates>(API.SetResponse.APIResponseString);
-
         }
 
         public static Collections Instance()
@@ -145,7 +145,7 @@ namespace Locsapp_Win_Phone.ViewModels
             }
             if (category == "clothe-states")
             {
-                foreach (var item in SClothCol.ClothStates)
+                foreach (var item in SClothCol.clothe_states)
                 {
                     if (item._id == ID)
                         return item.name;
@@ -160,6 +160,48 @@ namespace Locsapp_Win_Phone.ViewModels
                 }
             }
             return "";
+        }
+
+        public ObservableCollection<BuildSearchList>  BuildSearchField(string type)
+        {
+            ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
+
+            if (type == "Category")
+            {
+                foreach (var item in BCategoryCol.Base_categories)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "SubCategory")
+            {
+                foreach (var item in SCategoryCol.sub_categories)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "Gender")
+            {
+                foreach (var item in GenderCol.genders)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "Size")
+            {
+                foreach (var item in SizeCol.Sizes)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "Color")
+            {
+                foreach (var item in CClothCol.clothe_colors)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "State")
+            {
+                foreach (var item in SClothCol.clothe_states)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            if (type == "Payement")
+            {
+                foreach (var item in payementCol.payment_methods)
+                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+            }
+            return lists;
         }
 
     }

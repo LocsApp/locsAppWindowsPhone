@@ -77,7 +77,7 @@ namespace Locsapp_Win_Phone.Models
 
     public class RootClothStates
     {
-        public List<ClothStates> ClothStates { get; set; }
+        public List<ClothStates> clothe_states { get; set; }
     }
 
     //PayementMethods
