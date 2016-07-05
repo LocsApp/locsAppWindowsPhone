@@ -124,6 +124,9 @@
     <Compile Include="Views\FilterSearch.xaml.cs">
       <DependentUpon>FilterSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Likes.xaml.cs">
+      <DependentUpon>Likes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

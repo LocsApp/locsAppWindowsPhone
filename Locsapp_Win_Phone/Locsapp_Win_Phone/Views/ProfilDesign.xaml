@@ -27,12 +27,13 @@
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0">
                         <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50" Background="Transparent"/>
                     </StackPanel>
-                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+                    <StackPanel Grid.Row="4" Orientation="Horizontal">
                             <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                     Width="50" Height="50" Background="Transparent" Click="Logout"/>
                             <TextBlock Text="Logout" FontSize="18" VerticalAlignment="Center"/>
@@ -43,6 +44,11 @@
                             <TextBlock Text="Article" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="2">
+                        <Button x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;"
+                    Width="50" Height="50" Background="Transparent" Click="MenuButton4_Click"/>
+                        <TextBlock Text="Favorite" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3">
                         <Button x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;"
                     Width="50" Height="50" Background="Transparent" Click="MenuButton3_Click"/>
                         <TextBlock Text="Search" FontSize="18" VerticalAlignment="Center"/>

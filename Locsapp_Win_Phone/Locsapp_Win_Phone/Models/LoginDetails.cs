@@ -304,4 +304,9 @@ namespace Locsapp_Win_Phone.Models
         public bool Accept { get; set; }
     }
 
+    public class FavoritSearch
+    {
+        public string Name { get; set; }
+    }
+
 }

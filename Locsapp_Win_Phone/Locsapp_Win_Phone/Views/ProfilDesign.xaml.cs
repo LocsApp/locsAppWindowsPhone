@@ -182,6 +182,11 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(ArticleSearch));
         }
 
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Likes));
+        }
+
         private void AddAddressBilling(object sender, RoutedEventArgs e)
         {
             AddAddressContext billing = new AddAddressContext();
