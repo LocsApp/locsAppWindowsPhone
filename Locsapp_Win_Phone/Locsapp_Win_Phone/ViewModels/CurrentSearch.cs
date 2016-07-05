@@ -115,14 +115,24 @@ namespace Locsapp_Win_Phone.ViewModels
             search.Pagination = pag;
             string json2 = JsonConvert.SerializeObject(search);
 
-            Debug.WriteLine("Le JSON de recherche est : " + json2);
-
             return json2;
         }
 
-        public void SaveCurrentSearch(string Name)
+        public async void SaveCurrentSearch()
         {
-            ;
+            Dictionary<string, string> SaveSearch = new Dictionary<string, string>;
+
+            var collect = Collections.Instance();
+            string Name = "SavedSearch";
+            if (title != "")
+                Name += title;
+            if (base_category.Count > 1)
+                Name += collect.GetNameFromId(base_category[0], "base_category");
+            if (sub_category.Count > 1)
+                Name += collect.GetNameFromId(sub_category[0], "sub_category");
+            var cach = new Cache();
+            SaveSearch.Add(Name, JsonSearch());
+            await cach.Save("SavedSearchCache", SaveSearch);
         }
 
     }

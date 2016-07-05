@@ -38,14 +38,14 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class Cache
     {
-        public async Task<bool> Save(string file, Dictionary<string, List<string>> data)
+        public async Task<bool> Save(string file, Dictionary<string, string> data)
         {
             try
             {
                 StorageFile SavedCache = await ApplicationData.Current.LocalCacheFolder.CreateFileAsync(file, CreationCollisionOption.ReplaceExisting);
                 using (Stream write = await SavedCache.OpenStreamForWriteAsync())
                 {
-                    DataContractSerializer kek = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
+                    DataContractSerializer kek = new DataContractSerializer(typeof(Dictionary<string, string>));
                     kek.WriteObject(write, data);
                     await write.FlushAsync();
                     write.Dispose();
@@ -78,13 +78,13 @@ namespace Locsapp_Win_Phone.ViewModels
             return true;
         }
 
-        public async Task<Dictionary<string, List<string>>> get(string file)
+        public async Task<Dictionary<string, string>> get(string file)
         {
             var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
             if (Read == null)
-                return new Dictionary<string, List<string>>();
+                return new Dictionary<string, string>();
             DataContractSerializer saveddata = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
-            var result = (Dictionary<string, List<string>>)saveddata.ReadObject(Read);
+            var result = (Dictionary<string, string>)saveddata.ReadObject(Read);
             return result;
         }
 
