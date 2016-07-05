@@ -29,6 +29,11 @@ namespace Locsapp_Win_Phone.ViewModels
     {
         private RootPaymentMethod payementCol = null;
         private RootBaseCategory BCategoryCol = null;
+        private RootSubCategory SCategoryCol = null;
+        private RootGendre GenderCol = null;
+        private RootSizes SizeCol = null;
+        private RootClothStates SClothCol = null;
+        private RootClothColors CClothCol = null;
         private static Collections _instance = null;
 
         private Collections ()
@@ -52,7 +57,41 @@ namespace Locsapp_Win_Phone.ViewModels
             if (API.SetResponse.error == false)
                 BCategoryCol = JsonConvert.DeserializeObject<RootBaseCategory>(API.SetResponse.APIResponseString);
 
-            Debug.WriteLine("La base est " + BCategoryCol.Base_categories[0].name);
+            //Get SubCategory
+            API.API_req(API.URL_API + "api/v1/static-collections/sub-categories/", "GET", "", key);
+            if (API.SetResponse.error == true)
+                Debug.WriteLine("Error Get Sub Category");
+            if (API.SetResponse.error == false)
+                SCategoryCol = JsonConvert.DeserializeObject<RootSubCategory>(API.SetResponse.APIResponseString);
+
+            //Get Gender
+            API.API_req(API.URL_API + "api/v1/static-collections/genders/", "GET", "", key);
+            if (API.SetResponse.error == true)
+                Debug.WriteLine("Error Get Gender");
+            if (API.SetResponse.error == false)
+                GenderCol = JsonConvert.DeserializeObject<RootGendre>(API.SetResponse.APIResponseString);
+
+            //Get Sizes
+            API.API_req(API.URL_API + "api/v1/static-collections/sizes/", "GET", "", key);
+            if (API.SetResponse.error == true)
+                Debug.WriteLine("Error Get Size");
+            if (API.SetResponse.error == false)
+                SizeCol = JsonConvert.DeserializeObject<RootSizes>(API.SetResponse.APIResponseString);
+
+            //Get Cloths Colors
+            API.API_req(API.URL_API + "api/v1/static-collections/clothe-colors/", "GET", "", key);
+            if (API.SetResponse.error == true)
+                Debug.WriteLine("Error Get Base Category");
+            if (API.SetResponse.error == false)
+                CClothCol = JsonConvert.DeserializeObject<RootClothColors>(API.SetResponse.APIResponseString);
+
+            //Get States Cloths
+            API.API_req(API.URL_API + "api/v1/static-collections/clothe-states/", "GET", "", key);
+            if (API.SetResponse.error == true)
+                Debug.WriteLine("Error Get Base Category");
+            if (API.SetResponse.error == false)
+                SClothCol = JsonConvert.DeserializeObject<RootClothStates>(API.SetResponse.APIResponseString);
+
         }
 
         public static Collections Instance()
