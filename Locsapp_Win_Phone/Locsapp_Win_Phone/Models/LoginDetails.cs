@@ -199,6 +199,20 @@ namespace Locsapp_Win_Phone.Models
         public Pagination Pagination { get; set; }
         [JsonProperty("title")]
         public string Title { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> base_category { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> sub_category { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> gender { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> brand { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> clothe_condition { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> color { get; set; }
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> size { get; set; }
     }
 
 

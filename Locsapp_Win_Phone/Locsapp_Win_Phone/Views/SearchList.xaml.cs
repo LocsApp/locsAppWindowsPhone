@@ -43,6 +43,7 @@ namespace Locsapp_Win_Phone
             type = e.Parameter as string;
             var Collect = Collections.Instance();
 
+
             MyList.ItemsSource = Collect.BuildSearchField(type);
         }
 

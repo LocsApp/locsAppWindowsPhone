@@ -48,6 +48,10 @@ namespace Locsapp_Win_Phone
             string Key = "";
             SearchItems c1 = new SearchItems();
 
+            /*var search = CurrentSearch.Instance();
+
+            search.JsonSearch();*/
+
             Debug.WriteLine("Search Article");
 
             var pre_json = new Pagination();
@@ -55,12 +59,7 @@ namespace Locsapp_Win_Phone
             pre_json.ItemsPerPage = 11;
             var json = new MetaDataSearch();
             json.Pagination = pre_json;
-
-
-
-            Cache cach = new Cache();
-            if (await cach.isCacheExist("TitleSearch"))
-                json.Title = await cach.getString("TitleSearch");
+            json.Title = "";
 
             var sesInfo = SessionInfos.Instance();
             Key = sesInfo.GetKey();
@@ -68,6 +67,7 @@ namespace Locsapp_Win_Phone
             var collect = Collections.Instance();
 
             string json2 = JsonConvert.SerializeObject(json);
+            Debug.WriteLine("Le JSON est : " + json2);
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, Key);
             if (API.SetResponse.error == true)

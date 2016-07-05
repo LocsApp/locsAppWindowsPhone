@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Locsapp_Win_Phone.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace Locsapp_Win_Phone.ViewModels
     class CurrentSearch
     {
         private static CurrentSearch _instance = null;
+        public string title = "";
         public List<string> base_category = new List<string>();
         public List<string> sub_category = new List<string>();
         public List<string> gender = new List<string>();
@@ -88,6 +91,24 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public string JsonSearch()
         {
+            Pagination pag = new Pagination();
+            MetaDataSearch search = new MetaDataSearch();
+
+            pag.ItemsPerPage = 100;
+            pag.PageNumber = 1;
+
+            search.base_category = base_category;
+            search.brand = brand;
+            search.clothe_condition = clothe_condition;
+            search.color = color;
+            search.gender = gender;
+            search.sub_category = sub_category;
+            search.size = size;
+            search.Title = title;
+            string json2 = JsonConvert.SerializeObject(search);
+
+            Debug.WriteLine("LE JSON DE MON CUL est : " + json2);
+
             return "";
         }
 
