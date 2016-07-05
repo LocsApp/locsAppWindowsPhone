@@ -61,6 +61,9 @@ namespace Locsapp_Win_Phone
             json.Pagination = pre_json;
             json.Title = "";
 
+            var search = CurrentSearch.Instance();
+            
+
             var sesInfo = SessionInfos.Instance();
             Key = sesInfo.GetKey();
 
@@ -69,7 +72,7 @@ namespace Locsapp_Win_Phone
             string json2 = JsonConvert.SerializeObject(json);
             Debug.WriteLine("Le JSON est : " + json2);
             var API = new MainViewModel();
-            API.API_req(API.URL_API + "api/v1/search/articles/", "POST", json2, Key);
+            API.API_req(API.URL_API + "api/v1/search/articles/", "POST", search.JsonSearch(), Key);
             if (API.SetResponse.error == true)
             {
                 Debug.WriteLine("Il y a une erreur");

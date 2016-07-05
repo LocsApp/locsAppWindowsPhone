@@ -97,19 +97,27 @@ namespace Locsapp_Win_Phone.ViewModels
             pag.ItemsPerPage = 100;
             pag.PageNumber = 1;
 
-            search.base_category = base_category;
-            search.brand = brand;
-            search.clothe_condition = clothe_condition;
-            search.color = color;
-            search.gender = gender;
-            search.sub_category = sub_category;
-            search.size = size;
+            if (base_category.Count > 0)
+                search.base_category = base_category;
+            if (brand.Count > 0)
+                search.brand = brand;
+            if (clothe_condition.Count > 0)
+                search.clothe_condition = clothe_condition;
+            if (color.Count > 0)
+                search.color = color;
+            if (gender.Count > 0)
+                search.gender = gender;
+            if (sub_category.Count > 0)
+                search.sub_category = sub_category;
+            if (size.Count > 0)
+                search.size = size;
             search.Title = title;
+            search.Pagination = pag;
             string json2 = JsonConvert.SerializeObject(search);
 
-            Debug.WriteLine("LE JSON DE MON CUL est : " + json2);
+            Debug.WriteLine("Le JSON de recherche est : " + json2);
 
-            return "";
+            return json2;
         }
 
         public void SaveCurrentSearch(string Name)

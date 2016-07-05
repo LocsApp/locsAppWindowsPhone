@@ -91,8 +91,8 @@ namespace Locsapp_Win_Phone
         {
             if (TitleSearch.Text != null)
             {
-                Cache cach = new Cache();
-                await cach.Save("TitleSearch", TitleSearch.Text);
+                var search = CurrentSearch.Instance();
+                search.title = TitleSearch.Text;
             }
             Frame.Navigate(typeof(ArticleSearch));
         }
