@@ -101,5 +101,66 @@ namespace Locsapp_Win_Phone.ViewModels
             return _instance;
         }
 
+        public string GetNameFromId(string ID, string category)
+        {
+            if (category == "base-categories")
+            {
+                foreach (var item in BCategoryCol.Base_categories)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "sub-categories")
+            {
+                foreach (var item in SCategoryCol.sub_categories)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "genders")
+            {
+                foreach (var item in GenderCol.genders)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "sizes")
+            {
+                foreach (var item in SizeCol.Sizes)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "clothe-colors")
+            {
+                foreach (var item in CClothCol.clothe_colors)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "clothe-states")
+            {
+                foreach (var item in SClothCol.ClothStates)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            if (category == "payement-methods")
+            {
+                foreach (var item in payementCol.payment_methods)
+                {
+                    if (item._id == ID)
+                        return item.name;
+                }
+            }
+            return "";
+        }
+
     }
 }
