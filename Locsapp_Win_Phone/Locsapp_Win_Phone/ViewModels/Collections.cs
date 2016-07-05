@@ -162,6 +162,67 @@ namespace Locsapp_Win_Phone.ViewModels
             return "";
         }
 
+        public string GetIdFromName(string Name, string category)
+        {
+            if (category == "base-categories")
+            {
+                foreach (var item in BCategoryCol.Base_categories)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "sub-categories")
+            {
+                foreach (var item in SCategoryCol.sub_categories)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "genders")
+            {
+                foreach (var item in GenderCol.genders)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "sizes")
+            {
+                foreach (var item in SizeCol.Sizes)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "clothe-colors")
+            {
+                foreach (var item in CClothCol.clothe_colors)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "clothe-states")
+            {
+                foreach (var item in SClothCol.clothe_states)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            if (category == "payement-methods")
+            {
+                foreach (var item in payementCol.payment_methods)
+                {
+                    if (item.name == Name)
+                        return item._id;
+                }
+            }
+            return "";
+        }
+
         public ObservableCollection<BuildSearchList>  BuildSearchField(string type)
         {
             ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();

@@ -44,12 +44,6 @@ namespace Locsapp_Win_Phone
             var Collect = Collections.Instance();
 
             MyList.ItemsSource = Collect.BuildSearchField(type);
-            //ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
-            //lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = "Well-Worn" });
-
-            //Save
-            //MyList.ItemsSource = new BuildSearch(type).getlist();
-            //await checkFromCache();
         }
 
         public async Task checkFromCache()
@@ -57,9 +51,9 @@ namespace Locsapp_Win_Phone
             int i = 0;
             int i2 = 0;
 
-            Cache cach = new Cache();
+            //Cache cach = new Cache();
                 Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
-                dic = await cach.get("CurrentSearch");
+                //dic = await cach.get("CurrentSearch");
                 if (dic.ContainsKey(type))
                 {
                     while (i != dic[type].Count)
@@ -92,7 +86,7 @@ namespace Locsapp_Win_Phone
 
         private async void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Cache cach = new Cache();
+            //Cache cach = new Cache();
             var Data = new Dictionary<string, List<string>>();
             var active = new List<string>();
             int i = 0;
@@ -104,7 +98,7 @@ namespace Locsapp_Win_Phone
                 i++;
             }
             Data.Add(type, active);
-            await cach.Save("CurrentSearch", Data);
+            //await cach.Save("CurrentSearch", Data);
             Frame rootFram = Window.Current.Content as Frame;
             if (rootFram != null && rootFram.CanGoBack)
             {
