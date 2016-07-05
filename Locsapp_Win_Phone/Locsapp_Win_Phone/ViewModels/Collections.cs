@@ -103,7 +103,7 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public string GetNameFromId(string ID, string category)
         {
-            if (category == "base-categories")
+            if (category == "base-categories" || category == "Category")
             {
                 foreach (var item in BCategoryCol.Base_categories)
                 {
@@ -111,7 +111,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "sub-categories")
+            if (category == "sub-categories" || category == "SubCategory")
             {
                 foreach (var item in SCategoryCol.sub_categories)
                 {
@@ -119,7 +119,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "genders")
+            if (category == "genders" || category == "SubCategory")
             {
                 foreach (var item in GenderCol.genders)
                 {
@@ -127,7 +127,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "sizes")
+            if (category == "sizes" || category == "Size")
             {
                 foreach (var item in SizeCol.Sizes)
                 {
@@ -135,7 +135,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "clothe-colors")
+            if (category == "clothe-colors" || category == "Color")
             {
                 foreach (var item in CClothCol.clothe_colors)
                 {
@@ -143,7 +143,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "clothe-states")
+            if (category == "clothe-states" || category == "State")
             {
                 foreach (var item in SClothCol.clothe_states)
                 {
@@ -151,7 +151,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "payement-methods")
+            if (category == "payement-methods" || category == "Payement")
             {
                 foreach (var item in payementCol.payment_methods)
                 {
@@ -164,7 +164,8 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public string GetIdFromName(string Name, string category)
         {
-            if (category == "base-categories")
+
+            if (category == "base-categories" || category == "Category")
             {
                 foreach (var item in BCategoryCol.Base_categories)
                 {
@@ -172,7 +173,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "sub-categories")
+            if (category == "sub-categories" || category == "SubCategory")
             {
                 foreach (var item in SCategoryCol.sub_categories)
                 {
@@ -180,7 +181,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "genders")
+            if (category == "genders" || category == "Gender")
             {
                 foreach (var item in GenderCol.genders)
                 {
@@ -188,7 +189,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "sizes")
+            if (category == "sizes" || category == "Size")
             {
                 foreach (var item in SizeCol.Sizes)
                 {
@@ -196,7 +197,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "clothe-colors")
+            if (category == "clothe-colors" || category == "Color")
             {
                 foreach (var item in CClothCol.clothe_colors)
                 {
@@ -204,7 +205,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "clothe-states")
+            if (category == "clothe-states" || category == "State")
             {
                 foreach (var item in SClothCol.clothe_states)
                 {
@@ -212,7 +213,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item._id;
                 }
             }
-            if (category == "payement-methods")
+            if (category == "payement-methods" || category == "Payement")
             {
                 foreach (var item in payementCol.payment_methods)
                 {
@@ -225,42 +226,43 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public ObservableCollection<BuildSearchList>  BuildSearchField(string type)
         {
+            var currentserach = CurrentSearch.Instance();
             ObservableCollection<BuildSearchList> lists = new ObservableCollection<BuildSearchList>();
 
             if (type == "Category")
             {
                 foreach (var item in BCategoryCol.Base_categories)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "Category"), FieldSearch = item.name });
             }
             if (type == "SubCategory")
             {
                 foreach (var item in SCategoryCol.sub_categories)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "SubCategory"), FieldSearch = item.name });
             }
             if (type == "Gender")
             {
                 foreach (var item in GenderCol.genders)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "Gender"), FieldSearch = item.name });
             }
             if (type == "Size")
             {
                 foreach (var item in SizeCol.Sizes)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "Size"), FieldSearch = item.name });
             }
             if (type == "Color")
             {
                 foreach (var item in CClothCol.clothe_colors)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "Color"), FieldSearch = item.name });
             }
             if (type == "State")
             {
                 foreach (var item in SClothCol.clothe_states)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "State"), FieldSearch = item.name });
             }
             if (type == "Payement")
             {
                 foreach (var item in payementCol.payment_methods)
-                    lists.Add(new BuildSearchList { CheckSearch = false, FieldSearch = item.name });
+                    lists.Add(new BuildSearchList { CheckSearch = currentserach.IsCheck(item.name, "Payement"), FieldSearch = item.name });
             }
             return lists;
         }
