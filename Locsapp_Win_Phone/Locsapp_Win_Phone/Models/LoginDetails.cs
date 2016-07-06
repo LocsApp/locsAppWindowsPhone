@@ -146,31 +146,31 @@ namespace Locsapp_Win_Phone.Models
 
     public class AddressDetails
     {
-        [JsonProperty("last_name")]
+        [JsonProperty("last_name", NullValueHandling = NullValueHandling.Ignore)]
         public string LastName { get; set; }
-        [JsonProperty("address")]
+        [JsonProperty("address", NullValueHandling = NullValueHandling.Ignore)]
         public string Address { get; set; }
-        [JsonProperty("postal_code")]
+        [JsonProperty("postal_code", NullValueHandling = NullValueHandling.Ignore)]
         public int PostalCode { get; set; }
-        [JsonProperty("city")]
+        [JsonProperty("city", NullValueHandling = NullValueHandling.Ignore)]
         public string City { get; set; }
-        [JsonProperty("first_name")]
+        [JsonProperty("first_name", NullValueHandling = NullValueHandling.Ignore)]
         public string FirstName { get; set; }
     }
 
     public class AddressDisplay
     {
-        [JsonProperty("alias")]
+        [JsonProperty("alias", NullValueHandling = NullValueHandling.Ignore)]
         public string Alias { get; set; }
-        [JsonProperty("last_name")]
+        [JsonProperty("last_name", NullValueHandling = NullValueHandling.Ignore)]
         public string LastName { get; set; }
-        [JsonProperty("address")]
+        [JsonProperty("address", NullValueHandling = NullValueHandling.Ignore)]
         public string Address { get; set; }
-        [JsonProperty("postal_code")]
+        [JsonProperty("postal_code", NullValueHandling = NullValueHandling.Ignore)]
         public int PostalCode { get; set; }
-        [JsonProperty("city")]
+        [JsonProperty("city", NullValueHandling = NullValueHandling.Ignore)]
         public string City { get; set; }
-        [JsonProperty("first_name")]
+        [JsonProperty("first_name", NullValueHandling = NullValueHandling.Ignore)]
         public string FirstName { get; set; }
     }
 

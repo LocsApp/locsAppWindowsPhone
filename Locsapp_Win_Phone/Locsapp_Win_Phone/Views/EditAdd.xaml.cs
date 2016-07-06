@@ -46,16 +46,12 @@ namespace Locsapp_Win_Phone
             LName.Text = edit.Add[edit.index][1].Split('"')[3];
             City.Text = edit.Add[edit.index][1].Split('"')[11];
             Address.Text = edit.Add[edit.index][1].Split('"')[7];
-            PostalCode.Text = edit.Add[edit.index][1].Split('"')[18].TrimEnd('}');
+            PostalCode.Text = edit.Add[edit.index][1].Split('"')[18].TrimEnd('}').Trim().TrimStart(':');
         }
 
         public string BuildAddressToSend(string type = "")
         {
-            string address = "{\"";
-            address += type;
-            address += "_address\" : [ \"";
-            address += Alias.Text;
-            address += "\",{\"first_name\" : \"";
+            string address =  "{\"first_name\" : \"";
             address += FName.Text;
             address += "\",\"last_name\" : \"";
             address += LName.Text;
@@ -65,26 +61,35 @@ namespace Locsapp_Win_Phone
             address += PostalCode.Text;
             address += ",\"city\" : \"";
             address += City.Text;
-            address += "\"}]}";
+            address += "\"}";
             return address;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var key = SessionInfos.Instance();
             if (Alias.Text != "" && FName.Text != "" && LName.Text != "" && Address.Text != "" && City.Text != "")
             {
-                string APIRoute = "api/v1/user/" + id + "/" + type_adrress + "_addresses/";
-                string data = BuildAddressToSend(type_adrress);
-                Debug.WriteLine(data);
+                string data = BuildAddressToSend("living");
+                var edit = Edit_Add.Instance();
+                edit.Add[edit.index][0] = Alias.Text;
+                edit.Add[edit.index][1] = data;
+
+                Debug.WriteLine("Le data est : " + data);
+
                 var API = new MainViewModel();
-                Debug.WriteLine("La route utilisée est : " + API.URL_API + APIRoute);
-                API.API_req(API.URL_API + APIRoute, "POST", data, secretKey);
+
+                edit.data.LivingAddress = edit.Add;
+
+                string json = JsonConvert.SerializeObject(edit.data);
+
+                API.API_req(API.URL_API + "api/v1/rest-auth/user/", "PUT", json, key.GetKey());
                 if (API.SetResponse.error == true)
                     Frame.Navigate(typeof(Errorview), API);
                 if (API.SetResponse.error == false)
                 {
                     Debug.WriteLine("Send Adrress Success");
-                    Frame.Navigate(typeof(ProfilDesign), secretKey);
+                    Frame.Navigate(typeof(ProfilDesign), key.GetKey());
                 }
             }
             else

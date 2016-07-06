@@ -28,6 +28,7 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     public class MainViewModel
     {
+        //private static string URLAPI = "https://locsapp.sylflo.fr/";
         private static string URLAPI = "http://151.80.38.31:8000/";
         //private static string URLAPI = "http://5.135.163.38:8010/";
 
