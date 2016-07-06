@@ -209,28 +209,6 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(AddAddress), living);
         }
 
-        // private void DeleteAddress(object sender, RoutedEventArgs e)
-        // {
-        /* var data = (Button)sender;
-         Debug.WriteLine(data.Tag);
-         string APIRoute = "api/v1/user/" + Id + "/living_addresses/";
-         string data = "{Alias : \"\"}";
-         Debug.WriteLine(data);
-         var API = new MainViewModel();
-         Debug.WriteLine("La route utilisée est : " + API.URL_API + APIRoute);
-         API.API_req(API.URL_API + APIRoute, "POST", data, secretKey);
-         if (API.SetResponse.error == true)
-             Frame.Navigate(typeof(Errorview), API);
-         if (API.SetResponse.error == false)
-         {
-             Debug.WriteLine("Send Adrress Success");
-             Frame.Navigate(typeof(ProfilDesign), secretKey);
-         }*/
-        //}
-
-        //POST /user/userId/living_addresses/delete/
-        //You have to pass the same JSON from the POST at the route /user/userID/living_addresses/
-
         private void DeleteAddress(object sender, RoutedEventArgs e)
         {
             int i = 0;
@@ -251,6 +229,36 @@ namespace Locsapp_Win_Phone
             Send_Data(null, null);
         }
 
+        private void EditAddress(object sender, RoutedEventArgs e)
+        {
+            var Edit = Edit_Add.Instance();
+            int i = 0;
+            int i2 = 0;
+            bool is_find = false;
+            var del = (Button)sender;
+            foreach (List<string> item in LivingListList)
+            {
+                if (item[0] == del.Tag.ToString())
+                {
+                    is_find = true;
+                    i2 = i;
+                }
+                i++;
+            }
+            if (is_find)
+            {
+                UserInfos data = new UserInfos();
+                data.FirstName = EditProfile_FirstName.Text;
+                data.LastName = EditProfile_Name.Text;
+                data.Phone = EditProfile_Phone.Text;
+                data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+                data.LivingAddress = LivingListList;
+                Edit.index = i2;
+                Edit.Add = LivingListList;
+                Edit.data = data;
+                Frame.Navigate(typeof(EditAdd));
+            }
+        }
 
     }
 }

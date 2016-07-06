@@ -107,6 +107,7 @@
     <Compile Include="ViewModels\Cache.cs" />
     <Compile Include="ViewModels\Collections.cs" />
     <Compile Include="ViewModels\CurrentSearch.cs" />
+    <Compile Include="ViewModels\Edit_Add.cs" />
     <Compile Include="ViewModels\FaceBook.cs" />
     <Compile Include="ViewModels\SessionInfos.cs" />
     <Compile Include="Views\AddAddress.xaml.cs">
@@ -117,6 +118,9 @@
     </Compile>
     <Compile Include="Views\ArticleSearch.xaml.cs">
       <DependentUpon>ArticleSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAdd.xaml.cs">
+      <DependentUpon>EditAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Errorview.xaml.cs">
       <DependentUpon>Errorview.xaml</DependentUpon>
@@ -204,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ArticleSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

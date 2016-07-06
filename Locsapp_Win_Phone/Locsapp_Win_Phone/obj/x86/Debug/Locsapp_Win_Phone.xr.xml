@@ -153,6 +153,7 @@
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
+    <RootType FullName="Locsapp_Win_Phone.EditAdd" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="Margin" />
