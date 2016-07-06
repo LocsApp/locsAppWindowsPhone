@@ -83,7 +83,7 @@ namespace Locsapp_Win_Phone.ViewModels
             var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
             if (Read == null)
                 return new Dictionary<string, string>();
-            DataContractSerializer saveddata = new DataContractSerializer(typeof(Dictionary<string, List<string>>));
+            DataContractSerializer saveddata = new DataContractSerializer(typeof(Dictionary<string, string>));
             var result = (Dictionary<string, string>)saveddata.ReadObject(Read);
             return result;
         }

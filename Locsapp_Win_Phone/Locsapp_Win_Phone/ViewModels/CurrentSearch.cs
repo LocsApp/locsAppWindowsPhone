@@ -123,14 +123,16 @@ namespace Locsapp_Win_Phone.ViewModels
             Dictionary<string, string> SaveSearch = new Dictionary<string, string>();
 
             var collect = Collections.Instance();
-            string Name = "SavedSearch";
+            string Name = "SavedSearch ";
             if (title != "")
                 Name += title;
-            if (base_category.Count > 1)
+            if (base_category.Count > 0)
                 Name += collect.GetNameFromId(base_category[0], "base_category");
-            if (sub_category.Count > 1)
+            if (sub_category.Count > 0)
                 Name += collect.GetNameFromId(sub_category[0], "sub_category");
             var cach = new Cache();
+            //if (await cach.isCacheExist("SavedSearchCache"))
+             //   SaveSearch = await cach.get("SavedSearchCache");
             SaveSearch.Add(Name, JsonSearch());
             await cach.Save("SavedSearchCache", SaveSearch);
         }

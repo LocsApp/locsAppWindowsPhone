@@ -96,5 +96,11 @@ namespace Locsapp_Win_Phone
             }
             Frame.Navigate(typeof(ArticleSearch));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var current = CurrentSearch.Instance();
+            current.SaveCurrentSearch();
+        }
     }
 }

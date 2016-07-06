@@ -32,16 +32,16 @@
                         <RowDefinition Height="50"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0">
-                        <Button x:ConnectionId='6' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                        <Button x:ConnectionId='7' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50" Background="Transparent"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="1">
-                        <Button x:ConnectionId='5' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE7C3;"
+                        <Button x:ConnectionId='6' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE7C3;"
                     Width="50" Height="50" Background="Transparent"                          />
                         <TextBlock Text="Article" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="2">
-                        <Button x:ConnectionId='4' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;"
+                        <Button x:ConnectionId='5' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Content="&#xE8FD;"
                     Width="50" Height="50" Background="Transparent"                          />
                         <TextBlock Text="Search" FontSize="18" VerticalAlignment="Center"/>
                     </StackPanel>
@@ -49,7 +49,7 @@
 
             </SplitView.Pane>
 
-        <ListView x:ConnectionId='7' x:Name="MyList"                       >
+        <ListView x:ConnectionId='8' x:Name="MyList"                       >
             <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -75,7 +75,15 @@
             </ListView.ItemTemplate>
         </ListView>
         </SplitView>
-        <Button x:ConnectionId='3' Grid.Row="1" Height="50" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;"                     ></Button>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='3'  Height="50" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;"                     ></Button>
+            <Button x:ConnectionId='4' Grid.Column="1" Height="50" HorizontalAlignment="Stretch" Content="Save Search"                       ></Button>
+        </Grid>
+        
     </Grid>
 </Page>
 

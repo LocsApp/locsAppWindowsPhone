@@ -130,5 +130,11 @@ namespace Locsapp_Win_Phone
             Debug.WriteLine("L'Id de l'article est : " + SelectArticle.Id);
             Frame.Navigate(typeof(Article), SelectArticle);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var current = CurrentSearch.Instance();
+            current.SaveCurrentSearch();
+        }
     }
 }

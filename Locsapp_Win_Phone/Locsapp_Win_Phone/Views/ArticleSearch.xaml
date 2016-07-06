@@ -75,6 +75,14 @@
             </ListView.ItemTemplate>
         </ListView>
         </SplitView>
-        <Button Grid.Row="1" Height="50" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" Click="Button_Click"></Button>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button  Height="50" HorizontalAlignment="Stretch" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" Click="Button_Click"></Button>
+            <Button Grid.Column="1" Height="50" HorizontalAlignment="Stretch" Content="Save Search" Click="Button_Click_1"></Button>
+        </Grid>
+        
     </Grid>
 </Page>

@@ -23,19 +23,51 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace Locsapp_Win_Phone
 {
     public sealed partial class Likes : Page
     {
+        private List<string> SearchJson = new List<string>();
+        private Dictionary<string, string> DictSearch = new Dictionary<string, string>();
+        private ObservableCollection<FavoritSearch> dataList = new ObservableCollection<FavoritSearch>();
+
         public Likes()
         {
             InitializeComponent();
-            FavoritSearch favSearch = new FavoritSearch();
-            ObservableCollection<FavoritSearch> dataList = new ObservableCollection<FavoritSearch>();
-            favSearch.Name = "Toto";
-            dataList.Add(favSearch);
+
+            
+
+            
+            
+            getdictcache();
             FavoriteSearch.ItemsSource = dataList;
+        }
+
+        private async void getdictcache()
+        {
+            FavoritSearch favSearch = new FavoritSearch();
+            Cache cach = new Cache();
+            DictSearch = await cach.get("SavedSearchCache");
+            Debug.WriteLine("Le nombre de fav ets : " + DictSearch.Count);
+
+            foreach (KeyValuePair<string, string> item in DictSearch)
+            {
+                favSearch.Name = item.Key;
+                dataList.Add(favSearch);
+                SearchJson.Add(item.Value);
+            }
+            
+            FavoriteSearch.ItemsSource = dataList;
+        }
+
+        private void FavoriteSearch_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var i = 0;
+
+            Debug.WriteLine("L'index selectionné est : " + FavoriteSearch.SelectedIndex);
+            //Debug.WriteLine("TAp!!" + sender.ToString() + "--" + e.ToString());
         }
     }
 }

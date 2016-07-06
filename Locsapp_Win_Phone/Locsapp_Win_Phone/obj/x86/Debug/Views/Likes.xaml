@@ -10,14 +10,14 @@
         <Page.TopAppBar>
             <AppBar Background="#C51A1C" IsOpen="True" IsSticky="True">
                 <Grid>
-                    <AppBarButton Name="Show" Icon="AllApps" />
+                    <AppBarButton x:ConnectionId='1' Name="Show" Icon="AllApps" />
                 </Grid>
             </AppBar>
         </Page.TopAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <ListView x:Name="FavoriteSearch" Tapped="FavoriteSearch_Tapped">
+        <ListView x:ConnectionId='2' x:Name="FavoriteSearch"                               >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -34,3 +34,4 @@
 
     </Grid>
 </Page>
+
