@@ -26,7 +26,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="{Binding Name}"></TextBlock>
-                        <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Right"></Button>
+                        <Button x:ConnectionId='3' Content="Delete" Grid.Column="1" HorizontalAlignment="Right"                     ></Button>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

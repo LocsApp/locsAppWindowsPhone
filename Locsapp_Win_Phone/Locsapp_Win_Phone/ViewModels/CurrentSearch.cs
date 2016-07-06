@@ -145,8 +145,6 @@ namespace Locsapp_Win_Phone.ViewModels
             if (sub_category.Count > 0)
                 Name += collect.GetNameFromId(sub_category[0], "sub_category");
             var cach = new Cache();
-            //if (await cach.isCacheExist("SavedSearchCache"))
-             //   SaveSearch = await cach.get("SavedSearchCache");
             SaveSearch.Add(Name, JsonSearch());
             await cach.Save("SavedSearchCache", SaveSearch);
         }

@@ -101,7 +101,7 @@ namespace Locsapp_Win_Phone.ViewModels
         public async Task<bool> isCacheExist(string file)
         {
             var Read = await ApplicationData.Current.LocalCacheFolder.OpenStreamForReadAsync(file);
-            if (Read == null)
+            if (Read == null || Read.Length == 0)
                 return false;
             return true;
         }

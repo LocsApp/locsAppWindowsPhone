@@ -44,15 +44,19 @@ namespace Locsapp_Win_Phone
         {
             FavoritSearch favSearch = new FavoritSearch();
             Cache cach = new Cache();
-            DictSearch = await cach.get("SavedSearchCache");
-            Debug.WriteLine("Le nombre de fav ets : " + DictSearch.Count);
-
-            foreach (KeyValuePair<string, string> item in DictSearch)
+            if (await cach.isCacheExist("SavedSearchCache"))
             {
-                favSearch.Name = item.Key;
-                dataList.Add(favSearch);
-                SearchJson.Add(item.Value);
+                DictSearch = await cach.get("SavedSearchCache");
+                Debug.WriteLine("Le nombre de fav ets : " + DictSearch.Count);
+
+                foreach (KeyValuePair<string, string> item in DictSearch)
+                {
+                    favSearch.Name = item.Key;
+                    dataList.Add(favSearch);
+                    SearchJson.Add(item.Value);
+                }
             }
+
             
             FavoriteSearch.ItemsSource = dataList;
         }
@@ -61,10 +65,21 @@ namespace Locsapp_Win_Phone
         {
             var current = CurrentSearch.Instance();
 
-            current.FromSaveSearch = true;
-            current.SavedSearch = SearchJson[FavoriteSearch.SelectedIndex];
+            if (FavoriteSearch.SelectedIndex != -1)
+            {
+                current.FromSaveSearch = true;
+                current.SavedSearch = SearchJson[FavoriteSearch.SelectedIndex];
 
-            Frame.Navigate(typeof(ArticleSearch));
+                Frame.Navigate(typeof(ArticleSearch));
+            }
+
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Cache cach = new Cache();
+            await cach.Save("SavedSearchCache", new Dictionary<string, string>());
+            Frame.Navigate(typeof(Likes));
         }
     }
 }
