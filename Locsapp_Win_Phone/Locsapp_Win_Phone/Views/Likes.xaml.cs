@@ -36,11 +36,6 @@ namespace Locsapp_Win_Phone
         public Likes()
         {
             InitializeComponent();
-
-            
-
-            
-            
             getdictcache();
             FavoriteSearch.ItemsSource = dataList;
         }
@@ -64,10 +59,12 @@ namespace Locsapp_Win_Phone
 
         private void FavoriteSearch_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            var i = 0;
+            var current = CurrentSearch.Instance();
 
-            Debug.WriteLine("L'index selectionné est : " + FavoriteSearch.SelectedIndex);
-            //Debug.WriteLine("TAp!!" + sender.ToString() + "--" + e.ToString());
+            current.FromSaveSearch = true;
+            current.SavedSearch = SearchJson[FavoriteSearch.SelectedIndex];
+
+            Frame.Navigate(typeof(ArticleSearch));
         }
     }
 }

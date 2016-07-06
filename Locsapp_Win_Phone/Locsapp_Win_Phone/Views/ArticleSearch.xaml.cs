@@ -70,7 +70,7 @@ namespace Locsapp_Win_Phone
             var collect = Collections.Instance();
 
             string json2 = JsonConvert.SerializeObject(json);
-            Debug.WriteLine("Le JSON est : " + json2);
+            //Debug.WriteLine("Le JSON est : " + search.JsonSearch());
             var API = new MainViewModel();
             API.API_req(API.URL_API + "api/v1/search/articles/", "POST", search.JsonSearch(), Key);
             if (API.SetResponse.error == true)

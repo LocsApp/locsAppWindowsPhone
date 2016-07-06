@@ -11,6 +11,8 @@ namespace Locsapp_Win_Phone.ViewModels
 {
     class CurrentSearch
     {
+        public bool FromSaveSearch { get; set; }
+        public string SavedSearch { get; set; }
         private static CurrentSearch _instance = null;
         public string title = "";
         public List<string> base_category = new List<string>();
@@ -23,6 +25,8 @@ namespace Locsapp_Win_Phone.ViewModels
 
         private CurrentSearch()
         {
+            FromSaveSearch = false;
+            SavedSearch = "";
         }
 
         public static CurrentSearch Instance()
@@ -97,23 +101,33 @@ namespace Locsapp_Win_Phone.ViewModels
             pag.ItemsPerPage = 100;
             pag.PageNumber = 1;
 
-            if (base_category.Count > 0)
-                search.base_category = base_category;
-            if (brand.Count > 0)
-                search.brand = brand;
-            if (clothe_condition.Count > 0)
-                search.clothe_condition = clothe_condition;
-            if (color.Count > 0)
-                search.color = color;
-            if (gender.Count > 0)
-                search.gender = gender;
-            if (sub_category.Count > 0)
-                search.sub_category = sub_category;
-            if (size.Count > 0)
-                search.size = size;
-            search.Title = title;
-            search.Pagination = pag;
-            string json2 = JsonConvert.SerializeObject(search);
+            string json2 = "";
+
+            if (FromSaveSearch)
+            {
+                json2 = SavedSearch;
+                FromSaveSearch = false;
+            }
+            else
+            {
+                if (base_category.Count > 0)
+                    search.base_category = base_category;
+                if (brand.Count > 0)
+                    search.brand = brand;
+                if (clothe_condition.Count > 0)
+                    search.clothe_condition = clothe_condition;
+                if (color.Count > 0)
+                    search.color = color;
+                if (gender.Count > 0)
+                    search.gender = gender;
+                if (sub_category.Count > 0)
+                    search.sub_category = sub_category;
+                if (size.Count > 0)
+                    search.size = size;
+                search.Title = title;
+                search.Pagination = pag;
+                json2 = JsonConvert.SerializeObject(search);
+            }
 
             return json2;
         }
