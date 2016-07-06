@@ -135,7 +135,7 @@ namespace Locsapp_Win_Phone.ViewModels
         public async void SaveCurrentSearch()
         {
             Dictionary<string, string> SaveSearch = new Dictionary<string, string>();
-
+            FromSaveSearch = false;
             var collect = Collections.Instance();
             string Name = "SavedSearch ";
             if (title != "")
