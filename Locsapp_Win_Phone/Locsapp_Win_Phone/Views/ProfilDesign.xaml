@@ -115,6 +115,8 @@
                                         <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
@@ -174,6 +176,42 @@
                                                     </StackPanel>
                                                     <Button Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EditAddress"></Button>
                                                     <Button Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0" Click="DeleteAddress"></Button>
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                    <Button Grid.Row="12" Click="AddAddressBilling">Add Biling Address</Button>
+                                    <ListView x:Name="BilingListView" Grid.Row="13" Grid.ColumnSpan="5" >
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" MinWidth="250"/>
+                                                        <ColumnDefinition Width="Auto" MinWidth="48"/>
+                                                        <ColumnDefinition Width="Auto" MinWidth="48"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Alias}" FontSize="18" Foreground="#C51A1C"></TextBlock>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding FirstName}"></TextBlock>
+                                                        <TextBlock Text="{Binding LastName}" Margin="5,0,0,0"></TextBlock>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Address}"></TextBlock>
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding City}"></TextBlock>
+                                                        <TextBlock Text="{Binding PostalCode}" Margin="10,0,0,0"></TextBlock>
+                                                    </StackPanel>
+                                                    <Button Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EditAddressBiling"></Button>
+                                                    <Button Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0" Click="DeleteAddressBiling"></Button>
                                                 </Grid>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>

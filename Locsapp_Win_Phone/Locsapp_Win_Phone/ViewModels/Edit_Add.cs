@@ -11,6 +11,7 @@ namespace Locsapp_Win_Phone.ViewModels
     {
 
         public int index = 0;
+        public string Type_Edit = "";
         public List<List<string>> Add = new List<List<string>>();
         private static Edit_Add _instance = null;
         public UserInfos data = new UserInfos();

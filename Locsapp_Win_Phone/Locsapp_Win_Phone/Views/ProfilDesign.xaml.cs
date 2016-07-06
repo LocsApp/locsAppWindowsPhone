@@ -30,8 +30,9 @@ namespace Locsapp_Win_Phone
         private string _Key;
         private string _Id;
         private List<List<string>> LivingListList;
+        private List<List<string>> BilingListList;
         private List<AddressDisplay> _LivingList;
-        //private List<AddressDisplay> _BillingList;
+        private List<AddressDisplay> _BillingList;
 
         public string Key
         {
@@ -83,6 +84,8 @@ namespace Locsapp_Win_Phone
                     results.Alias = Field[0];
                     BillingList.Add(results);
                 }
+                BilingListView.ItemsSource = BillingList;
+                _BillingList = BillingList;
             }
         }
 
@@ -113,6 +116,7 @@ namespace Locsapp_Win_Phone
                 EditProfile_Name.Text = NullToString(results.LastName);
                 EditProfile_Phone.Text = NullToString(results.Phone);
                 LivingListList = results.LivingAddress;
+                BilingListList = results.BillingAddress;
                 InitAddress(results.LivingAddress, results.BillingAddress);
             }
         }
@@ -142,6 +146,7 @@ namespace Locsapp_Win_Phone
             data.Phone = EditProfile_Phone.Text;
             data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
             data.LivingAddress = LivingListList;
+            data.BillingAddress = BilingListList;
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
@@ -196,7 +201,7 @@ namespace Locsapp_Win_Phone
             billing.IdUser = Id;
             billing.Key = Key;
             billing.Type = "billing";
-            //Frame.Navigate(typeof(Article, biling));
+            Frame.Navigate(typeof(AddAddress), billing);
         }
 
         private void AddAddressLiving(object sender, RoutedEventArgs e)
@@ -229,6 +234,26 @@ namespace Locsapp_Win_Phone
             Send_Data(null, null);
         }
 
+        private void DeleteAddressBiling(object sender, RoutedEventArgs e)
+        {
+            int i = 0;
+            int i2 = 0;
+            bool is_find = false;
+            var del = (Button)sender;
+            foreach (List<string> item in BilingListList)
+            {
+                if (item[0] == del.Tag.ToString())
+                {
+                    is_find = true;
+                    i2 = i;
+                }
+                i++;
+            }
+            if (is_find)
+                BilingListList.RemoveAt(i2);
+            Send_Data(null, null);
+        }
+
         private void EditAddress(object sender, RoutedEventArgs e)
         {
             var Edit = Edit_Add.Instance();
@@ -253,9 +278,44 @@ namespace Locsapp_Win_Phone
                 data.Phone = EditProfile_Phone.Text;
                 data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
                 data.LivingAddress = LivingListList;
+                data.BillingAddress = BilingListList;
                 Edit.index = i2;
                 Edit.Add = LivingListList;
                 Edit.data = data;
+                Edit.Type_Edit = "Living";
+                Frame.Navigate(typeof(EditAdd));
+            }
+        }
+
+        private void EditAddressBiling(object sender, RoutedEventArgs e)
+        {
+            var Edit = Edit_Add.Instance();
+            int i = 0;
+            int i2 = 0;
+            bool is_find = false;
+            var del = (Button)sender;
+            foreach (List<string> item in BilingListList)
+            {
+                if (item[0] == del.Tag.ToString())
+                {
+                    is_find = true;
+                    i2 = i;
+                }
+                i++;
+            }
+            if (is_find)
+            {
+                UserInfos data = new UserInfos();
+                data.FirstName = EditProfile_FirstName.Text;
+                data.LastName = EditProfile_Name.Text;
+                data.Phone = EditProfile_Phone.Text;
+                data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+                data.LivingAddress = LivingListList;
+                data.BillingAddress = BilingListList;
+                Edit.index = i2;
+                Edit.Add = BilingListList;
+                Edit.data = data;
+                Edit.Type_Edit = "Biling";
                 Frame.Navigate(typeof(EditAdd));
             }
         }

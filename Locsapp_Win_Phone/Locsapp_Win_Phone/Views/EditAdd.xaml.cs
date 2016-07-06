@@ -29,10 +29,6 @@ namespace Locsapp_Win_Phone
     public sealed partial class EditAdd : Page
     {
 
-        private string type_adrress = "";
-        private string secretKey = "";
-        private string id = "toto";
-
         public EditAdd()
         {
             this.InitializeComponent();
@@ -70,7 +66,7 @@ namespace Locsapp_Win_Phone
             var key = SessionInfos.Instance();
             if (Alias.Text != "" && FName.Text != "" && LName.Text != "" && Address.Text != "" && City.Text != "")
             {
-                string data = BuildAddressToSend("living");
+                string data = BuildAddressToSend("");
                 var edit = Edit_Add.Instance();
                 edit.Add[edit.index][0] = Alias.Text;
                 edit.Add[edit.index][1] = data;
@@ -79,7 +75,10 @@ namespace Locsapp_Win_Phone
 
                 var API = new MainViewModel();
 
-                edit.data.LivingAddress = edit.Add;
+                if (edit.Type_Edit == "Living")
+                    edit.data.LivingAddress = edit.Add;
+                if (edit.Type_Edit == "Biling")
+                    edit.data.BillingAddress = edit.Add;
 
                 string json = JsonConvert.SerializeObject(edit.data);
 
