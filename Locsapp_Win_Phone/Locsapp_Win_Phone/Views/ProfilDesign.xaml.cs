@@ -29,6 +29,7 @@ namespace Locsapp_Win_Phone
 
         private string _Key;
         private string _Id;
+        private List<List<string>> LivingListList;
         private List<AddressDisplay> _LivingList;
         //private List<AddressDisplay> _BillingList;
 
@@ -111,6 +112,7 @@ namespace Locsapp_Win_Phone
                 EditProfile_FirstName.Text = NullToString(results.FirstName);
                 EditProfile_Name.Text = NullToString(results.LastName);
                 EditProfile_Phone.Text = NullToString(results.Phone);
+                LivingListList = results.LivingAddress;
                 InitAddress(results.LivingAddress, results.BillingAddress);
             }
         }
@@ -139,6 +141,7 @@ namespace Locsapp_Win_Phone
             data.LastName = EditProfile_Name.Text;
             data.Phone = EditProfile_Phone.Text;
             data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+            data.LivingAddress = LivingListList;
             string json = JsonConvert.SerializeObject(data);
             Debug.WriteLine(json);
             var API = new MainViewModel();
@@ -230,9 +233,22 @@ namespace Locsapp_Win_Phone
 
         private void DeleteAddress(object sender, RoutedEventArgs e)
         {
-            var test = (Button)sender;
-            Debug.WriteLine("Le tag du boutton est : " + test.Tag);
-            //_LivingList[];
+            int i = 0;
+            int i2 = 0;
+            bool is_find = false;
+            var del = (Button)sender;
+            foreach (List<string> item in LivingListList)
+            {
+                if (item[0] == del.Tag.ToString())
+                {
+                    is_find = true;
+                    i2 = i;
+                }  
+                i++;
+            }
+            if (is_find)
+                LivingListList.RemoveAt(i2);
+            Send_Data(null, null);
         }
 
 
