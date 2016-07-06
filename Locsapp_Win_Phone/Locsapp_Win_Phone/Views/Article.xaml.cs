@@ -34,14 +34,37 @@ namespace Locsapp_Win_Phone
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            var collect = Collections.Instance();
+            var ses = SessionInfos.Instance();
+            var API = new MainViewModel();
             ListSearchArticle art = e.Parameter as ListSearchArticle;
-            Debug.WriteLine("Les différents paramètres envoyés sont : " + art);
-            if (art != null)
+
+
+            API.API_req(API.URL_API + "api/v1/articles/get/" + art.Id + "/", "GET", "", ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                Debug.WriteLine("LOL 3 ");
+                var results = JsonConvert.DeserializeObject<ArticleFromGet>(API.SetResponse.APIResponseString);
+                Price.Text = results.price.ToString();
+                Description.Text = results.description;
+                Title.Text = results.title;
+                MainCategory.Text = collect.GetNameFromId(results.base_category, "Category");
+                SubCategory.Text = collect.GetNameFromId(results.sub_category, "SubCategory");
+                Gender.Text = collect.GetNameFromId(results.gender, "genders");
+                size.Text = collect.GetNameFromId(results.size, "sizes");
+                color.Text = collect.GetNameFromId(results.color, "Color");
+                brand.Text = collect.GetNameFromId(results.brand, "Brand");
+                State.Text = collect.GetNameFromId(results.clothe_condition, "State");
+            }
+
+            /*if (art != null)
             {
                 Price.Text = art.price;
                 Description.Text = art.Description;
                 Title.Text = art.Title;
-            }
+            }*/
         }
 
         public Article()

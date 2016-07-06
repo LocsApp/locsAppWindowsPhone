@@ -74,9 +74,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button x:ConnectionId='8' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
-                        <Image x:ConnectionId='9' Grid.Column="1" x:Name="sceneriesBtn" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
-                        <Button x:ConnectionId='10' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                        ></Button>
+                        <Button x:ConnectionId='15' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
+                        <Image x:ConnectionId='16' Grid.Column="1" x:Name="sceneriesBtn" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
+                        <Button x:ConnectionId='17' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                        ></Button>
                     </Grid>
 
                     <TextBlock x:ConnectionId='1' Grid.Row="1" FontSize="26.667" Margin="10,0,0,0" Name="Title">Robe Rouge</TextBlock>
@@ -108,7 +108,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0" >Price</TextBlock>
-                        <TextBlock x:ConnectionId='7' Grid.Column="1" Margin="0,0,10,0" Name="Price" HorizontalAlignment="Right">43 € / Day</TextBlock>
+                        <TextBlock x:ConnectionId='14' Grid.Column="1" Margin="0,0,10,0" Name="Price" HorizontalAlignment="Right">43 € / Day</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -141,7 +141,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Main Category</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Fashion</TextBlock>
+                        <TextBlock x:ConnectionId='13' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="MainCategory">Fashion</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -152,7 +152,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Sub Category</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Dress</TextBlock>
+                        <TextBlock x:ConnectionId='12' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" x:Name="SubCategory">Dress</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -163,7 +163,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Gender</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Female</TextBlock>
+                        <TextBlock x:ConnectionId='11' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="Gender">Female</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -174,7 +174,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Size</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">S</TextBlock>
+                        <TextBlock x:ConnectionId='10' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="size">S</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -196,7 +196,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Color</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Red</TextBlock>
+                        <TextBlock x:ConnectionId='9' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="color">Red</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -207,7 +207,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Brand</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Channel</TextBlock>
+                        <TextBlock x:ConnectionId='8' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="brand">Channel</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -218,7 +218,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">State</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">New</TextBlock>
+                        <TextBlock x:ConnectionId='7' Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="State">New</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 

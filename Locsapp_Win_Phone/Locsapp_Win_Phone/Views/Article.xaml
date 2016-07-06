@@ -141,7 +141,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Main Category</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Fashion</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="MainCategory">Fashion</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -152,7 +152,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Sub Category</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Dress</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" x:Name="SubCategory">Dress</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -163,7 +163,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Gender</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Female</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="Gender">Female</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -174,7 +174,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Size</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">S</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="size">S</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -196,7 +196,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Color</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Red</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="color">Red</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -207,7 +207,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">Brand</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">Channel</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="brand">Channel</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 
@@ -218,7 +218,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="10,0,0,0">State</TextBlock>
-                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right">New</TextBlock>
+                        <TextBlock Grid.Column="1" Margin="0,0,10,0" HorizontalAlignment="Right" x:Name="State">New</TextBlock>
                         <Line Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Bottom" Stroke="Black" StrokeThickness="1" Grid.ColumnSpan="2" X1="0" X2="500"></Line>
                     </Grid>
 

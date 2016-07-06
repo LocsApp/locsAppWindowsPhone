@@ -119,7 +119,7 @@ namespace Locsapp_Win_Phone.ViewModels
                         return item.name;
                 }
             }
-            if (category == "genders" || category == "SubCategory")
+            if (category == "genders" || category == "Gender")
             {
                 foreach (var item in GenderCol.genders)
                 {

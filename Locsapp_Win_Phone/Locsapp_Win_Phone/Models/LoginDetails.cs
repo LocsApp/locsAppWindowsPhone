@@ -309,4 +309,48 @@ namespace Locsapp_Win_Phone.Models
         public string Name { get; set; }
     }
 
+
+    /* Get articles infos From Get */
+
+    public class AvailibilityEnd
+    {
+        [JsonProperty(PropertyName = "$date")]
+        public long date { get; set; }
+    }
+
+    public class AvailibilityStart
+    {
+        [JsonProperty(PropertyName = "$date")]
+        public long date { get; set; }
+    }
+
+    public class CreationDate
+    {
+        [JsonProperty(PropertyName = "$date")]
+        public long date { get; set; }
+    }
+
+public class ArticleFromGet
+{
+    public string _id { get; set; }
+    public bool available { get; set; }
+    public AvailibilityEnd availibility_end { get; set; }
+    public AvailibilityStart availibility_start { get; set; }
+    public string base_category { get; set; }
+    public string brand { get; set; }
+    public string clothe_condition { get; set; }
+    public string color { get; set; }
+    public CreationDate creation_date { get; set; }
+    public string description { get; set; }
+    public string gender { get; set; }
+    public int id_author { get; set; }
+    public List<string> payment_methods { get; set; }
+    public int price { get; set; }
+    public string size { get; set; }
+    public string sub_category { get; set; }
+    public string title { get; set; }
+    public List<string> url_pictures { get; set; }
+    public string url_thumbnail { get; set; }
+}
+
 }

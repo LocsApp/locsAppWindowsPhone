@@ -57,6 +57,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
