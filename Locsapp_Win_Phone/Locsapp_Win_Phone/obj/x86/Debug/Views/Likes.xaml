@@ -17,20 +17,45 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <ListView x:ConnectionId='2' x:Name="FavoriteSearch"                               >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Name}"></TextBlock>
-                        <Button x:ConnectionId='3' Content="Delete" Grid.Column="1" HorizontalAlignment="Right"                     ></Button>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <ScrollViewer>
+            <StackPanel x:ConnectionId='2' x:Name="Sign_up_Scroll">
+                <Pivot>
+                    <PivotItem Header="Articles">
+                        <ListView x:ConnectionId='5' x:Name="FavoriteArticles"                                 >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Name}"></TextBlock>
+                                        <Button x:ConnectionId='6' Content="Delete" Grid.Column="1" HorizontalAlignment="Right"                       ></Button>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </PivotItem>
+                    <PivotItem Header="Search">
+                        <ListView x:ConnectionId='3' x:Name="FavoriteSearch"                               >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Name}"></TextBlock>
+                                        <Button x:ConnectionId='4' Content="Delete" Grid.Column="1" HorizontalAlignment="Right"                     ></Button>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </PivotItem>
+                </Pivot>
+            </StackPanel>
+        </ScrollViewer>
+        
 
     </Grid>
 </Page>

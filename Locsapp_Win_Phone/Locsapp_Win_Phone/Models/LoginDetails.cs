@@ -353,4 +353,24 @@ public class ArticleFromGet
     public string url_thumbnail { get; set; }
 }
 
+
+    /* Favorites Get */
+
+    public class FavoriteArticle
+    {
+        public string _id { get; set; }
+        public CreationDate creation_date { get; set; }
+        public string description { get; set; }
+        public string id_article { get; set; }
+        public int id_user { get; set; }
+        public int price { get; set; }
+        public string title { get; set; }
+        public string url_thumbnail { get; set; }
+    }
+
+    public class FavoritesGet
+    {
+        public List<FavoriteArticle> favorite_article { get; set; }
+    }
+
 }

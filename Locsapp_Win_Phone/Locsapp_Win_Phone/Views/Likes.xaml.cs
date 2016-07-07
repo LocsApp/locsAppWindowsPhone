@@ -38,6 +38,18 @@ namespace Locsapp_Win_Phone
             InitializeComponent();
             getdictcache();
             FavoriteSearch.ItemsSource = dataList;
+
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+
+            API.API_req(API.URL_API + "/api/v1/favorites/articles/", "GET", "", ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                Debug.WriteLine("And the winner is : " + API.SetResponse.APIResponseString);
+                //var results = JsonConvert.DeserializeObject<ArticleFromGet>(API.SetResponse.APIResponseString);
+            }
         }
 
         private async void getdictcache()
@@ -75,11 +87,30 @@ namespace Locsapp_Win_Phone
 
         }
 
+        private void FavoriteArticles_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var current = CurrentSearch.Instance();
+
+            if (FavoriteSearch.SelectedIndex != -1)
+            {
+                current.FromSaveSearch = true;
+                current.SavedSearch = SearchJson[FavoriteSearch.SelectedIndex];
+
+                Frame.Navigate(typeof(ArticleSearch));
+            }
+
+        }
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             Cache cach = new Cache();
             await cach.Save("SavedSearchCache", new Dictionary<string, string>());
             Frame.Navigate(typeof(Likes));
+        }
+
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

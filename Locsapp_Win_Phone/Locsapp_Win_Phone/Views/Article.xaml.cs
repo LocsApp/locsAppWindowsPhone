@@ -27,6 +27,7 @@ namespace Locsapp_Win_Phone
 {
     public sealed partial class Article : Page
     {
+        private string Id = "";
         List<string> Images1 = new List<string>();
         List<string> Images2 = new List<string>();
         int imgCount = 0;
@@ -39,7 +40,7 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             ListSearchArticle art = e.Parameter as ListSearchArticle;
 
-
+            Id = art.Id;
             API.API_req(API.URL_API + "api/v1/articles/get/" + art.Id + "/", "GET", "", ses.GetKey());
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Errorview), API);
@@ -58,13 +59,6 @@ namespace Locsapp_Win_Phone
                 brand.Text = collect.GetNameFromId(results.brand, "Brand");
                 State.Text = collect.GetNameFromId(results.clothe_condition, "State");
             }
-
-            /*if (art != null)
-            {
-                Price.Text = art.price;
-                Description.Text = art.Description;
-                Title.Text = art.Title;
-            }*/
         }
 
         public Article()
@@ -114,6 +108,24 @@ namespace Locsapp_Win_Phone
             if (imgCountRec <= 0)
                 imgCountRec = Images2.Count - 1;
             recommand.Source = new BitmapImage(new Uri("ms-appx:///Assets/Article/" + Images2[imgCountRec]));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+            string json = "{\"id_article\" : \"" + Id + "\"}";
+            API.API_req(API.URL_API + "/api/v1/favorites/articles/", "POST", json, ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog(
+               "Success Add Favorite",
+               "Favorite");
+
+                var result = dialog.ShowAsync();
+            }
         }
     }
 }

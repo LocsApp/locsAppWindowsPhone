@@ -14,7 +14,7 @@
                     <ColumnDefinition Width="400"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="ms-appx:///Assets/Article/heart.png" HorizontalAlignment="Right" Height="24"></Image>
+                <Button Grid.Column="0" FontFamily="Segoe MDL2 Assets" Content="&#xE006;" HorizontalAlignment="Right" Height="48" Click="Button_Click"></Button>
                 <Image Grid.Column="1" Source="ms-appx:///Assets/Article/share-variant.png" HorizontalAlignment="Right" Height="24"></Image>
             </Grid>
         </AppBar>
