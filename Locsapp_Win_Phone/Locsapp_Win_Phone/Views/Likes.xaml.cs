@@ -30,6 +30,7 @@ namespace Locsapp_Win_Phone
     public sealed partial class Likes : Page
     {
         private List<string> SearchJson = new List<string>();
+        private List<FavoriteArticle>  FavoriteArt = new List<FavoriteArticle>();
         private Dictionary<string, string> DictSearch = new Dictionary<string, string>();
         private ObservableCollection<FavoritSearch> dataList = new ObservableCollection<FavoritSearch>();
 
@@ -47,8 +48,10 @@ namespace Locsapp_Win_Phone
                 Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
-                Debug.WriteLine("And the winner is : " + API.SetResponse.APIResponseString);
-                //var results = JsonConvert.DeserializeObject<ArticleFromGet>(API.SetResponse.APIResponseString);
+                var results = JsonConvert.DeserializeObject<FavoritesGet>(API.SetResponse.APIResponseString);
+                Debug.WriteLine("Le result est " + results.favorite_article[0]);
+                FavoriteArticles.ItemsSource = results.favorite_article;
+                FavoriteArt = results.favorite_article;
             }
         }
 
@@ -73,21 +76,14 @@ namespace Locsapp_Win_Phone
             FavoriteSearch.ItemsSource = dataList;
         }
 
-        private void FavoriteSearch_Tapped(object sender, TappedRoutedEventArgs e)
+        private void FavoriteArticles_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            var current = CurrentSearch.Instance();
-
-            if (FavoriteSearch.SelectedIndex != -1)
-            {
-                current.FromSaveSearch = true;
-                current.SavedSearch = SearchJson[FavoriteSearch.SelectedIndex];
-
-                Frame.Navigate(typeof(ArticleSearch));
-            }
-
+            var Art = new ListSearchArticle();
+            Art.Id = FavoriteArt[FavoriteArticles.SelectedIndex].id_article;
+            Frame.Navigate(typeof(Article), Art);
         }
 
-        private void FavoriteArticles_Tapped(object sender, TappedRoutedEventArgs e)
+        private void FavoriteSearch_Tapped(object sender, TappedRoutedEventArgs e)
         {
             var current = CurrentSearch.Instance();
 
@@ -108,9 +104,21 @@ namespace Locsapp_Win_Phone
             Frame.Navigate(typeof(Likes));
         }
 
-        private async void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+            var del = (Button)sender;
 
+            string json = "{\"id_article\" : \"" + del.Tag + "\"}";
+            Debug.WriteLine("Le Json est : " + json);
+            API.API_req(API.URL_API + "/api/v1/favorites/delete-articles/", "POST", json, ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                Frame.Navigate(typeof(Likes));
+            }
         }
     }
 }

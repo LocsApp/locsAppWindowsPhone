@@ -7,6 +7,9 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Thumbnail" />
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="_id" />
+    <RootPropertyPathName Name="price" />
+    <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="Alias" />
     <RootPropertyPathName Name="PostalCode" />
     <RootPropertyPathName Name="City" />
@@ -82,8 +85,8 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="Foreground" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.AddAddress" />

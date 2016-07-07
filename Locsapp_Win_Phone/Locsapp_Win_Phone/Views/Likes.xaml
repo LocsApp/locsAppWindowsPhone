@@ -28,9 +28,11 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
                                             <ColumnDefinition/>
+                                            <ColumnDefinition/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="{Binding Name}"></TextBlock>
-                                        <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Right" Click="Button_Click_2"></Button>
+                                        <TextBlock Grid.Column="0" Text="{Binding title}"></TextBlock>
+                                        <TextBlock Grid.Column="1" Text="{Binding price}" VerticalAlignment="Center"></TextBlock>
+                                        <Button Content="Delete" Grid.Column="2" HorizontalAlignment="Right" Click="Button_Click_2" Tag="{Binding _id}"></Button>
                                     </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
