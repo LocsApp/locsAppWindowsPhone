@@ -144,7 +144,8 @@ namespace Locsapp_Win_Phone
             data.FirstName = EditProfile_FirstName.Text;
             data.LastName = EditProfile_Name.Text;
             data.Phone = EditProfile_Phone.Text;
-            data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+            //data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
+            data.Birthdate = EditProfile_Birthday.Date.ToString("dd-MM-yyyy");
             data.LivingAddress = LivingListList;
             data.BillingAddress = BilingListList;
             string json = JsonConvert.SerializeObject(data);

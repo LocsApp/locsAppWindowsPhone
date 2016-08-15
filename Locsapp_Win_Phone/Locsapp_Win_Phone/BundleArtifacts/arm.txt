@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\ARM\Release\Locsapp_Win_Phone_0.1.0.0_ARM.appx
+SymbolPackage=C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\AppPackages\Locsapp_Win_Phone_0.1.0.0_Test\Locsapp_Win_Phone_0.1.0.0_ARM.appxsym

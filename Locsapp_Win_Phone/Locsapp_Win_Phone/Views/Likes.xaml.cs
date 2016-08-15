@@ -49,7 +49,7 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == false)
             {
                 var results = JsonConvert.DeserializeObject<FavoritesGet>(API.SetResponse.APIResponseString);
-                Debug.WriteLine("Le result est " + results.favorite_article[0]);
+               // Debug.WriteLine("Le result est " + results.favorite_article[0]);
                 FavoriteArticles.ItemsSource = results.favorite_article;
                 FavoriteArt = results.favorite_article;
             }

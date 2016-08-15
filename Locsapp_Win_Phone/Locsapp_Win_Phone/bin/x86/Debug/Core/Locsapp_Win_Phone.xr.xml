@@ -7,7 +7,7 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Thumbnail" />
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="_id" />
+    <RootPropertyPathName Name="id_article" />
     <RootPropertyPathName Name="price" />
     <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="Alias" />

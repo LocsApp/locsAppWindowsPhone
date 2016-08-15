@@ -28,6 +28,7 @@ namespace Locsapp_Win_Phone
     public sealed partial class Article : Page
     {
         private string Id = "";
+        private string Id_Author = "";
         List<string> Images1 = new List<string>();
         List<string> Images2 = new List<string>();
         int imgCount = 0;
@@ -58,6 +59,8 @@ namespace Locsapp_Win_Phone
                 color.Text = collect.GetNameFromId(results.color, "Color");
                 brand.Text = collect.GetNameFromId(results.brand, "Brand");
                 State.Text = collect.GetNameFromId(results.clothe_condition, "State");
+                Author.Text = results.id_author.ToString();
+                Id_Author = results.id_author.ToString();
             }
         }
 
@@ -116,6 +119,50 @@ namespace Locsapp_Win_Phone
             var ses = SessionInfos.Instance();
             string json = "{\"id_article\" : \"" + Id + "\"}";
             API.API_req(API.URL_API + "/api/v1/favorites/articles/", "POST", json, ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog(
+               "Success Add Favorite",
+               "Favorite");
+
+                var result = dialog.ShowAsync();
+            }
+        }
+
+        private void SendQuestion(object sender, RoutedEventArgs e)
+        {
+            var ques = new QuestionToAsk();
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+            ques.id_article = Id;
+            ques.content = AskQuestions.Text;
+            if (AskQuestions.Text != "")
+            {
+                
+                string json = JsonConvert.SerializeObject(ques);
+                Debug.WriteLine("Le json est : " + json);
+                API.API_req(API.URL_API + "/api/v1/articles/questions/", "POST", json, ses.GetKey());
+                if (API.SetResponse.error == true)
+                    Frame.Navigate(typeof(Errorview), API);
+                if (API.SetResponse.error == false)
+                {
+                    var dialog = new Windows.UI.Popups.MessageDialog(
+"Question send success",
+"Question");
+
+                    var result = dialog.ShowAsync();
+                }
+            }
+            
+        }
+
+        private void Author_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+            API.API_req(API.URL_API + "/api/v1/user/" + "locsapp" + "/", "GET", "", ses.GetKey());
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)

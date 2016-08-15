@@ -373,4 +373,11 @@ public class ArticleFromGet
         public List<FavoriteArticle> favorite_article { get; set; }
     }
 
+    /* Questions */
+    public class QuestionToAsk
+    {
+        public string content { get; set; }
+        public string id_article { get; set; }
+    }
+
 }

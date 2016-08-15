@@ -19,7 +19,6 @@
   </Dependencies>
   <Resources>
     <Resource Language="FR-FR" />
-    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="vstest.executionengine.universal.App" Executable="UnitTestProject.exe" EntryPoint="UnitTestProject.App">
@@ -37,8 +36,8 @@
       <InProcessServer>
         <Path>vstest_executionengine_platformbridge.dll</Path>
         <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.NativeMethods" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.ServiceMain" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.MessageTransmitter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="vstest_executionengine_platformbridge.ServiceMain" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>
@@ -47,13 +46,13 @@
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.10240.16384 (th1.150709-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23315.0" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.25425.1" />
     <build:Item Name="ProjectGUID" Value="{122C545B-468D-4250-834F-76E6962E1BDD}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.23309.0" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.25527.1" />
     <build:Item Name="MSTestFramework.Universal" Version="14.0" />
     <build:Item Name="TestPlatform.Universal" Version="14.0" />
-    <build:Item Name="MakePri.exe" Version="10.0.10240.16384 (th1.150709-1700)" />
+    <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
   </build:Metadata>
 </Package>

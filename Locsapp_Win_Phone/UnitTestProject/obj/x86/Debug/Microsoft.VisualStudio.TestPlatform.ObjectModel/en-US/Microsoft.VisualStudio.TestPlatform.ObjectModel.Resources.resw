@@ -156,7 +156,7 @@
     <value>Name</value>
   </data>
   <data name="TestCasePropertyExecutorUriLabel" xml:space="preserve">
-    <value>Executor Uri</value>
+    <value>Executor URI</value>
   </data>
   <data name="TestOutcomeNotFound" xml:space="preserve">
     <value>NotFound</value>
@@ -211,7 +211,7 @@
     <value>Duration</value>
   </data>
   <data name="TestCasePropertyIdLabel" xml:space="preserve">
-    <value>Id</value>
+    <value>ID</value>
   </data>
   <data name="TestCasePropertySourceLabel" xml:space="preserve">
     <value>Source</value>
@@ -244,6 +244,6 @@
     <value>None</value>
   </data>
   <data name="InvalidSettingsIncorrectValue" xml:space="preserve">
-    <value>Invalid settings '{0}'.  Invalid value '{1}' specified for '{2}'.</value>
+    <value>Invalid settings '{0}'. Invalid value '{1}' specified for '{2}'.</value>
   </data>
 </root>

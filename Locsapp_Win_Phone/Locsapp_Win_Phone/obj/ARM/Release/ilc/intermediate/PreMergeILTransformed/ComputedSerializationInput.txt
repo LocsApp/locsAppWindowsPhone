@@ -1,0 +1,2 @@
+"/t:System.Collections.Generic.Dictionary`2[[System.String,System.Runtime],[System.String,System.Runtime]],mscorlib,dcs"
+"/t:System.String,System.Runtime,dcs"
