@@ -71,7 +71,7 @@ namespace Locsapp_Win_Phone
             //Description.Text = "This is a very pretty red dress\r\nRed, good idea for a party\r\nSuch happy with this dress !";
         }
 
-        private void LoadSlideShow()
+        private void LoadSlideShow()    
         {
             Images1.Add("Robe1Redim.jpg");
             Images1.Add("Robe2Redim.jpg");

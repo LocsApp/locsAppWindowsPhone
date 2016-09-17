@@ -100,7 +100,7 @@
                         <PivotItem Header="Edit Profile">
                             <StackPanel>
                                 <Image Source="ms-appx:///Assets/Profile_Assets/RandomDude.jpg" Stretch="Fill" Height="250" ></Image>
-                                <Button HorizontalAlignment="Stretch" Width="auto" Margin="0,0,0,20" Background="#2196f3">Change Profile Picture</Button>
+                                <Button HorizontalAlignment="Stretch" Width="auto" Margin="0,0,0,20" Background="#2196f3" Click="Upload_profile_pic">Change Profile Picture</Button>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>

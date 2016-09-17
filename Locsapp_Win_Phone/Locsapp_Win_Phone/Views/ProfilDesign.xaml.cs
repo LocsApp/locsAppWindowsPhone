@@ -22,6 +22,7 @@ using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
 
+
 namespace Locsapp_Win_Phone
 {
     public sealed partial class ProfilDesign : Page
@@ -118,6 +119,7 @@ namespace Locsapp_Win_Phone
                 LivingListList = results.LivingAddress;
                 BilingListList = results.BillingAddress;
                 InitAddress(results.LivingAddress, results.BillingAddress);
+                Debug.WriteLine("L'url du logo est : " + NullToString(results.LogoUrl));
             }
         }
 
@@ -321,5 +323,26 @@ namespace Locsapp_Win_Phone
             }
         }
 
+        private async void Upload_profile_pic(object sender, RoutedEventArgs e)
+        {
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation =
+                Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+
+            Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
+            {
+                // Application now has read/write access to the picked file
+               Debug.WriteLine("Picked photo: " + file.Name);
+            }
+            else
+            {
+                Debug.WriteLine("Canceled");
+            }
+        }
     }
 }

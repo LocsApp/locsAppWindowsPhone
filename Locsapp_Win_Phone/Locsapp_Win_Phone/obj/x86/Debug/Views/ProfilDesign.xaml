@@ -79,15 +79,15 @@
                                             <ColumnDefinition Width="4*"/>
                                         </Grid.ColumnDefinitions>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/account.png"  Width="24" Grid.Column="0" Grid.Row="0" ></Image>
-                                        <TextBlock x:ConnectionId='28' Grid.Column="1" Grid.Row="0" x:Name="View_Username">Username</TextBlock>
+                                        <TextBlock x:ConnectionId='29' Grid.Column="1" Grid.Row="0" x:Name="View_Username">Username</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/gender-male-female.png" Width="24" Grid.Column="0" Grid.Row="1"></Image>
-                                        <TextBlock x:ConnectionId='29' Grid.Column="1" Grid.Row="1" x:Name="View_Sex">Sex</TextBlock>
+                                        <TextBlock x:ConnectionId='30' Grid.Column="1" Grid.Row="1" x:Name="View_Sex">Sex</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/cake-variant.png" Width="24" Grid.Column="0" Grid.Row="2" ></Image>
-                                        <TextBlock x:ConnectionId='30' Grid.Column="1" Grid.Row="2" x:Name="View_Birthday">Birthday</TextBlock>
+                                        <TextBlock x:ConnectionId='31' Grid.Column="1" Grid.Row="2" x:Name="View_Birthday">Birthday</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/map-marker.png" Width="24" Grid.Column="0" Grid.Row="3" ></Image>
-                                        <TextBlock x:ConnectionId='31' Grid.Column="1" Grid.Row="3" x:Name="View_Map">Map</TextBlock>
+                                        <TextBlock x:ConnectionId='32' Grid.Column="1" Grid.Row="3" x:Name="View_Map">Map</TextBlock>
                                         <Image Source="ms-appx:///Assets/Profile_Assets/emoticon.png" Width="24" Grid.Column="0" Grid.Row="4" ></Image>
-                                        <TextBlock x:ConnectionId='32' Grid.Column="1" Grid.Row="4" x:Name="View_Subscribed">Subscribed</TextBlock>
+                                        <TextBlock x:ConnectionId='33' Grid.Column="1" Grid.Row="4" x:Name="View_Subscribed">Subscribed</TextBlock>
                                     </Grid>
                                 </Border>
                                 <Border Margin="8,0,8,8" BorderThickness="0,0,0,1" BorderBrush="Black" Height="60">
@@ -100,7 +100,7 @@
                         <PivotItem Header="Edit Profile">
                             <StackPanel>
                                 <Image Source="ms-appx:///Assets/Profile_Assets/RandomDude.jpg" Stretch="Fill" Height="250" ></Image>
-                                <Button HorizontalAlignment="Stretch" Width="auto" Margin="0,0,0,20" Background="#2196f3">Change Profile Picture</Button>
+                                <Button x:ConnectionId='9' HorizontalAlignment="Stretch" Width="auto" Margin="0,0,0,20" Background="#2196f3"                           >Change Profile Picture</Button>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
@@ -127,25 +127,25 @@
                                     </Grid.ColumnDefinitions>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/gender-male-female.png"  Width="24" Grid.Column="0" Grid.Row="0" ></Image>
                                     <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">Man</TextBlock>
-                                    <RadioButton x:ConnectionId='9' Grid.Column="2" Grid.Row="0" x:Name="EditProfile_Man"/>
+                                    <RadioButton x:ConnectionId='10' Grid.Column="2" Grid.Row="0" x:Name="EditProfile_Man"/>
                                     <TextBlock Grid.Column="3" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">Woman</TextBlock>
-                                    <RadioButton x:ConnectionId='10' Grid.Column="4" Grid.Row="0" x:Name="EditProfile_Woman"/>
+                                    <RadioButton x:ConnectionId='11' Grid.Column="4" Grid.Row="0" x:Name="EditProfile_Woman"/>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/account.png"  Width="24" Grid.Column="0" Grid.Row="1" ></Image>
-                                    <TextBox x:ConnectionId='11' Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" PlaceholderText="Name" Margin="0,0,0,10" x:Name="EditProfile_Name"></TextBox>
-                                    <TextBox x:ConnectionId='12' Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" PlaceholderText="First Name" Margin="0,0,0,10" x:Name="EditProfile_FirstName"></TextBox>
+                                    <TextBox x:ConnectionId='12' Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" PlaceholderText="Name" Margin="0,0,0,10" x:Name="EditProfile_Name"></TextBox>
+                                    <TextBox x:ConnectionId='13' Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" PlaceholderText="First Name" Margin="0,0,0,10" x:Name="EditProfile_FirstName"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/phone.png"  Width="24" Grid.Column="0" Grid.Row="3" ></Image>
-                                    <TextBox x:ConnectionId='13' Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" PlaceholderText="Phone" Margin="0,0,0,10" x:Name="EditProfile_Phone"></TextBox>
+                                    <TextBox x:ConnectionId='14' Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" PlaceholderText="Phone" Margin="0,0,0,10" x:Name="EditProfile_Phone"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/cake-variant.png"  Width="24" Grid.Column="0" Grid.Row="4" ></Image>
-                                    <DatePicker x:ConnectionId='14' Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Margin="0,0,0,10" x:Name="EditProfile_Birthday"></DatePicker>
+                                    <DatePicker x:ConnectionId='15' Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Margin="0,0,0,10" x:Name="EditProfile_Birthday"></DatePicker>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/email.png"  Width="24" Grid.Column="0" Grid.Row="5" ></Image>
-                                    <TextBox x:ConnectionId='15' Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" PlaceholderText="Email" Margin="0,0,0,10" x:Name="EditProfile_Email"></TextBox>
+                                    <TextBox x:ConnectionId='16' Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" PlaceholderText="Email" Margin="0,0,0,10" x:Name="EditProfile_Email"></TextBox>
                                     <Image Source="ms-appx:///Assets/Profile_Assets/lock.png"  Width="24" Grid.Column="0" Grid.Row="6" ></Image>
-                                    <PasswordBox x:ConnectionId='16' Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" PlaceholderText="Old Password" Margin="0,0,0,10" x:Name="EditProfile_OldPass"></PasswordBox>
-                                    <PasswordBox x:ConnectionId='17' Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
-                                    <PasswordBox x:ConnectionId='18' Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
-                                    <Button x:ConnectionId='19' Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send"                  ></Button>
-                                    <Button x:ConnectionId='20' Grid.Row="10"                         >Add Living Address</Button>
-                                    <ListView x:ConnectionId='21' x:Name="LivingListView" Grid.Row="11" Grid.ColumnSpan="5" >
+                                    <PasswordBox x:ConnectionId='17' Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" PlaceholderText="Old Password" Margin="0,0,0,10" x:Name="EditProfile_OldPass"></PasswordBox>
+                                    <PasswordBox x:ConnectionId='18' Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" PlaceholderText="New Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass1"></PasswordBox>
+                                    <PasswordBox x:ConnectionId='19' Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" PlaceholderText="Confirm Password" Margin="0,0,0,10" x:Name="EditProfile_NewPass2"></PasswordBox>
+                                    <Button x:ConnectionId='20' Background="#C51A1C" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="5" Content="Send" HorizontalAlignment="Stretch" Width="auto" x:Name="EditProfile_Send"                  ></Button>
+                                    <Button x:ConnectionId='21' Grid.Row="10"                         >Add Living Address</Button>
+                                    <ListView x:ConnectionId='22' x:Name="LivingListView" Grid.Row="11" Grid.ColumnSpan="5" >
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <Grid>
@@ -174,14 +174,14 @@
                                                         <TextBlock Text="{Binding City}"></TextBlock>
                                                         <TextBlock Text="{Binding PostalCode}" Margin="10,0,0,0"></TextBlock>
                                                     </StackPanel>
-                                                    <Button x:ConnectionId='26' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right"                    ></Button>
-                                                    <Button x:ConnectionId='27' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0"                      ></Button>
+                                                    <Button x:ConnectionId='27' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right"                    ></Button>
+                                                    <Button x:ConnectionId='28' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0"                      ></Button>
                                                 </Grid>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
-                                    <Button x:ConnectionId='22' Grid.Row="12"                          >Add Biling Address</Button>
-                                    <ListView x:ConnectionId='23' x:Name="BilingListView" Grid.Row="13" Grid.ColumnSpan="5" >
+                                    <Button x:ConnectionId='23' Grid.Row="12"                          >Add Biling Address</Button>
+                                    <ListView x:ConnectionId='24' x:Name="BilingListView" Grid.Row="13" Grid.ColumnSpan="5" >
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <Grid>
@@ -210,8 +210,8 @@
                                                         <TextBlock Text="{Binding City}"></TextBlock>
                                                         <TextBlock Text="{Binding PostalCode}" Margin="10,0,0,0"></TextBlock>
                                                     </StackPanel>
-                                                    <Button x:ConnectionId='24' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right"                          ></Button>
-                                                    <Button x:ConnectionId='25' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0"                            ></Button>
+                                                    <Button x:ConnectionId='25' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right"                          ></Button>
+                                                    <Button x:ConnectionId='26' Tag="{Binding Alias}" Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Width="48" Height="48" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0,0,0"                            ></Button>
                                                 </Grid>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
