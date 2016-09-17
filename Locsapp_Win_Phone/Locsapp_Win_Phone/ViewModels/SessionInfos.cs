@@ -10,6 +10,7 @@ namespace Locsapp_Win_Phone.ViewModels
     {
         private static SessionInfos _instance = null;
         private string Key = "";
+        private string Base_Url = "";
 
         private SessionInfos()
         {
@@ -27,6 +28,11 @@ namespace Locsapp_Win_Phone.ViewModels
             Key = key;
         }
 
+        public void AddBaseUrl(string BaseUrl)
+        {
+            Base_Url = BaseUrl;
+        }
+
         public string GetKey()
         {
             if (Key != "")
@@ -34,5 +40,14 @@ namespace Locsapp_Win_Phone.ViewModels
             else
                 return ("No Key Found");
         }
+
+        public string GetBaseUrl()
+        {
+            if (Base_Url != "")
+                return Base_Url;
+            else
+                return ("No Base Url Found");
+        }
+
     }
 }

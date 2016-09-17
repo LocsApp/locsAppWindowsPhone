@@ -52,6 +52,8 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public void API_req(String API_URL, String Method, String JSON_data = "", String Key = "")
         {
+            var ses = SessionInfos.Instance();
+            ses.AddBaseUrl(URLAPI);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(API_URL);
             request.Method = Method;
                 allDone = new ManualResetEvent(false);

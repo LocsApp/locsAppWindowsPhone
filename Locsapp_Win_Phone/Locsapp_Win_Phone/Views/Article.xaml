@@ -265,9 +265,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets" Click="SlidshowBackRec"></Button>
+                        <Button Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"></Button>
                         <Image Grid.Column="1" x:Name="recommand" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
-                        <Button Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right" Click="SlidshowForwardRec"></Button>
+                        <Button Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"></Button>
                     </Grid>
                 </Grid>
         </StackPanel>

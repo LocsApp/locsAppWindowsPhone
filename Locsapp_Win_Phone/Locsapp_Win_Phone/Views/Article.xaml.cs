@@ -67,35 +67,18 @@ namespace Locsapp_Win_Phone
 
                 foreach (string apercu in results.url_pictures)
                 {
-                    Images1.Add("https://locsapp.sylflo.fr/" + apercu);
-                    Debug.WriteLine("Ce qui a été ajouté est : https://locsapp.sylflo.fr/" + apercu.ToString());
+                    Images1.Add(ses.GetBaseUrl() + apercu);
+                    Debug.WriteLine("Ce qui a été ajouté est : " + ses.GetBaseUrl() + apercu.ToString());
                 }
 
-                Images2.Add("https://locsapp.sylflo.fr/" + results.url_thumbnail);
-                Debug.WriteLine("Le thumbnail est : https://locsapp.sylflo.fr/" + results.url_thumbnail);
-                /* Traitement des images de recommandations */
-                /* foreach (string recom in results.url_thumbnail)
-                 {
-                     Images1.Add("https://locsapp.sylflo.fr/" + apercu);
-                     Debug.WriteLine("Ce qui a été ajouté est : https://locsapp.sylflo.fr/" + apercu.ToString());
-                 }*/
+                Images2.Add(ses.GetBaseUrl() + results.url_thumbnail);
+                Debug.WriteLine("Le thumbnail est : " + ses.GetBaseUrl() + results.url_thumbnail);
             }
         }
 
         public Article()
         {
             this.InitializeComponent();
-            LoadSlideShow();
-        }
-
-        private void LoadSlideShow()    
-        {
-            /*Images1.Add("Robe1Redim.jpg");
-            Images1.Add("Robe2Redim.jpg");
-            Images1.Add("Robe3Redim.jpg");
-            Images2.Add("Robe1Redim.jpg");
-            Images2.Add("Robe2Redim.jpg");
-            Images2.Add("Robe3Redim.jpg");*/
         }
 
         private void SlidshowBack(object sender, RoutedEventArgs e)
@@ -112,22 +95,6 @@ namespace Locsapp_Win_Phone
             if (imgCount <= 0)
                 imgCount = Images1.Count - 1;
             sceneriesBtn.Source = new BitmapImage(new Uri(Images1[imgCount]));
-        }
-
-        private void SlidshowBackRec(object sender, RoutedEventArgs e)
-        {
-            imgCountRec++;
-            if (imgCountRec >= Images2.Count)
-                imgCountRec = 0;
-            recommand.Source = new BitmapImage(new Uri(Images2[imgCountRec]));
-        }
-
-        private void SlidshowForwardRec(object sender, RoutedEventArgs e)
-        {
-            imgCountRec--;
-            if (imgCountRec <= 0)
-                imgCountRec = Images2.Count - 1;
-            recommand.Source = new BitmapImage(new Uri(Images2[imgCountRec]));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
