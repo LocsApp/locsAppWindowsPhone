@@ -75,7 +75,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Button x:ConnectionId='18' Grid.Column="0" Margin="10,0,0,0" Content="&#xE72B;" FontFamily="Segoe MDL2 Assets"                     ></Button>
-                        <Image x:ConnectionId='19' Grid.Column="1" x:Name="sceneriesBtn" Source="ms-appx:///Assets/Article/Robe1Redim.jpg" MaxHeight="150" VerticalAlignment="Top" Height="150"/>
+                        <Image x:ConnectionId='19' Grid.Column="1" x:Name="sceneriesBtn"  MaxHeight="150" VerticalAlignment="Top" Height="150"/>
                         <Button x:ConnectionId='20' Grid.Column="2"  Margin="0,0,10,0" Content="&#xE72A;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right"                        ></Button>
                     </Grid>
 
