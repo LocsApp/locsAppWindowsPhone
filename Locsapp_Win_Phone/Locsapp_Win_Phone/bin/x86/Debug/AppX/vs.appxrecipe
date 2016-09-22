@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>DE67DEF591FA1FB05AE9EB29C09F01944984785C8B38D254AE443E89656A7782</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>AC4DC9120754B0138B142F1EF29430E517EADB1BF307158740D4E7E855D6442A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>5107Locsapp.Locsapp_0.1.0.0_x86__y5pymcxfgteh4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>5107Locsapp.Locsapp_y5pymcxfgteh4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>5107Locsapp.Locsapp</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-17T14:28:55.649</Modified>
+      <Modified>2016-09-22T20:35:50.731</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2016-09-17T14:28:54.782</Modified>
+      <Modified>2016-09-22T20:35:50.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -600,7 +600,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
-      <Modified>2016-07-09T07:07:41.512</Modified>
+      <Modified>2016-09-22T16:20:20.351</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -608,11 +608,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-09-17T14:28:55.400</Modified>
+      <Modified>2016-09-22T20:35:50.541</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2016-09-17T14:28:55.643</Modified>
+      <Modified>2016-09-22T20:35:50.726</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

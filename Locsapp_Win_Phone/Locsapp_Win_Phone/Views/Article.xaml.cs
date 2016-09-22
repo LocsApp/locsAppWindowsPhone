@@ -29,6 +29,8 @@ namespace Locsapp_Win_Phone
     {
         private string Id = "";
         private string Id_Author = "";
+        private string name = "";
+        private string thumb = "";
         List<string> Images1 = new List<string>();
         List<string> Images2 = new List<string>();
         int imgCount = 0;
@@ -48,31 +50,36 @@ namespace Locsapp_Win_Phone
             if (API.SetResponse.error == false)
             {
                 Debug.WriteLine("LOL 3 ");
-                var results = JsonConvert.DeserializeObject<ArticleFromGet>(API.SetResponse.APIResponseString);
-                Price.Text = results.price.ToString();
-                Description.Text = results.description;
-                Title.Text = results.title;
-                MainCategory.Text = collect.GetNameFromId(results.base_category, "Category");
-                SubCategory.Text = collect.GetNameFromId(results.sub_category, "SubCategory");
-                Gender.Text = collect.GetNameFromId(results.gender, "genders");
-                size.Text = collect.GetNameFromId(results.size, "sizes");
-                color.Text = collect.GetNameFromId(results.color, "Color");
-                brand.Text = collect.GetNameFromId(results.brand, "Brand");
-                State.Text = collect.GetNameFromId(results.clothe_condition, "State");
-                Author.Text = results.id_author.ToString();
-                Id_Author = results.id_author.ToString();
-
+                    var results = JsonConvert.DeserializeObject<RootArticleFromGet>(API.SetResponse.APIResponseString);
+                Debug.WriteLine("Le resukt est : " + results);
+                Price.Text = results.article.price.ToString();
+                if (string.IsNullOrEmpty(results.article.description))
+                    Description.Text = "No describe for this article";
+                else
+                    Description.Text = results.article.description;
+                Title.Text = results.article.title;
+                name = results.article.title;
+                MainCategory.Text = collect.GetNameFromId(results.article.base_category, "Category");
+                SubCategory.Text = collect.GetNameFromId(results.article.sub_category, "SubCategory");
+                Gender.Text = collect.GetNameFromId(results.article.gender, "genders");
+                size.Text = collect.GetNameFromId(results.article.size, "sizes");
+                color.Text = collect.GetNameFromId(results.article.color, "Color");
+                brand.Text = collect.GetNameFromId(results.article.brand, "Brand");
+                State.Text = collect.GetNameFromId(results.article.clothe_condition, "State");
+                Author.Text = results.article.id_author.ToString();
+                Id_Author = results.article.id_author.ToString();
+                thumb = results.article.url_thumbnail;
 
                 /* Traitement des images d'aperçu article */
 
-                foreach (string apercu in results.url_pictures)
+                foreach (string apercu in results.article.url_pictures)
                 {
                     Images1.Add(ses.GetBaseUrl() + apercu);
                     Debug.WriteLine("Ce qui a été ajouté est : " + ses.GetBaseUrl() + apercu.ToString());
                 }
 
-                Images2.Add(ses.GetBaseUrl() + results.url_thumbnail);
-                Debug.WriteLine("Le thumbnail est : " + ses.GetBaseUrl() + results.url_thumbnail);
+                Images2.Add(ses.GetBaseUrl() + results.article.url_thumbnail);
+                Debug.WriteLine("Le thumbnail est : " + ses.GetBaseUrl() + results.article.url_thumbnail);
             }
         }
 
@@ -154,6 +161,32 @@ namespace Locsapp_Win_Phone
                 var dialog = new Windows.UI.Popups.MessageDialog(
                "Success Add Favorite",
                "Favorite");
+
+                var result = dialog.ShowAsync();
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("La demande est en cours");
+            var API = new MainViewModel();
+            var ses = SessionInfos.Instance();
+            var demand = new DemandArticle();
+            demand.article_thumbnail_url = thumb;
+            demand.article_title = name;
+            //demand.author_name;
+            //demand.author_notation;
+            //demand.availibility_end;
+            //demand.availibility_start;
+            string json = JsonConvert.SerializeObject(demand);
+            API.API_req(API.URL_API + "/api/v1/articles/demands/", "POST", json, ses.GetKey());
+            if (API.SetResponse.error == true)
+                Frame.Navigate(typeof(Errorview), API);
+            if (API.SetResponse.error == false)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog(
+                "Article demand sended",
+                "Demande");
 
                 var result = dialog.ShowAsync();
             }

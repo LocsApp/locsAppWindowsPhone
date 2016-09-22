@@ -157,6 +157,14 @@
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.ArticleSearch" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Locsapp_Win_Phone.demands" />
     <RootType FullName="Locsapp_Win_Phone.EditAdd" />
     <RootType FullName="Locsapp_Win_Phone.Errorview" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
@@ -167,13 +175,6 @@
     </RootType>
     <RootType FullName="Locsapp_Win_Phone.FilterSearch" />
     <RootType FullName="Locsapp_Win_Phone.HistoryArticle" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
-      <RootProperty Name="Header" />
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="Locsapp_Win_Phone.Likes" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="HorizontalAlignment" />

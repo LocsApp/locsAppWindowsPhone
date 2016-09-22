@@ -330,17 +330,30 @@ namespace Locsapp_Win_Phone.Models
         public long date { get; set; }
     }
 
-public class ArticleFromGet
+    public class Question
+    {
+        public bool visible { get; set; }
+        public List<object> thumbs_up { get; set; }
+        public int id_owner_article { get; set; }
+        public string author_name { get; set; }
+        public object response { get; set; }
+        public List<object> report { get; set; }
+        public string id { get; set; }
+        public string content { get; set; }
+        public string creation_date { get; set; }
+    }
+
+    public class ArticleFromGet
 {
     public string _id { get; set; }
     public bool available { get; set; }
-    public AvailibilityEnd availibility_end { get; set; }
-    public AvailibilityStart availibility_start { get; set; }
+    public string availibility_end { get; set; }
+    public string availibility_start { get; set; }
     public string base_category { get; set; }
     public string brand { get; set; }
     public string clothe_condition { get; set; }
     public string color { get; set; }
-    public CreationDate creation_date { get; set; }
+    public string creation_date { get; set; }
     public string description { get; set; }
     public string gender { get; set; }
     public int id_author { get; set; }
@@ -353,6 +366,15 @@ public class ArticleFromGet
     public string url_thumbnail { get; set; }
 }
 
+public class RootArticleFromGet
+    {
+        public int nb_mark_as_renter { get; set; }
+        public List<object> articles_recommend { get; set; }
+        public bool is_reported { get; set; }
+        public int global_mark_as_renter { get; set; }
+        public bool is_in_favorite { get; set; }
+        public ArticleFromGet article { get; set; }
+    }
 
     /* Favorites Get */
 
@@ -378,6 +400,21 @@ public class ArticleFromGet
     {
         public string content { get; set; }
         public string id_article { get; set; }
+    }
+
+    /* DemandeArticle */
+    public class DemandArticle
+    {
+        public string id_target { get; set; } //id_author
+        public string name_target { get; set; } //username_author
+        public string id_article { get; set; } //id_article
+        public string availibility_start { get; set; } //start
+        public string availibility_end { get; set; } //end
+        public string article_title { get; set; } //Title
+        public string article_thumbnail_url { get; set; } //url_thumbnail
+        public string author_name { get; set; } //current name
+        public string author_notation { get; set; } //current notation
+
     }
 
 }
