@@ -11,6 +11,8 @@ namespace Locsapp_Win_Phone.ViewModels
         private static SessionInfos _instance = null;
         private string Key = "";
         private string Base_Url = "";
+        private string User_Name = "";
+        private string User_Notation = "";
 
         private SessionInfos()
         {
