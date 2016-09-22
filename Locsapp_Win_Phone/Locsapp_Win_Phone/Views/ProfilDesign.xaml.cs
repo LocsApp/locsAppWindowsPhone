@@ -109,6 +109,8 @@ namespace Locsapp_Win_Phone
                 Debug.WriteLine("La réponse est : " + API.SetResponse.APIResponseString);
                 var results = JsonConvert.DeserializeObject<UserInfos>(API.SetResponse.APIResponseString);
                 Id = results.Id;
+                sesinfo.AddUserName(results.Username);
+                sesinfo.AddUserNotation(results.tenant_score.ToString());
                 View_Username.Text = results.Username;
                 View_Birthday.Text = NullToString(results.Birthdate);
                 View_Subscribed.Text = NullToString(results.RegisteredDate);

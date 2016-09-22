@@ -22,6 +22,7 @@ using Locsapp_Win_Phone.ViewModels;
 using Newtonsoft;
 using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Text.RegularExpressions;
 
 namespace Locsapp_Win_Phone
 {
@@ -31,6 +32,7 @@ namespace Locsapp_Win_Phone
         private string Id_Author = "";
         private string name = "";
         private string thumb = "";
+        private string author_name = "";
         List<string> Images1 = new List<string>();
         List<string> Images2 = new List<string>();
         int imgCount = 0;
@@ -38,6 +40,10 @@ namespace Locsapp_Win_Phone
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Button btnClickMe = new Button();
+            btnClickMe.Content = "Click Me";
+            btnClickMe.Name = "btnClickMe";
+            Question_box.Children.Add(btnClickMe);
             var collect = Collections.Instance();
             var ses = SessionInfos.Instance();
             var API = new MainViewModel();
@@ -51,7 +57,8 @@ namespace Locsapp_Win_Phone
             {
                 Debug.WriteLine("LOL 3 ");
                     var results = JsonConvert.DeserializeObject<RootArticleFromGet>(API.SetResponse.APIResponseString);
-                Debug.WriteLine("Le resukt est : " + results);
+                Debug.WriteLine("Le L'id de larticle est : " + results.article._id);
+                Debug.WriteLine("Le nom de l'aut est : " + results.article.username_author);
                 Price.Text = results.article.price.ToString();
                 if (string.IsNullOrEmpty(results.article.description))
                     Description.Text = "No describe for this article";
@@ -66,8 +73,9 @@ namespace Locsapp_Win_Phone
                 color.Text = collect.GetNameFromId(results.article.color, "Color");
                 brand.Text = collect.GetNameFromId(results.article.brand, "Brand");
                 State.Text = collect.GetNameFromId(results.article.clothe_condition, "State");
-                Author.Text = results.article.id_author.ToString();
+                Author.Text = results.article.username_author.ToString();
                 Id_Author = results.article.id_author.ToString();
+                author_name = results.article.username_author.ToString();
                 thumb = results.article.url_thumbnail;
 
                 /* Traitement des images d'aperçu article */
@@ -173,23 +181,43 @@ namespace Locsapp_Win_Phone
             var ses = SessionInfos.Instance();
             var demand = new DemandArticle();
             demand.article_thumbnail_url = thumb;
-            demand.article_title = name;
-            //demand.author_name;
-            //demand.author_notation;
-            //demand.availibility_end;
-            //demand.availibility_start;
-            string json = JsonConvert.SerializeObject(demand);
-            API.API_req(API.URL_API + "/api/v1/articles/demands/", "POST", json, ses.GetKey());
-            if (API.SetResponse.error == true)
-                Frame.Navigate(typeof(Errorview), API);
-            if (API.SetResponse.error == false)
+            demand.article_name = name;
+            demand.author_name = ses.GetUserName();
+            demand.author_notation = Int32.Parse(ses.GetUserNotation());
+            demand.id_article = Id;
+            demand.name_target = author_name;
+            demand.id_target = Int32.Parse(Id_Author);
+            Regex regex = new Regex("[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}");
+            Match match = regex.Match(Date_Start.Text);
+            Match match2 = regex.Match(Date_End.Text);
+            if (match.Success && match2.Success && match.Value == Date_Start.Text && match2.Value == Date_End.Text)
+            {
+                demand.availibility_end = Date_End.Text + "T00:00:00";
+                demand.availibility_start = Date_Start.Text + "T00:00:00";
+                string json = JsonConvert.SerializeObject(demand);
+                Debug.WriteLine("Le Json est : " + json);
+                API.API_req(API.URL_API + "/api/v1/articles/demands/", "POST", json, ses.GetKey());
+                if (API.SetResponse.error == true)
+                    Frame.Navigate(typeof(Errorview), API);
+                if (API.SetResponse.error == false)
+                {
+                    var dialog = new Windows.UI.Popups.MessageDialog(
+                    "Article demand sended",
+                    "Demande");
+
+                    var result = dialog.ShowAsync();
+                }
+            }
+
+            else
             {
                 var dialog = new Windows.UI.Popups.MessageDialog(
-                "Article demand sended",
-                "Demande");
-
+                "Error",
+                "Date must be formated  yyyy-mm-dd");
                 var result = dialog.ShowAsync();
             }
+
+            
         }
     }
 }

@@ -70,6 +70,8 @@ namespace Locsapp_Win_Phone.Models
         public string IsActive { get; set; }
         [JsonProperty("registered_date")]
         public string RegisteredDate { get; set; }
+        [JsonProperty("tenant_score")]
+        public int tenant_score { get; set; }
     }
 
     public class LoginDetails
@@ -364,7 +366,8 @@ namespace Locsapp_Win_Phone.Models
     public string title { get; set; }
     public List<string> url_pictures { get; set; }
     public string url_thumbnail { get; set; }
-}
+    public string username_author { get; set; }
+    }
 
 public class RootArticleFromGet
     {
@@ -405,15 +408,15 @@ public class RootArticleFromGet
     /* DemandeArticle */
     public class DemandArticle
     {
-        public string id_target { get; set; } //id_author
+        public int id_target { get; set; } //id_author
         public string name_target { get; set; } //username_author
         public string id_article { get; set; } //id_article
         public string availibility_start { get; set; } //start
         public string availibility_end { get; set; } //end
-        public string article_title { get; set; } //Title
+        public string article_name { get; set; } //Title
         public string article_thumbnail_url { get; set; } //url_thumbnail
         public string author_name { get; set; } //current name
-        public string author_notation { get; set; } //current notation
+        public int author_notation { get; set; } //current notation
 
     }
 
