@@ -16,6 +16,7 @@ namespace Locsapp_Win_Phone.ViewModels
         private string FacebookToken = "";
         private bool IsTokenGet = false;
 
+
         public string TokenFB
         {
             get { return FacebookToken; }
@@ -30,6 +31,7 @@ namespace Locsapp_Win_Phone.ViewModels
 
         public async Task AuthenticateFacebookAsync()
         {
+            //Debug.WriteLine("Le SID est : " + WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString());
             var fb = new FacebookClient();
             var redirectUri = WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString();
 

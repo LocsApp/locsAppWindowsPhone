@@ -25,6 +25,16 @@ namespace Locsapp_Win_Phone.ViewModels
             return _instance;
         }
 
+        public void AddUserName(string UserName)
+        {
+            User_Name = UserName;
+        }
+
+        public void AddUserNotation(string UserNotation)
+        {
+            User_Notation = UserNotation;
+        }
+
         public void AddKey(string key)
         {
             Key = key;
@@ -49,6 +59,22 @@ namespace Locsapp_Win_Phone.ViewModels
                 return Base_Url;
             else
                 return ("No Base Url Found");
+        }
+
+        public string GetUserName()
+        {
+            if (User_Name != "")
+                return User_Name;
+            else
+                return ("No User Name found");
+        }
+
+        public string GetUserNotation()
+        {
+            if (User_Notation != "")
+                return User_Notation;
+            else
+                return ("No UserNotation");
         }
 
     }
