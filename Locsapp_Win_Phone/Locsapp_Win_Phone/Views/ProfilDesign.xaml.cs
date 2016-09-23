@@ -113,6 +113,7 @@ namespace Locsapp_Win_Phone
                 sesinfo.AddUserNotation(results.tenant_score.ToString());
                 View_Username.Text = results.Username;
                 View_Birthday.Text = NullToString(results.Birthdate);
+                Debug.WriteLine("La date reçu est : " + results.Birthdate);
                 View_Subscribed.Text = NullToString(results.RegisteredDate);
                 EditProfile_Email.Text = NullToString(results.Email);
                 EditProfile_FirstName.Text = NullToString(results.FirstName);
@@ -144,12 +145,18 @@ namespace Locsapp_Win_Phone
 
         private void Send_Data(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("SEND DATAAAAA");
             UserInfos data = new UserInfos();
             data.FirstName = EditProfile_FirstName.Text;
             data.LastName = EditProfile_Name.Text;
             data.Phone = EditProfile_Phone.Text;
-            //data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-MM-dd") + " 00:00:00";
-            data.Birthdate = EditProfile_Birthday.Date.ToString("dd-MM-yyyy");
+            data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy/MM/dd");
+            Debug.WriteLine("La birthday envoyée est : " + data.Birthdate);
+            //data.Birthdate = EditProfile_Birthday.Date.ToString("yyyy-");
+            if (EditProfile_Man.IsChecked == true)
+                data.gender = "Male";
+            if (EditProfile_Woman.IsChecked == true)
+                data.gender = "Woman";
             data.LivingAddress = LivingListList;
             data.BillingAddress = BilingListList;
             string json = JsonConvert.SerializeObject(data);

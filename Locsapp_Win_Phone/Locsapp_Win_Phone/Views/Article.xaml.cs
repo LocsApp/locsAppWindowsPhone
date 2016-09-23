@@ -43,7 +43,11 @@ namespace Locsapp_Win_Phone
             Button btnClickMe = new Button();
             btnClickMe.Content = "Click Me";
             btnClickMe.Name = "btnClickMe";
-            Question_box.Children.Add(btnClickMe);
+            Button btnClickMe2 = new Button();
+            btnClickMe2.Content = "Click Me11";
+            btnClickMe2.Name = "btnClickMe2";
+            QuestionBox.Children.Add(btnClickMe);
+            QuestionBox.Children.Add(btnClickMe2);
             var collect = Collections.Instance();
             var ses = SessionInfos.Instance();
             var API = new MainViewModel();
@@ -117,7 +121,7 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             var ses = SessionInfos.Instance();
             string json = "{\"id_article\" : \"" + Id + "\"}";
-            API.API_req(API.URL_API + "/api/v1/favorites/articles/", "POST", json, ses.GetKey());
+            API.API_req(API.URL_API + "api/v1/favorites/add-articles/", "POST", json, ses.GetKey());
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)

@@ -43,26 +43,22 @@ namespace Locsapp_Win_Phone
             var API = new MainViewModel();
             var ses = SessionInfos.Instance();
 
-            API.API_req(API.URL_API + "/api/v1/favorites/articles/", "GET", "", ses.GetKey());
+            API.API_req(API.URL_API + "/api/v1/favorites/articles/1/", "GET", "", ses.GetKey());
             if (API.SetResponse.error == true)
                 Frame.Navigate(typeof(Errorview), API);
             if (API.SetResponse.error == false)
             {
                 var results = JsonConvert.DeserializeObject<FavoritesGet>(API.SetResponse.APIResponseString);
-               // Debug.WriteLine("Le result est " + results.favorite_article[0]);
+                //Debug.WriteLine("Le result est " + results.favorite_article[0]);
                 FavoriteArticles.ItemsSource = results.favorite_article;
                 FavoriteArt = results.favorite_article;
             }
         }
 
-        private async void getdictcache()
+        private void getdictcache()
         {
             FavoritSearch favSearch = new FavoritSearch();
-            Cache cach = new Cache();
-            if (await cach.isCacheExist("SavedSearchCache"))
-            {
-                DictSearch = await cach.get("SavedSearchCache");
-                Debug.WriteLine("Le nombre de fav ets : " + DictSearch.Count);
+            Debug.WriteLine("Le nombre de fav ets : " + DictSearch.Count);
 
                 foreach (KeyValuePair<string, string> item in DictSearch)
                 {
@@ -70,9 +66,6 @@ namespace Locsapp_Win_Phone
                     dataList.Add(favSearch);
                     SearchJson.Add(item.Value);
                 }
-            }
-
-            
             FavoriteSearch.ItemsSource = dataList;
         }
 
@@ -110,7 +103,7 @@ namespace Locsapp_Win_Phone
             var ses = SessionInfos.Instance();
             var del = (Button)sender;
 
-            string json = "{\"id_article\" : \"" + del.Tag + "\"}";
+            string json = "{\"id_favorite_article\" : \"" + del.Tag + "\"}";
             Debug.WriteLine("Le Json est : " + json);
             API.API_req(API.URL_API + "/api/v1/favorites/delete-articles/", "POST", json, ses.GetKey());
             if (API.SetResponse.error == true)

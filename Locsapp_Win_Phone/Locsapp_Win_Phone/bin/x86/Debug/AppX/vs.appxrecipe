@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-22T23:31:45.985</Modified>
+      <Modified>2016-09-23T01:10:08.518</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Locsapp_Win_Phone.exe">
       <PackagePath>entrypoint\Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2016-09-22T23:31:45.331</Modified>
+      <Modified>2016-09-23T01:10:08.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\.nuget\packages\Facebook\7.0.6\lib\win8\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
@@ -600,7 +600,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Locsapp_Win_Phone.xr.xml">
       <PackagePath>Locsapp_Win_Phone.xr.xml</PackagePath>
-      <Modified>2016-09-22T16:20:20.351</Modified>
+      <Modified>2016-09-23T00:18:39.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -608,11 +608,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-09-22T23:31:45.799</Modified>
+      <Modified>2016-09-23T01:06:12.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tagzz\Desktop\Phone1\locsappwindowsphone\Locsapp_Win_Phone\Locsapp_Win_Phone\bin\x86\Debug\Core\Locsapp_Win_Phone.exe">
       <PackagePath>Locsapp_Win_Phone.exe</PackagePath>
-      <Modified>2016-09-22T23:31:45.981</Modified>
+      <Modified>2016-09-23T01:10:08.514</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -54,7 +54,7 @@ namespace Locsapp_Win_Phone.Models
         public string Password1 { get; set; }
         [JsonProperty("password2")]
         public string Password2 { get; set; }
-        [JsonProperty("birthday")]
+        [JsonProperty("birthdate")]
         public string Birthdate { get; set; }
         [JsonProperty("phone")]
         public string Phone { get; set; }
@@ -72,6 +72,8 @@ namespace Locsapp_Win_Phone.Models
         public string RegisteredDate { get; set; }
         [JsonProperty("tenant_score")]
         public int tenant_score { get; set; }
+        [JsonProperty("gender")]
+        public string gender { get; set; }
     }
 
     public class LoginDetails
@@ -391,6 +393,7 @@ public class RootArticleFromGet
         public int price { get; set; }
         public string title { get; set; }
         public string url_thumbnail { get; set; }
+        public string id_favorite_article { get; set; }
     }
 
     public class FavoritesGet
